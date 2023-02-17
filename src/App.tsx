@@ -1,6 +1,5 @@
 import { ParallaxBackground } from "./components/ParallaxBackground";
 import { Link } from "react-scroll";
-import { TextBox } from "./components/TextBox";
 import { PageProjects } from "./pages/PageProjects";
 import { PageSkills } from "./pages/PageSkills";
 import { PageContact } from "./pages/PageContact";

@@ -1,12 +1,16 @@
 import "../styles/parallaxStyle.scss";
 import ParallaxLine from "./ParallaxLine";
+import { useContext } from "react";
+import { AppContext, AppProvider } from "../AppContext";
 
 export const TextBox = () => {
   return (
     <div className="textBox">
       <h3>First Class Ticket</h3>
       <div className="rowParallaxLine">
-        <ParallaxLine speed={10} start={0} end={700} />
+        <AppProvider speed={10} start={0} end={700}>
+          <ParallaxLine />
+        </AppProvider>
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem est,
@@ -23,7 +27,9 @@ export const TextBox = () => {
         inventore. Necessitatibus autem tenetur praesentium obcaecati
         accusantium suscipit sequi minus?
       </p>
-      <ParallaxLine speed={5} start={850} end={1550} />
+      <AppProvider speed={10} start={600} end={1350}>
+        <ParallaxLine />
+      </AppProvider>
     </div>
   );
 };
