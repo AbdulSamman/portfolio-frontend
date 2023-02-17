@@ -1,4 +1,4 @@
-import "../styles/App.scss";
+import "../styles/parallaxStyle.scss";
 import ParallaxLine from "./ParallaxLine";
 
 export const TextBox = () => {

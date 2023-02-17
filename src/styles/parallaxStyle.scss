@@ -1,3 +1,4 @@
+@use "variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
     padding: 0;
@@ -21,14 +22,14 @@
 
         .personal {
             text-transform: uppercase;
-            color: #fff;
+            color: $mainColor;
             padding: 1rem 0;
             font-weight: bold;
             font-size: 4rem;
             height: fit-content;
-            text-shadow: 5px 5px #fff;
+            text-shadow: 5px 5px $mainColor;
             font-family: "Indie Flower", cursive;
-            color: rgb(21, 21, 51);
+            color: $backgroundColor;
         }
     }
 
@@ -48,6 +49,34 @@
         bottom: 0;
         width: 600px;
         height: 450px;
+    }
+}
+
+.parallaxRowLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+
+    .parallaxLine {
+        position: relative;
+        height: 1px;
+        background-color: $lineColor;
+        transform-origin: center center;
+        width: 40vw;
+    }
+    .parallaxSpace {
+        position: absolute;
+        height: max-content;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(21, 21, 51);
+
+        .BsTriangleHalfIcon {
+            color: $lineColor;
+        }
     }
 }
 

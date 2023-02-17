@@ -135,7 +135,6 @@ const ParallaxLine: React.FC<ParallaxLineProps> = ({ speed, start, end }) => {
     }
   };
 
-  console.log(window.scrollY);
   useEffect(() => {
     window.addEventListener("scroll", (event) =>
       handleScroll(event, window.pageYOffset)

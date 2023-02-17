@@ -4,6 +4,9 @@ export interface IAppProvider {
 
 export interface IAppContext {
   scaleX: number;
+  projectsRef: string;
+  skillsRef: string;
+  contactRef: string;
 }
 
 export interface IParallaxLineProps {
@@ -14,4 +17,8 @@ export interface IParallaxLineProps {
 export interface IHandleScroll {
   (event: Event): void;
   prevScrollPosition?: number;
+}
+
+export interface IPageProps {
+  ref: React.RefObject<HTMLDivElement>;
 }
