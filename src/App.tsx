@@ -13,7 +13,7 @@ function App() {
       <ParallaxBackground />
       <div className="navList">
         <nav>
-          <Link to="/" spy={true} smooth={true} offset={0} duration={500}>
+          <Link to="start" spy={true} smooth={true} offset={0} duration={500}>
             HOME
           </Link>
           <Link

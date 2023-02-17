@@ -1,0 +1,10 @@
+@use "../variables" as *;
+
+.pageProjects {
+    height: 100vh;
+    padding: $pagePadding;
+    background-color: $backgroundColor;
+    h1 {
+        color: $mainColor;
+    }
+}

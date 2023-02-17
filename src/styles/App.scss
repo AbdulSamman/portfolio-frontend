@@ -13,21 +13,27 @@ body {
   .App {
     .navList {
       position: absolute;
-      z-index: 3;
-      top: 90%;
+      z-index: 2;
       width: 100%;
-
+      bottom: 0;
+      left: 0;
       nav {
-        padding: 1.8rem 0;
         background-color: $backgroundColor;
         border-bottom: 1px solid $mainColor;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
+        column-gap: 2rem;
         align-items: center;
+
         a {
           color: $shadowWhite;
           text-decoration: none;
+          letter-spacing: 2px;
+          padding-bottom: 1rem;
+          &::first-letter {
+            font-size: 1.5rem;
+          }
         }
       }
     }
@@ -45,5 +51,14 @@ body {
       padding: 3rem 1rem;
       text-align: justify;
     }
+  }
+}
+
+@media (max-width: 567px) {
+  .shadowBlackImg {
+    max-height: 300px;
+  }
+  .rightImg {
+    max-height: 350px;
   }
 }

@@ -1,7 +1,8 @@
+import "../styles/pages/pageProjects.scss";
 export const PageProjects = () => {
   return (
-    <div id="projects">
-      <p>welcome to the Projects page</p>
+    <div id="projects" className="pageProjects">
+      <h1>welcome to the Projects page</h1>
     </div>
   );
 };
