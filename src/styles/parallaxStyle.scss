@@ -1,5 +1,5 @@
 @use "variables" as *;
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -22,13 +22,13 @@
 
         .personal {
             text-transform: uppercase;
-            color: $shadowWhite;
+            color: $Lime;
             padding: 1rem 0;
             font-weight: bold;
             font-size: 4rem;
             height: fit-content;
-            text-shadow: 5px 5px $shadowWhite;
-            font-family: "Indie Flower", cursive;
+            text-shadow: 5px 5px $mainColor;
+            font-family: $mainFonts, cursive;
             color: $backgroundColor;
         }
     }
