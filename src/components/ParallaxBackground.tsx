@@ -1,4 +1,6 @@
 import { Parallax } from "react-parallax";
+// for more parallax another image
+import { ParallaxBanner } from "react-scroll-parallax";
 import Background from "../images/Green.jpg";
 import shadowImage from "../images/shadowForest.png";
 import rightImage from "../images/palmen.png";
