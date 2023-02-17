@@ -18,7 +18,3 @@ export interface IHandleScroll {
   (event: Event): void;
   prevScrollPosition?: number;
 }
-
-export interface IPageProps {
-  ref: React.RefObject<HTMLDivElement>;
-}

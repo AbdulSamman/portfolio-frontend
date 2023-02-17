@@ -16,17 +16,17 @@ body {
       z-index: 3;
       top: 90%;
       width: 100%;
+
       nav {
         padding: 1.8rem 0;
         background-color: $backgroundColor;
-
-        border-bottom: 1px solid $lineColor;
+        border-bottom: 1px solid $mainColor;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
         a {
-          color: $mainColor;
+          color: $shadowWhite;
           text-decoration: none;
         }
       }

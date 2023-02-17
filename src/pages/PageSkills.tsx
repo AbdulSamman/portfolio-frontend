@@ -1,9 +1,9 @@
-import { IPageProps } from "../interfaces";
+import "../styles/pages/pageSkills.scss";
 
-export const PageSkills: React.FC<IPageProps> = ({ ref }) => {
+export const PageSkills = () => {
   return (
-    <div ref={ref} id="skills">
-      <p>welcome to the Skills page</p>
+    <div id="skills" className="pageSkills">
+      <h1>welcome to the Skills page</h1>
     </div>
   );
 };

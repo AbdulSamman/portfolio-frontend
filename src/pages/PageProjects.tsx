@@ -1,5 +1,3 @@
-import { IPageProps } from "../interfaces";
-
 export const PageProjects = () => {
   return (
     <div id="projects">

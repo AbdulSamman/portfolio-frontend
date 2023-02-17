@@ -7,56 +7,35 @@ import { PageContact } from "./pages/PageContact";
 
 import "./styles/App.scss";
 
-import { useContext } from "react";
-import { AppContext } from "./AppContext";
-
 function App() {
-  const { projectsRef, skillsRef, contactRef } = useContext(AppContext);
-
   return (
     <div className="App" id="start">
       <ParallaxBackground />
       <div className="navList">
         <nav>
-          <Link to="/" spy={true} smooth={true} offset={50} duration={500}>
+          <Link to="/" spy={true} smooth={true} offset={0} duration={500}>
             HOME
           </Link>
           <Link
             to="projects"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             PROJECTS
           </Link>
-          <Link to="skills" spy={true} smooth={true} offset={50} duration={500}>
+          <Link to="skills" spy={true} smooth={true} offset={0} duration={500}>
             SKILLS
           </Link>
-          <Link
-            to="#contact"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-          >
+          <Link to="contact" spy={true} smooth={true} offset={0} duration={500}>
             CONTACT
           </Link>
         </nav>
       </div>
-
-      <TextBox />
-      <TextBox />
-      <TextBox />
-      <TextBox />
-      <TextBox />
-      <PageSkills ref={skillsRef} />
-      <TextBox />
-
-      <TextBox />
       <PageProjects />
-      <TextBox />
-      <TextBox />
+      <PageSkills />
+      <PageContact />
     </div>
   );
 }

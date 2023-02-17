@@ -1,10 +1,9 @@
-import { IPageProps } from "../interfaces";
 import "../styles/pages/pageContact.scss";
 
-export const PageContact: React.FC<IPageProps> = ({ ref }) => {
+export const PageContact = () => {
   return (
-    <div ref={ref} id="contact" className="pageContact">
-      <p>welcome to the Contact page</p>
+    <div id="contact" className="pageContact">
+      <h1>welcome to the Contact page</h1>
     </div>
   );
 };

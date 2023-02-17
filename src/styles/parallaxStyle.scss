@@ -22,12 +22,12 @@
 
         .personal {
             text-transform: uppercase;
-            color: $mainColor;
+            color: $shadowWhite;
             padding: 1rem 0;
             font-weight: bold;
             font-size: 4rem;
             height: fit-content;
-            text-shadow: 5px 5px $mainColor;
+            text-shadow: 5px 5px $shadowWhite;
             font-family: "Indie Flower", cursive;
             color: $backgroundColor;
         }
@@ -61,7 +61,7 @@
     .parallaxLine {
         position: relative;
         height: 1px;
-        background-color: $lineColor;
+        background-color: $mainColor;
         transform-origin: center center;
         width: 40vw;
     }
@@ -75,7 +75,7 @@
         background-color: rgb(21, 21, 51);
 
         .BsTriangleHalfIcon {
-            color: $lineColor;
+            color: $mainColor;
         }
     }
 }

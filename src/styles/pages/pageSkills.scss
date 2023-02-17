@@ -1,9 +1,9 @@
 @use "../variables" as *;
 
-.pageContact {
+.pageSkills {
     height: 100vh;
-    background-color: $backgroundColor;
     padding: $pagePadding;
+    background-color: $backgroundColor;
     h1 {
         color: $mainColor;
     }
