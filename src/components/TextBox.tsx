@@ -6,7 +6,7 @@ export const TextBox = () => {
     <div className="textBox">
       <h3>First Class Ticket</h3>
       <div className="rowParallaxLine">
-        <ParallaxLine speed={10} />
+        <ParallaxLine speed={10} start={0} end={650} />
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem est,
@@ -23,6 +23,7 @@ export const TextBox = () => {
         inventore. Necessitatibus autem tenetur praesentium obcaecati
         accusantium suscipit sequi minus?
       </p>
+      <ParallaxLine speed={5} start={700} end={1350} />
     </div>
   );
 };
