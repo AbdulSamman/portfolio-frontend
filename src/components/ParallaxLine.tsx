@@ -1,7 +1,7 @@
 import "../styles/App.scss";
 import { BsTriangleHalf } from "react-icons/bs";
 import { useContext } from "react";
-import { AppContext } from "../AppContext";
+import { AppContext } from "../AppContextParallax";
 
 const ParallaxLine = () => {
   const { scaleX, rotateY } = useContext(AppContext);

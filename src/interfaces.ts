@@ -1,11 +1,17 @@
 export interface IAppProvider {
   children: React.ReactNode;
+}
+
+export interface IAppContext {}
+
+export interface IAppProviderParallax {
+  children: React.ReactNode;
   speed: number;
   start: number;
   end: number;
 }
 
-export interface IAppContext {
+export interface IAppContextParallax {
   scaleX: number;
   rotateY: number;
   isFixed: boolean;
