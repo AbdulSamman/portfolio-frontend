@@ -1,14 +1,14 @@
 import { Parallax } from "react-parallax";
 // for more parallax another image
-import Background from "../images/Green.jpg";
-import shadowImage from "../images/shadowForest.png";
-import rightImage from "../images/palmen.png";
-import mongodbImage from "../images/mongodb.png";
-import htmlImage from "../images/html.png";
-import jsImage from "../images/javascript.png";
-import tsImage from "../images/typescript.png";
-import nodejsImage from "../images/nodejs.png";
-import reactImage from "../images/react.png";
+import Background from "/images/Green.jpg";
+import shadowImage from "/images/shadowForest.png";
+import rightImage from "/images/palmen.png";
+import mongodbImage from "/images/mongodb.png";
+import htmlImage from "/images/html.png";
+import jsImage from "/images/javascript.png";
+import tsImage from "/images/typescript.png";
+import nodejsImage from "/images/nodejs.png";
+import reactImage from "/images/react.png";
 import "../styles/parallaxStyle.scss";
 import "../styles/cubeSpinner.scss";
 
