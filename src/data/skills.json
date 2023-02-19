@@ -1,0 +1,54 @@
+[
+  {
+    "type": "JAVASCRIPT",
+    "level": 95
+  },
+  {
+    "type": "TYPESCRIPT",
+    "level": 90
+  },
+  {
+    "type": "REACT",
+    "level": 95
+  },
+  {
+    "type": "HTML",
+    "level": 99
+  },
+  {
+    "type": "CSS",
+    "level": 99
+  },
+  {
+    "type": "BOOTSTRAP",
+    "level": 99
+  },
+  {
+    "type": "TAILWIND",
+    "level": 85
+  },
+  {
+    "type": "SASS",
+    "level": 90
+  },
+  {
+    "type": "NODE.JS",
+    "level": 85
+  },
+  {
+    "type": "EXPRESS.JS",
+    "level": 90
+  },
+  {
+    "type": "MONGODB",
+    "level": 89
+  },
+  {
+    "type": "MONGOOSE",
+    "level": 85
+  },
+  {
+    "type": "CYPRESS",
+    "level": 80
+  }
+]

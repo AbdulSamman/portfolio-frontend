@@ -7,18 +7,6 @@ import "./styles/App.scss";
 import { useContext } from "react";
 import { AppContext } from "./AppContextParallax";
 
-/* 
-{
-    "personal": {
-      "firstName": "Abdulrazak",
-      "lastName": "Samman",
-      "githubName": "AbdulSamman",
-      "description": "Passionate Junior Fullstack Web Developer with problem-solving skills, strong design sense, and a hunger for learning.",
-      "hobbys": ["Chess", "Football", "Swimming"]
-    }
-  }
-*/
-
 function App() {
   const { isFixed } = useContext(AppContext);
   return (
