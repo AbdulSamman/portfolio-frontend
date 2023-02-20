@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Cypress Test",
     "image": "/images/projects/cypressTest.png",
-    "tags": ["React", "Cypress", "TypeScript", "Sass"],
+    "tags": ["React", "Cypress", "TypeScript", "Scss"],
     "repo": "https://github.com/AbdulSamman/cypress-site",
     "url": "",
     "description": "Simple React Site with simple Cypress Test"
@@ -39,7 +39,7 @@
     "id": 5,
     "name": "SQlite CRUD flashcards",
     "image": "/images/projects/sqliteCrudFlashcards.png",
-    "tags": ["React", "Sass", "TypeScript", "Sqlite", "Express"],
+    "tags": ["React", "Scss", "TypeScript", "Sqlite", "Express"],
     "repo": "https://github.com/AbdulSamman/sqlite-crud-flashcards-frontend",
     "url": "",
     "description": "Develop a basic full-stack flashcards application with CRUD functionality"
@@ -48,7 +48,7 @@
     "id": 6,
     "name": "SQlite readonly flashcards",
     "image": "/images/projects/sqliteReadonlyFlashcards.png",
-    "tags": ["React", "Sass", "TypeScript", "Express", "Sqlite"],
+    "tags": ["React", "Scss", "TypeScript", "Express", "Sqlite"],
     "repo": "https://github.com/AbdulSamman/sqlite-readonly-flashcards-frontend",
     "url": "",
     "description": "Create a readonly full-stack flashcards application with CRUD operations using SQLite as the database."
@@ -93,7 +93,7 @@
     "id": 11,
     "name": "Bike Rental App",
     "image": "/images/projects/BikeRentalApp.png",
-    "tags": ["React", "Sass", "JavaScript"],
+    "tags": ["React", "Scss", "JavaScript"],
     "repo": "https://github.com/AbdulSamman/Bike-Rental-App",
     "url": "https://abdulsamman.github.io/Bike-Rental-App/",
     "description": "Bike Renal App API with PIGEON MAPS"
@@ -111,7 +111,7 @@
     "id": 13,
     "name": "Node/Express Api with JSON-file",
     "image": "/images/projects/NodeExpress-Api-JSONFILE.png",
-    "tags": ["React", "Sass", "TypeScript", "Express"],
+    "tags": ["React", "Scss", "TypeScript", "Express"],
     "repo": "https://github.com/AbdulSamman/NodeExpress-API--JSON-file-data",
     "url": "",
     "description": "Create simple Node/Express Api with JSON-file"
@@ -147,7 +147,7 @@
     "id": 17,
     "name": "React zustand with JSON server",
     "image": "/images/projects/zustand-json-server.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/zustand-json-server",
     "url": "",
     "description": "simple JSON server with react zustand"
@@ -156,7 +156,7 @@
     "id": 18,
     "name": "DEMO zustand",
     "image": "/images/projects/DEMO-zustand.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/zustand-json-server",
     "url": "",
     "description": "simple dynamic DEMO react zustand"
@@ -165,7 +165,7 @@
     "id": 19,
     "name": "React useContext with JSON server",
     "image": "/images/projects/zustand-json-server.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/usecontext-jsonServer",
     "url": "",
     "description": "simple  JSON server with react useContext"
@@ -183,7 +183,7 @@
     "id": 21,
     "name": "Get Job/todos",
     "image": "/images/projects/getajob.png",
-    "tags": ["React", "TypeScript", "Sass"],
+    "tags": ["React", "TypeScript", "Scss"],
     "repo": "https://github.com/AbdulSamman/getajob-frontend",
     "url": "",
     "description": "Get job/tods frontend/backend"
@@ -192,7 +192,7 @@
     "id": 22,
     "name": "MakeUp shop",
     "image": "/images/projects/makeUpShop.png",
-    "tags": ["React", "TypeScript", "Sass"],
+    "tags": ["React", "TypeScript", "Scss"],
     "repo": "https://github.com/AbdulSamman/makeup-shop-vite",
     "url": "https://makeup-shop-vite.vercel.app/",
     "description": "MakeUp shop frontend with react route"
@@ -210,7 +210,7 @@
     "id": 24,
     "name": "Travel Info Site",
     "image": "/images/projects/infoTravilSite.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/travel-info-site",
     "url": "https://react-route-site.netlify.app/",
     "description": "Travel Info Site using react router"
@@ -219,7 +219,7 @@
     "id": 25,
     "name": "FORM with JSON server",
     "image": "/images/projects/formJsonServer.png",
-    "tags": ["React", "Sass", "TypeScript", "JSON-server"],
+    "tags": ["React", "Scss", "TypeScript", "JSON-server"],
     "repo": "https://github.com/AbdulSamman/form-json-server",
     "url": "",
     "description": "simple form JSON server using typescript"
@@ -228,7 +228,7 @@
     "id": 26,
     "name": "CUSTOM HOOKS",
     "image": "/images/projects/customHooks.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/custom-hooks",
     "url": "",
     "description": "simple custom hooks useToggle, useFetch using typescript"
@@ -237,16 +237,16 @@
     "id": 27,
     "name": "Dynamic styling",
     "image": "/images/projects/dynamicStyling.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/dynamic-styling",
     "url": "",
-    "description": "simple Dynamic styling using typescript, react, Sass"
+    "description": "simple Dynamic styling using typescript, react, Scss"
   },
   {
     "id": 28,
     "name": "Book Info Site JSX Basic",
     "image": "/images/projects/jsxBasics.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/Books-info-site",
     "url": "https://books-info-site.netlify.app/",
     "description": "Book Info Site, JSX Basic with localStorage using typescript"
@@ -255,7 +255,7 @@
     "id": 29,
     "name": "German Nouns",
     "image": "/images/projects/germanNouns.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/german-nouns",
     "url": "",
     "description": "German nouns learn mark with localStorage using typescript"
@@ -264,7 +264,7 @@
     "id": 30,
     "name": "Deployment with Netlify and Vercel",
     "image": "/images/projects/deploymentNetlifyVercel.png",
-    "tags": ["React", "Sass", "TypeScript"],
+    "tags": ["React", "Scss", "TypeScript"],
     "repo": "https://github.com/AbdulSamman/deployment-netlify-vercel",
     "url": "https://deployment-netlify-vercel.vercel.app",
     "description": "Deploying with netlify and vercel, we need _redirect for netlify and vercel.json for vercel"
