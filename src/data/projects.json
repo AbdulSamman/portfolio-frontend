@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "name": "sqlite CRUD flashcards",
+    "name": "SQlite CRUD flashcards",
     "image": "/images/projects/sqliteCrudFlashcards.png",
     "tags": ["react", "scss", "typescript", "sqlite", "express"],
     "repo": "https://github.com/AbdulSamman/sqlite-crud-flashcards-frontend",
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "name": "sqlite readonly flashcards",
+    "name": "SQlite readonly flashcards",
     "image": "/images/projects/sqliteReadonlyFlashcards.png",
     "tags": ["react", "scss", "typescript", "express", "sqlite"],
     "repo": "https://github.com/AbdulSamman/sqlite-readonly-flashcards-frontend",

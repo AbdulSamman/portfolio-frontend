@@ -154,7 +154,8 @@
                     transform: rotateY(180deg);
                     p {
                         height: 85%;
-                        border: solid green;
+                        display: flex;
+                        align-items: center;
                     }
                     .icons {
                         display: flex;
@@ -165,15 +166,20 @@
 
                         .icon {
                             display: flex;
-                            background-color: #eee;
                             font-size: 2.5rem;
                             color: rgba($backgroundCard, 0.6);
+                            &.ic1:hover,
+                            &.ic2:hover {
+                                color: $Lime;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
             }
             &:hover .flipCardInner {
                 transform: rotateY(180deg);
+                backface-visibility: visible;
             }
         }
     }
