@@ -1,4 +1,4 @@
-import "../styles/App.scss";
+import "../styles/parallaxStyle.scss";
 import { BsTriangleHalf } from "react-icons/bs";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";

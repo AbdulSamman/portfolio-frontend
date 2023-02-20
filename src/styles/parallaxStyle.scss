@@ -62,6 +62,7 @@
         position: relative;
         height: 1px;
         background-color: $mainColor;
+        filter: brightness(150%);
         transform-origin: center center;
         width: 40vw;
     }
@@ -72,10 +73,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(21, 21, 51);
+        background-color: $backgroundColor;
 
         .BsTriangleHalfIcon {
             color: $mainColor;
+            filter: brightness(150%);
         }
     }
 }

@@ -1,15 +1,20 @@
-import { TextBox } from "../components/TextBox";
 import "../styles/pages/pageProjects.scss";
 import { useContext } from "react";
-import { AppContext } from "../AppContext";
+import { AppContext, AppProvider } from "../AppContext";
 import { AiFillGithub, AiOutlineGlobal } from "react-icons/ai";
 import React from "react";
-
+import ParallaxLine from "../components/ParallaxLine";
+import { Link } from "react-scroll";
 export const PageProjects = () => {
   const { projects } = useContext(AppContext);
   return (
     <div id="projects" className="pageProjects">
-      <h1>PROJECTS</h1>
+      <div style={{ paddingBottom: "2rem" }}>
+        <AppProvider speed={10} start={0} end={1000}>
+          <ParallaxLine />
+        </AppProvider>
+      </div>
+
       <div className="projects">
         {projects.map((project) => {
           return (
@@ -37,8 +42,24 @@ export const PageProjects = () => {
                   <div className="flipCardInner-back">
                     <p>{project.description}</p>
                     <div className="icons">
-                      <AiFillGithub className="icon ic1" />
-                      <AiOutlineGlobal className="icon ic2" />
+                      <a href={project.repo} target="_blank">
+                        <AiFillGithub className="icon ic1" />
+                      </a>
+                      {project.url === "" ? (
+                        <AiOutlineGlobal
+                          className={
+                            project.url === "" ? "icon notUrl" : "icon ic2"
+                          }
+                        />
+                      ) : (
+                        <a href={project.url} target="_blank">
+                          <AiOutlineGlobal
+                            className={
+                              project.url === "" ? "icon notUrl" : "icon ic2"
+                            }
+                          />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -46,6 +67,11 @@ export const PageProjects = () => {
             </React.Fragment>
           );
         })}
+      </div>
+      <div style={{ paddingTop: "2rem" }}>
+        <AppProvider speed={10} start={1800} end={2800}>
+          <ParallaxLine />
+        </AppProvider>
       </div>
     </div>
   );

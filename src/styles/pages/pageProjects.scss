@@ -156,6 +156,7 @@
                         height: 85%;
                         display: flex;
                         align-items: center;
+                        text-shadow: -3px 0px 15px $Lime;
                     }
                     .icons {
                         display: flex;
@@ -173,6 +174,10 @@
                                 color: $Lime;
                                 cursor: pointer;
                             }
+                        }
+                        .notUrl {
+                            color: red;
+                            cursor: auto;
                         }
                     }
                 }

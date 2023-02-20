@@ -7,10 +7,7 @@
 }
 body {
   overflow-x: hidden;
-  .rowParallaxLine {
-    display: flex;
-    justify-content: space-around;
-  }
+
   .App {
     .navList {
       z-index: 2;
@@ -38,6 +35,10 @@ body {
             color: $mainColor;
             cursor: pointer;
           }
+        }
+        a.active:not(:first-child) {
+          color: $mainColor;
+          cursor: pointer;
         }
       }
     }

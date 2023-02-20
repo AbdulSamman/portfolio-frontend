@@ -21,15 +21,27 @@ function App() {
             to="projects"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-80}
             duration={500}
           >
             PROJECTS
           </Link>
-          <Link to="skills" spy={true} smooth={true} offset={0} duration={500}>
+          <Link
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             SKILLS
           </Link>
-          <Link to="contact" spy={true} smooth={true} offset={0} duration={500}>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             CONTACT
           </Link>
         </nav>
