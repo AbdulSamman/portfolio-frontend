@@ -1,81 +1,81 @@
 [
   {
     "id": 1,
-    "name": "NextJs with Tailwind CSS",
+    "name": "NextJs with Tailwind css",
     "image": "/images/projects/nextjs-tailwind.png",
-    "tags": ["React", "Tailwind", "TypeScript", "Next"],
+    "tags": ["react", "tailwind", "typescript", "next"],
     "repo": "https://github.com/AbdulSamman/nextjs-usecontext",
     "url": "https://nextjs-usecontext.vercel.app/",
-    "description": "This is my inaugural project with Next.js and Tailwind. It demonstrates the utilization of Tailwind CSS (v3.2) in conjunction with Next.js."
+    "description": "This is my inaugural project with Next.js and Tailwind. It demonstrates the utilization of Tailwind css (v3.2) in conjunction with Next.js."
   },
   {
     "id": 2,
-    "name": "MongodbTest CRUD",
+    "name": "mongodbTest CRUD",
     "image": "/images/projects/mongodbTest.png",
-    "tags": ["Express", "Mongodb", "TypeScript", "Express"],
+    "tags": ["express", "mongodb", "typescript"],
     "repo": "https://github.com/AbdulSamman/mongodbTest",
     "url": "",
-    "description": "you can utilize REST to build a server using Express and Mongoose. This will provide you with the ability to implement basic CRUD (Create, Read, Update, and Delete) functionality for your data."
+    "description": "you can utilize REST to build a server using express and Mongoose. This will provide you with the ability to implement basic CRUD (Create, Read, Update, and Delete) functionality for your data."
   },
   {
     "id": 3,
     "name": "Cypress Test",
     "image": "/images/projects/cypressTest.png",
-    "tags": ["React", "Cypress", "TypeScript", "Scss"],
+    "tags": ["react", "cypress", "typescript", "scss"],
     "repo": "https://github.com/AbdulSamman/cypress-site",
     "url": "",
-    "description": "Simple React Site with simple Cypress Test"
+    "description": "Simple react Site with simple Cypress Test"
   },
   {
     "id": 4,
     "name": "Vitest",
     "image": "/images/projects/vitest.png",
-    "tags": ["React", "Vitest", "TypeScript"],
+    "tags": ["react", "vitest", "typescript"],
     "repo": "https://github.com/AbdulSamman/first-test-vitest",
     "url": "",
-    "description": "Simple React Site with simple Vitest"
+    "description": "Simple react Site with simple Vitest"
   },
   {
     "id": 5,
-    "name": "SQlite CRUD flashcards",
+    "name": "sqlite CRUD flashcards",
     "image": "/images/projects/sqliteCrudFlashcards.png",
-    "tags": ["React", "Scss", "TypeScript", "Sqlite", "Express"],
+    "tags": ["react", "scss", "typescript", "sqlite", "express"],
     "repo": "https://github.com/AbdulSamman/sqlite-crud-flashcards-frontend",
     "url": "",
     "description": "Develop a basic full-stack flashcards application with CRUD functionality"
   },
   {
     "id": 6,
-    "name": "SQlite readonly flashcards",
+    "name": "sqlite readonly flashcards",
     "image": "/images/projects/sqliteReadonlyFlashcards.png",
-    "tags": ["React", "Scss", "TypeScript", "Express", "Sqlite"],
+    "tags": ["react", "scss", "typescript", "express", "sqlite"],
     "repo": "https://github.com/AbdulSamman/sqlite-readonly-flashcards-frontend",
     "url": "",
-    "description": "Create a readonly full-stack flashcards application with CRUD operations using SQLite as the database."
+    "description": "Create a readonly full-stack flashcards application with CRUD operations using sqlite as the database."
   },
   {
     "id": 7,
-    "name": "Node/Express API",
+    "name": "Node/express API",
     "image": "/images/projects/nodeApiMongodb.png",
-    "tags": ["React", "Express", "TypeScript", "Mongodb"],
+    "tags": ["react", "express", "typescript", "mongodb"],
     "repo": "https://github.com/AbdulSamman/node-api-mongodb",
     "url": "",
-    "description": "Implement a Node.js/Express API that utilizes a basic Express server and MongoDB as the data source."
+    "description": "Implement a Node.js/express API that utilizes a basic express server and mongodb as the data source."
   },
   {
     "id": 8,
     "name": "Tic Tac Toe",
     "image": "/images/projects/ticTacToe.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/tec-tac-toe",
     "url": "https://abdulsamman.github.io/tec-tac-toe/",
-    "description": "Develop a basic tic-tac-toe game using JavaScript."
+    "description": "Develop a basic tic-tac-toe game using javascript."
   },
   {
     "id": 9,
     "name": "API NASA with subtitle VTT",
     "image": "/images/projects/NasaPicOfTHeDay.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/nasa-api-vtt",
     "url": "https://abdulsamman.github.io/nasa-api-vtt/",
     "description": "API-NASA Pic of the Day with Subtitle VTT"
@@ -84,7 +84,7 @@
     "id": 10,
     "name": "DCI Chat Api",
     "image": "/images/projects/DCI-ChatApi.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/github-chat-api",
     "url": "",
     "description": "Create a simple DCI Chat API"
@@ -93,7 +93,7 @@
     "id": 11,
     "name": "Bike Rental App",
     "image": "/images/projects/BikeRentalApp.png",
-    "tags": ["React", "Scss", "JavaScript"],
+    "tags": ["react", "scss", "javascript"],
     "repo": "https://github.com/AbdulSamman/Bike-Rental-App",
     "url": "https://abdulsamman.github.io/Bike-Rental-App/",
     "description": "Bike Renal App API with PIGEON MAPS"
@@ -102,25 +102,25 @@
     "id": 12,
     "name": "API CRUD MONGOOSE",
     "image": "/images/projects/apiMongoose-CRUD.png",
-    "tags": ["React", "Express", "TypeScript"],
+    "tags": ["react", "express", "typescript"],
     "repo": "https://github.com/AbdulSamman/api-mongoose-crud",
     "url": "",
     "description": "Create a simple server CRUD mongoose API"
   },
   {
     "id": 13,
-    "name": "Node/Express Api with JSON-file",
+    "name": "Node/express Api with JSON-file",
     "image": "/images/projects/NodeExpress-Api-JSONFILE.png",
-    "tags": ["React", "Scss", "TypeScript", "Express"],
-    "repo": "https://github.com/AbdulSamman/NodeExpress-API--JSON-file-data",
+    "tags": ["react", "scss", "typescript", "express"],
+    "repo": "https://github.com/AbdulSamman/Nodeexpress-API--JSON-file-data",
     "url": "",
-    "description": "Create simple Node/Express Api with JSON-file"
+    "description": "Create simple Node/express Api with JSON-file"
   },
   {
     "id": 14,
     "name": "JACKPOT random number",
     "image": "/images/projects/jackpotNumber.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/jackpot-number",
     "url": "https://abdulsamman.github.io/jackpot-number/",
     "description": "Generate a random Jackpot number"
@@ -129,7 +129,7 @@
     "id": 15,
     "name": "Guess a number game",
     "image": "/images/projects/guessAnumberGame.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/guess-number-game",
     "url": "https://abdulsamman.github.io/guess-number-game/",
     "description": "Guess a number game with three different levels"
@@ -138,16 +138,16 @@
     "id": 16,
     "name": "BMI Calculator",
     "image": "/images/projects/BMI-calculator.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/bmi-rechner",
     "url": "https://abdulsamman.github.io/bmi-rechner/",
     "description": "simple BMI calculator with Weight, Hight and Age. with localStorage to see the last result"
   },
   {
     "id": 17,
-    "name": "React zustand with JSON server",
+    "name": "react zustand with JSON server",
     "image": "/images/projects/zustand-json-server.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/zustand-json-server",
     "url": "",
     "description": "simple JSON server with react zustand"
@@ -156,34 +156,34 @@
     "id": 18,
     "name": "DEMO zustand",
     "image": "/images/projects/DEMO-zustand.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/zustand-json-server",
     "url": "",
     "description": "simple dynamic DEMO react zustand"
   },
   {
     "id": 19,
-    "name": "React useContext with JSON server",
+    "name": "react useContext with JSON server",
     "image": "/images/projects/zustand-json-server.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/usecontext-jsonServer",
     "url": "",
     "description": "simple  JSON server with react useContext"
   },
   {
     "id": 20,
-    "name": "EJS Basics",
+    "name": "ejs Basics",
     "image": "/images/projects/ejsBasics.png",
-    "tags": ["EJS", "TypeScript", "Express"],
+    "tags": ["ejs", "typescript", "express"],
     "repo": "https://github.com/AbdulSamman/ejs-basics",
     "url": "",
-    "description": "EJS basics with express server"
+    "description": "ejs basics with express server"
   },
   {
     "id": 21,
     "name": "Get Job/todos",
     "image": "/images/projects/getajob.png",
-    "tags": ["React", "TypeScript", "Scss"],
+    "tags": ["react", "typescript", "scss"],
     "repo": "https://github.com/AbdulSamman/getajob-frontend",
     "url": "",
     "description": "Get job/tods frontend/backend"
@@ -192,7 +192,7 @@
     "id": 22,
     "name": "MakeUp shop",
     "image": "/images/projects/makeUpShop.png",
-    "tags": ["React", "TypeScript", "Scss"],
+    "tags": ["react", "typescript", "scss"],
     "repo": "https://github.com/AbdulSamman/makeup-shop-vite",
     "url": "https://makeup-shop-vite.vercel.app/",
     "description": "MakeUp shop frontend with react route"
@@ -201,7 +201,7 @@
     "id": 23,
     "name": "Node Web server",
     "image": "/images/projects/node-web-server.png",
-    "tags": ["TypeScript"],
+    "tags": ["typescript"],
     "repo": "https://github.com/AbdulSamman/node-web-server",
     "url": "",
     "description": "simple Node web server using typescript"
@@ -210,7 +210,7 @@
     "id": 24,
     "name": "Travel Info Site",
     "image": "/images/projects/infoTravilSite.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/travel-info-site",
     "url": "https://react-route-site.netlify.app/",
     "description": "Travel Info Site using react router"
@@ -219,7 +219,7 @@
     "id": 25,
     "name": "FORM with JSON server",
     "image": "/images/projects/formJsonServer.png",
-    "tags": ["React", "Scss", "TypeScript", "JSON-server"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/form-json-server",
     "url": "",
     "description": "simple form JSON server using typescript"
@@ -228,7 +228,7 @@
     "id": 26,
     "name": "CUSTOM HOOKS",
     "image": "/images/projects/customHooks.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/custom-hooks",
     "url": "",
     "description": "simple custom hooks useToggle, useFetch using typescript"
@@ -237,16 +237,16 @@
     "id": 27,
     "name": "Dynamic styling",
     "image": "/images/projects/dynamicStyling.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/dynamic-styling",
     "url": "",
-    "description": "simple Dynamic styling using typescript, react, Scss"
+    "description": "simple Dynamic styling using typescript, react, scss"
   },
   {
     "id": 28,
     "name": "Book Info Site JSX Basic",
     "image": "/images/projects/jsxBasics.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/Books-info-site",
     "url": "https://books-info-site.netlify.app/",
     "description": "Book Info Site, JSX Basic with localStorage using typescript"
@@ -255,7 +255,7 @@
     "id": 29,
     "name": "German Nouns",
     "image": "/images/projects/germanNouns.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/german-nouns",
     "url": "",
     "description": "German nouns learn mark with localStorage using typescript"
@@ -264,7 +264,7 @@
     "id": 30,
     "name": "Deployment with Netlify and Vercel",
     "image": "/images/projects/deploymentNetlifyVercel.png",
-    "tags": ["React", "Scss", "TypeScript"],
+    "tags": ["react", "scss", "typescript"],
     "repo": "https://github.com/AbdulSamman/deployment-netlify-vercel",
     "url": "https://deployment-netlify-vercel.vercel.app",
     "description": "Deploying with netlify and vercel, we need _redirect for netlify and vercel.json for vercel"
@@ -273,7 +273,7 @@
     "id": 31,
     "name": "Crypto converter",
     "image": "/images/projects/cryptoConverter.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/crypto-converter",
     "url": "https://abdulsamman.github.io/crypto-converter/",
     "description": "Create a simple Crypto converter using javsscript"
@@ -282,7 +282,7 @@
     "id": 32,
     "name": "GitHub username repos API",
     "image": "/images/projects/GithubUsername.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["html", "css", "javascript"],
     "repo": "https://github.com/AbdulSamman/github-username-api",
     "url": "https://abdulsamman.github.io/github-username-api/",
     "description": "Create a simple github username repositories API"

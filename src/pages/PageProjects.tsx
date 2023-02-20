@@ -37,8 +37,8 @@ export const PageProjects = () => {
                   <div className="flipCardInner-back">
                     <p>{project.description}</p>
                     <div className="icons">
-                      <AiFillGithub />
-                      <AiOutlineGlobal />
+                      <AiFillGithub className="icon ic1" />
+                      <AiOutlineGlobal className="icon ic2" />
                     </div>
                   </div>
                 </div>

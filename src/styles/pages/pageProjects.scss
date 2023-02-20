@@ -7,6 +7,7 @@
     h1 {
         color: $mainColor;
     }
+
     .projects {
         display: flex;
         gap: 1rem;
@@ -15,9 +16,10 @@
         flex-wrap: wrap;
 
         .project {
-            width: 200px;
-            height: 300px;
+            width: 220px;
+            height: 320px;
             perspective: 1000px; // add 3D perspective
+
             .flipCardInner {
                 border-radius: $borderTop;
                 position: relative;
@@ -25,7 +27,7 @@
                 transition: transform 0.6s;
                 width: 100%;
                 height: 100%;
-                box-shadow: $mainColor 0px 3px 8px;
+                box-shadow: $mainColor 0px 2px 3px 4px;
                 &,
                 &-front,
                 &-back {
@@ -36,43 +38,138 @@
                 }
 
                 &-front {
-                    height: 100%;
+                    border-radius: $borderTop;
+                    background-color: rgba($backgroundCard, 0.2);
                     .imgContainer {
-                        width: 200px;
+                        width: 220px;
                         height: 150px;
                         img {
-                            width: 200px;
+                            width: 220px;
                             height: 150px;
                             border-radius: $borderTop;
+                            filter: brightness(90%) saturate(90%);
                         }
                     }
                     .container {
-                        padding: 0 0.5rem;
+                        padding: 0.5rem;
                         display: flex;
                         flex-flow: column wrap;
+                        row-gap: 0.5rem;
                         width: 100%;
-
+                        text-align: center;
+                        h4 {
+                            height: 50px;
+                            color: $Lime;
+                        }
                         .tags {
                             display: grid;
                             grid-template-columns: 1fr 1fr;
                             grid-gap: 10px;
                             gap: 10px;
+                            text-align: left;
+                            .tag {
+                                border-radius: 10px;
+                                text-align: center;
+                                font-weight: bold;
+                                padding: 0.1rem;
+
+                                &.typescript {
+                                    color: $typescript;
+                                    background-color: rgba($typescript, 0.5);
+                                    &::before {
+                                        content: "";
+                                    }
+                                }
+
+                                &.react {
+                                    color: $react;
+                                    background-color: rgba($react, 0.5);
+                                }
+                                &.express {
+                                    color: $express;
+                                    background-color: rgba($express, 0.5);
+                                }
+                                &.scss {
+                                    color: $scss;
+                                    background-color: rgba($scss, 0.5);
+                                }
+                                &.sqlite {
+                                    color: $sqlite;
+                                    background-color: rgba($sqlite, 0.5);
+                                }
+                                &.mongodb {
+                                    color: $mongodb;
+                                    background-color: rgba($mongodb, 0.5);
+                                }
+                                &.html {
+                                    color: $html;
+                                    background-color: rgba($html, 0.5);
+                                }
+                                &.css {
+                                    color: $css;
+                                    background-color: rgba($css, 0.3);
+                                }
+                                &.javascript {
+                                    color: $javascript;
+                                    background-color: rgba($javascript, 0.5);
+                                }
+                                &.ejs {
+                                    color: $ejs1;
+                                    background-color: rgba($ejs, 0.5);
+                                }
+                                &.tailwind {
+                                    color: $tailwind;
+                                    background-color: rgba($tailwind, 0.5);
+                                }
+                                &.next {
+                                    color: $next;
+                                    background-color: rgba($next, 0.5);
+                                }
+                                &.cypress {
+                                    color: $cypress;
+                                    background-color: rgba($cypress, 0.5);
+                                }
+                                &.vitest {
+                                    color: $vitest1;
+                                    background-color: rgba($vitest2, 0.5);
+                                }
+                            }
                         }
                     }
                 }
 
                 &-back {
-                    transform: rotateY(180deg);
-                    background-color: #e6e6e6;
-                    height: 100%;
-                    width: 100%;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
                     align-items: center;
                     text-align: center;
-                    flex-direction: column;
-                    box-shadow: $mainColor 0px 3px 8px;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba($backgroundCard, 0.2);
+                    box-shadow: $Lime 0px 2px 3px 4px;
                     border-radius: $borderTop;
+                    font-weight: bold;
+                    padding: 10px;
+                    color: $backgroundColor;
+                    transform: rotateY(180deg);
+                    p {
+                        height: 85%;
+                        border: solid green;
+                    }
+                    .icons {
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 100%;
+                        z-index: 3;
+                        position: relative;
+
+                        .icon {
+                            display: flex;
+                            background-color: #eee;
+                            font-size: 2.5rem;
+                            color: rgba($backgroundCard, 0.6);
+                        }
+                    }
                 }
             }
             &:hover .flipCardInner {
