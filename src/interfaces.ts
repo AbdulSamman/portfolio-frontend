@@ -1,20 +1,17 @@
 export interface IAppProvider {
   children: React.ReactNode;
-}
-
-export interface IAppContext {}
-
-export interface IAppProviderParallax {
-  children: React.ReactNode;
   speed: number;
   start: number;
   end: number;
 }
 
-export interface IAppContextParallax {
+export interface IAppContext {
   scaleX: number;
   rotateY: number;
   isFixed: boolean;
+  projects: IProject[];
+  skills: ISkills[];
+  person: IPerson;
 }
 
 export interface IParallaxLineProps {
@@ -38,4 +35,26 @@ export interface ParallaxLineProps {
 export interface HandleScroll {
   (event: Event, scrollY: number): void;
   prevScrollPosition?: number;
+}
+
+export interface IPerson {
+  firstName: string;
+  lastName: string;
+  githubName: string;
+  hobbys: string[];
+  description: string;
+}
+
+export interface IProject {
+  id: number;
+  name: string;
+  image: string;
+  tags: string[];
+  repo: string;
+  url: string;
+  description: string;
+}
+export interface ISkills {
+  type: string;
+  level: number;
 }

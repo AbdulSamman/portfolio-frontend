@@ -5,7 +5,7 @@ import { PageSkills } from "./pages/PageSkills";
 import { PageContact } from "./pages/PageContact";
 import "./styles/App.scss";
 import { useContext } from "react";
-import { AppContext } from "./AppContextParallax";
+import { AppContext } from "./AppContext";
 
 function App() {
   const { isFixed } = useContext(AppContext);

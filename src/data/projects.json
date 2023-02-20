@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "name": "Node/Express API with simple Express server and mongodb data source",
+    "name": "Node/Express API",
     "image": "/images/projects/nodeApiMongodb.png",
     "tags": ["React", "Express", "TypeScript", "Mongodb"],
     "repo": "https://github.com/AbdulSamman/node-api-mongodb",
@@ -92,7 +92,7 @@
   {
     "id": 11,
     "name": "Bike Rental App",
-    "image": "/images/projects/BikeRenalApp.png",
+    "image": "/images/projects/BikeRentalApp.png",
     "tags": ["React", "Sass", "JavaScript"],
     "repo": "https://github.com/AbdulSamman/Bike-Rental-App",
     "url": "https://abdulsamman.github.io/Bike-Rental-App/",
@@ -261,7 +261,7 @@
     "description": "German nouns learn mark with localStorage using typescript"
   },
   {
-    "id": 29,
+    "id": 30,
     "name": "Deployment with Netlify and Vercel",
     "image": "/images/projects/deploymentNetlifyVercel.png",
     "tags": ["React", "Sass", "TypeScript"],
@@ -270,7 +270,7 @@
     "description": "Deploying with netlify and vercel, we need _redirect for netlify and vercel.json for vercel"
   },
   {
-    "id": 30,
+    "id": 31,
     "name": "Crypto converter",
     "image": "/images/projects/cryptoConverter.png",
     "tags": ["HTML", "CSS", "JavaScript"],
@@ -279,17 +279,8 @@
     "description": "Create a simple Crypto converter using javsscript"
   },
   {
-    "id": 31,
-    "name": "GitHub username repos API",
-    "image": "/images/projects/GithubUsername.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "repo": "https://github.com/AbdulSamman/github-username-api",
-    "url": "https://abdulsamman.github.io/github-username-api/",
-    "description": "Create a simple github username repositories API"
-  },
-  {
     "id": 32,
-    "name": "Crypto converter",
+    "name": "GitHub username repos API",
     "image": "/images/projects/GithubUsername.png",
     "tags": ["HTML", "CSS", "JavaScript"],
     "repo": "https://github.com/AbdulSamman/github-username-api",

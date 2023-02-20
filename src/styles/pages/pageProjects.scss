@@ -1,10 +1,48 @@
 @use "../variables" as *;
 
 .pageProjects {
-    height: 100vh;
     padding: $pagePadding;
     background-color: $backgroundColor;
     h1 {
         color: $mainColor;
+    }
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .project {
+            border: solid red;
+            width: 250px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+
+            .imageContainer {
+                width: 250px;
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+            &:hover {
+                transform: scale(1.2);
+                transition: 1.5s;
+            }
+            .container {
+                padding: 0 0.5rem;
+                display: flex;
+                flex-flow: column wrap;
+                word-break: break-all;
+                .tags {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 10px;
+                }
+            }
+        }
     }
 }
