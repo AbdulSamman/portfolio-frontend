@@ -12,6 +12,7 @@ export interface IAppContext {
   projects: IProject[];
   skills: ISkills[];
   person: IPerson;
+  isOpacity: number;
 }
 
 export interface IParallaxLineProps {

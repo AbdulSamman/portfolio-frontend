@@ -25,7 +25,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
   const [scaleX, setScaleX] = useState(0.2);
   const [rotateY, setRotateY] = useState(0.2);
   const [isFixed, setIsFixed] = useState(false);
-
+  const [isOpacity, setIsOpacity] = useState(0);
   // Data
   const [person, setPerson] = useState<IPerson>(personData);
   const [projects, setProjects] = useState<IProject[]>(projectsData);
@@ -47,13 +47,31 @@ export const AppProvider: React.FC<IAppProvider> = ({
       } else if (direction === "up") {
         scaleX = 0.01 + (scrollY - start) * 0.0015;
       }
+
       setRotateY(scaleX);
       setScaleX(scaleX);
     }
-    if (scrollY > 850) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
+    switch (true) {
+      case scrollY >= 1150:
+        setIsOpacity(1);
+        break;
+      case scrollY >= 950:
+        setIsOpacity(0.9);
+        break;
+      case scrollY >= 850:
+        setIsFixed(true);
+
+        break;
+      case scrollY >= 750:
+        setIsOpacity(0.6);
+        break;
+      case scrollY >= 550:
+        setIsOpacity(0.3);
+        break;
+      default:
+        setIsOpacity(0);
+        setIsFixed(false);
+        break;
     }
   };
 
@@ -76,6 +94,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
         person,
         projects,
         skills,
+        isOpacity,
       }}
     >
       {children}

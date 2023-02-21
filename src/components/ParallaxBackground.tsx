@@ -17,7 +17,7 @@ export const ParallaxBackground: React.FC = () => {
     <Parallax bgImage={Background} strength={300}>
       <div className="content">
         <div className="personalContainer">
-          <h1 className="personal">5AMMAN</h1>
+          <h1 className="personal">SAMMAN</h1>
           <div className="cubeSpinner">
             <div className="face1">
               <img src={mongodbImage} />

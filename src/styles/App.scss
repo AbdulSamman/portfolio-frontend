@@ -6,22 +6,31 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
-
   .App {
     .navList {
       z-index: 2;
       width: 100%;
-
-      nav {
+      align-items: center;
+      display: flex;
+      border-bottom: 1px solid $mainColor;
+      .logo {
         background-color: $backgroundColor;
-        border-bottom: 1px solid $mainColor;
+        h2 {
+          color: $Lime;
+          font-family: $mainFonts;
+          padding: 1rem;
+        }
+      }
+      nav {
+        width: 92%;
+        background-color: $backgroundColor;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 2rem;
+        justify-content: space-evenly;
         align-items: center;
         font-family: $mainFonts, cursive;
+        padding: 0 5rem;
+
         a {
           color: $Lime;
           text-decoration: none;
@@ -36,6 +45,7 @@ body {
             cursor: pointer;
           }
         }
+
         a.active:not(:first-child) {
           color: $mainColor;
           cursor: pointer;

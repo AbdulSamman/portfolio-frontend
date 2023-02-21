@@ -17,9 +17,9 @@
 
         .project {
             width: 220px;
-            height: 320px;
-            perspective: 1000px; // add 3D perspective
+            height: 330px;
 
+            perspective: 1000px; // add 3D perspective
             .flipCardInner {
                 border-radius: $borderTop;
                 position: relative;
