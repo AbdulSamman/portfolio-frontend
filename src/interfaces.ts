@@ -8,7 +8,7 @@ export interface IAppProvider {
 export interface IAppContext {
   scaleX: number;
   rotateY: number;
-  isFixed: boolean;
+  isSticky: boolean;
   projects: IProject[];
   skills: ISkills[];
   person: IPerson;

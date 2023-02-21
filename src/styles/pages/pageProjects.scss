@@ -55,7 +55,6 @@
                         display: flex;
                         flex-flow: column wrap;
                         row-gap: 0.5rem;
-                        width: 100%;
                         text-align: center;
                         h4 {
                             height: 50px;
@@ -65,8 +64,7 @@
                             display: grid;
                             grid-template-columns: 1fr 1fr;
                             grid-gap: 10px;
-                            gap: 10px;
-                            text-align: left;
+
                             .tag {
                                 border-radius: 10px;
                                 text-align: center;

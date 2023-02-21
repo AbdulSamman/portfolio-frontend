@@ -8,17 +8,23 @@ import { useContext } from "react";
 import { AppContext } from "./AppContext";
 
 function App() {
-  const { isFixed, isOpacity } = useContext(AppContext);
+  const { isSticky, isOpacity } = useContext(AppContext);
 
   return (
     <div className="App" id="start">
       <ParallaxBackground />
-      <div className={`navList ${isFixed ? "fixed" : "notFixed"}`}>
+      <div className={`navList ${isSticky ? "sticky" : "notSticky"}`}>
         <div className="logo">
           <h2 style={{ opacity: `${isOpacity}` }}>SAMMAN</h2>
         </div>
         <nav>
-          <Link to="start" spy={true} smooth={true} offset={0} duration={500}>
+          <Link
+            to="start"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
             HOME
           </Link>
           <Link

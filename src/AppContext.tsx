@@ -24,7 +24,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
   // Define a state variable for the horizontal scaling of the parallax line.
   const [scaleX, setScaleX] = useState(0.2);
   const [rotateY, setRotateY] = useState(0.2);
-  const [isFixed, setIsFixed] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const [isOpacity, setIsOpacity] = useState(0);
   // Data
   const [person, setPerson] = useState<IPerson>(personData);
@@ -51,26 +51,27 @@ export const AppProvider: React.FC<IAppProvider> = ({
       setRotateY(scaleX);
       setScaleX(scaleX);
     }
+
     switch (true) {
-      case scrollY >= 1150:
+      case scrollY >= 950:
         setIsOpacity(1);
         break;
-      case scrollY >= 950:
-        setIsOpacity(0.9);
-        break;
       case scrollY >= 850:
-        setIsFixed(true);
-
+        setIsSticky(true);
+        setIsOpacity(0.8);
         break;
       case scrollY >= 750:
         setIsOpacity(0.6);
         break;
+      case scrollY >= 650:
+        setIsOpacity(0.4);
+        break;
       case scrollY >= 550:
-        setIsOpacity(0.3);
+        setIsOpacity(0.2);
         break;
       default:
         setIsOpacity(0);
-        setIsFixed(false);
+        setIsSticky(false);
         break;
     }
   };
@@ -90,7 +91,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
       value={{
         scaleX,
         rotateY,
-        isFixed,
+        isSticky,
         person,
         projects,
         skills,
