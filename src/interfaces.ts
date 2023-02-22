@@ -57,5 +57,5 @@ export interface IProject {
 }
 export interface ISkills {
   type: string;
-  level: number;
+  value: number;
 }

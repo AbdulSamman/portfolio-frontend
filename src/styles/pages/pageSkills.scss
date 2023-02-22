@@ -4,7 +4,22 @@
     height: 100vh;
     padding: $pagePadding;
     background-color: $backgroundColor;
-    h1 {
-        color: $mainColor;
+    .skillbar {
+        &-title {
+            width: 140px;
+            z-index: 1;
+            span {
+                background-color: $backgroundCard;
+                font-size: 1rem;
+                font-family: $mainFonts;
+            }
+        }
+        &-bar {
+            background-color: $scss;
+        }
+        &-percent {
+            font-family: $mainFonts;
+            font-size: 1rem;
+        }
     }
 }

@@ -1,54 +1,18 @@
 [
   {
     "type": "JAVASCRIPT",
-    "level": 95
+    "value": 95
   },
-  {
-    "type": "TYPESCRIPT",
-    "level": 90
-  },
-  {
-    "type": "REACT",
-    "level": 95
-  },
-  {
-    "type": "HTML",
-    "level": 99
-  },
-  {
-    "type": "CSS",
-    "level": 99
-  },
-  {
-    "type": "BOOTSTRAP",
-    "level": 99
-  },
-  {
-    "type": "TAILWIND",
-    "level": 85
-  },
-  {
-    "type": "SASS",
-    "level": 90
-  },
-  {
-    "type": "NODE.JS",
-    "level": 85
-  },
-  {
-    "type": "EXPRESS.JS",
-    "level": 90
-  },
-  {
-    "type": "MONGODB",
-    "level": 89
-  },
-  {
-    "type": "MONGOOSE",
-    "level": 85
-  },
-  {
-    "type": "CYPRESS",
-    "level": 80
-  }
+  { "type": "TYPESCRIPT", "value": 90 },
+  { "type": "REACT", "value": 95 },
+  { "type": "HTML", "value": 99 },
+  { "type": "CSS", "value": 99 },
+  { "type": "BOOTSTRAP", "value": 99 },
+  { "type": "TAILWIND", "value": 85 },
+  { "type": "SASS", "value": 90 },
+  { "type": "NODE.JS", "value": 85 },
+  { "type": "EXPRESS.JS", "value": 90 },
+  { "type": "MONGODB", "value": 89 },
+  { "type": "MONGOOSE", "value": 85 },
+  { "type": "CYPRESS", "value": 80 }
 ]

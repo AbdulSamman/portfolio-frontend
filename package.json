@@ -17,6 +17,7 @@
     "react-router-dom": "^6.8.1",
     "react-scroll": "^1.8.9",
     "react-scroll-parallax": "^3.3.2",
+    "react-skillbars": "^2.1.0",
     "sass": "^1.58.1",
     "styled-components": "^5.3.6"
   },

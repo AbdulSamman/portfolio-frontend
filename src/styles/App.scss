@@ -9,14 +9,14 @@ body {
   .App {
     .navList {
       z-index: 2;
-      width: 100%;
+
       align-items: center;
       display: flex;
       border-bottom: 1px solid $mainColor;
 
       .logo {
         background-color: $backgroundColor;
-        width: 15%;
+
         h2 {
           color: $Lime;
           font-family: $mainFonts;
@@ -24,14 +24,14 @@ body {
         }
       }
       nav {
-        width: 85%;
+        width: 100%;
         background-color: $backgroundColor;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         font-family: $mainFonts, cursive;
-
+        column-gap: 4rem;
         a {
           color: $Lime;
           text-decoration: none;
