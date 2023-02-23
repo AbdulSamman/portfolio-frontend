@@ -1,30 +1,32 @@
 import "../styles/pages/pageSkills.scss";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
-
-import ReactSkillbar, { SkillBarProps } from "react-skillbars";
-
-interface MySkillBarProps extends SkillBarProps {
-  delay: number;
-}
+import ReactSkillbar from "react-skillbars";
+import CountUp from "react-countup";
 
 export const PageSkills = () => {
   const { skills } = useContext(AppContext);
 
-  const skillBars = skills.map((skill, time) => ({
+  const skillBars = skills.map((skill) => ({
     type: skill.type,
     level: skill.value,
-    delay: (time + 1) * 1000,
   }));
 
   return (
     <div id="skills" className="pageSkills">
-      <ReactSkillbar<MySkillBarProps>
-        skills={skillBars}
-        height={40}
-        animationDuration={3000}
-        delay={4000}
-      />
+      <ReactSkillbar skills={skillBars} height={40} animationDuration={1800} />
+
+      {/* <div className="skill">
+        {skills.map((skill, i) => {
+          return (
+            <div className="countUp" key={i}>
+              <h1 className="skillPercent">
+                <CountUp start={0} end={skill.value} duration={3} delay={0} />
+              </h1>
+            </div>
+          );
+        })}
+      </div> */}
     </div>
   );
 };

@@ -4,22 +4,27 @@
     height: 100vh;
     padding: $pagePadding;
     background-color: $backgroundColor;
+
     .skillbar {
         &-title {
             width: 140px;
             z-index: 1;
             span {
-                background-color: $backgroundCard;
+                background-color: #1e3d94;
                 font-size: 1rem;
                 font-family: $mainFonts;
             }
         }
         &-bar {
-            background-color: $scss;
+            background-color: #04767a;
         }
         &-percent {
             font-family: $mainFonts;
-            font-size: 1rem;
+            color: #8abb05;
+            font-size: 1.8rem;
+            font-weight: bold;
+            position: absolute;
+            top: 5px;
         }
     }
 }
