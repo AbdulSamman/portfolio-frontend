@@ -9,23 +9,23 @@ body {
   .App {
     .navList {
       z-index: 2;
-
+      background-color: $backgroundColor;
       align-items: center;
       display: flex;
       border-bottom: 1px solid $mainColor;
 
       .logo {
-        background-color: $backgroundColor;
-
         h2 {
           color: $Lime;
           font-family: $mainFonts;
           padding: 1rem;
+          a {
+            cursor: pointer;
+          }
         }
       }
       nav {
-        width: 100%;
-        background-color: $backgroundColor;
+        width: 80%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -47,7 +47,7 @@ body {
           }
         }
 
-        a.active:not(:first-child) {
+        a.active {
           color: $mainColor;
           cursor: pointer;
         }
@@ -57,25 +57,21 @@ body {
       position: sticky;
       top: 0;
     }
-    .notSticky {
-      position: sticky;
-      bottom: 0;
-    }
   }
-  .textBox {
-    background-color: $backgroundColor;
-    h3 {
-      letter-spacing: 10px;
-      text-transform: uppercase;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-    p {
-      text-align: center;
-      padding: 3rem 1rem;
-      text-align: justify;
-    }
-  }
+  // .textBox {
+  //   background-color: $backgroundColor;
+  //   h3 {
+  //     letter-spacing: 10px;
+  //     text-transform: uppercase;
+  //     text-align: center;
+  //     padding-bottom: 1rem;
+  //   }
+  //   p {
+  //     text-align: center;
+  //     padding: 3rem 1rem;
+  //     text-align: justify;
+  //   }
+  // }
 }
 
 @media (max-width: 567px) {

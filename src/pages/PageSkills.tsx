@@ -14,8 +14,13 @@ export const PageSkills = () => {
 
   return (
     <div id="skills" className="pageSkills">
-      <ReactSkillbar skills={skillBars} height={40} animationDuration={1800} />
-
+      <div className="container">
+        <ReactSkillbar
+          skills={skillBars}
+          height={40}
+          animationDuration={1800}
+        />
+      </div>
       {/* <div className="skill">
         {skills.map((skill, i) => {
           return (
