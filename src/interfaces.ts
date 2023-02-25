@@ -58,3 +58,15 @@ export interface ISkills {
   type: string;
   value: number;
 }
+
+export interface IContactForm {
+  _id: string;
+  name: string[];
+}
+
+export interface IContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}

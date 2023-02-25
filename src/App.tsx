@@ -4,12 +4,14 @@ import { PageProjects } from "./pages/PageProjects";
 import { PageSkills } from "./pages/PageSkills";
 import { PageContact } from "./pages/PageContact";
 import "./styles/App.scss";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
 
 function App() {
   const { isOpacity } = useContext(AppContext);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="App" id="start">
       <ParallaxBackground />
