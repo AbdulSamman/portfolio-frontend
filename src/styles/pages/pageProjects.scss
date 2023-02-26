@@ -17,7 +17,7 @@
 
         .project {
             width: 220px;
-            height: 330px;
+            height: 340px;
 
             perspective: 1000px; // add 3D perspective
             .flipCardInner {
@@ -69,7 +69,6 @@
                                 border-radius: 10px;
                                 text-align: center;
                                 font-weight: bold;
-                                padding: 0.1rem;
 
                                 &.typescript {
                                     color: $typescript;

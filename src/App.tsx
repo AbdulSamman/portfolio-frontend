@@ -8,10 +8,10 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
 
 function App() {
-  const { isOpacity } = useContext(AppContext);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const { isOpacity } = useContext(AppContext);
   return (
     <div className="App" id="start">
       <ParallaxBackground />

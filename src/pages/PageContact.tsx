@@ -15,7 +15,8 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 export const PageContact = () => {
   const [firstNameList, setFirstNameList] = useState<IContactForm[]>([]);
   const [formData, setFormData] = useState<IContactFormData>(contactFormData);
-
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isMessageValid, setIsMessageValid] = useState(true);
   useEffect(() => {
     (async () => {
       const data = (await axios.get(`${backendUrl}/contacts`)).data;
@@ -24,6 +25,11 @@ export const PageContact = () => {
       }
     })();
   }, []);
+
+  // Email validation function
+  const validateEmail = (email: string): boolean => {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+  };
 
   const handleSubmit = async (formData: IContactFormData) => {
     try {
@@ -49,13 +55,20 @@ export const PageContact = () => {
     const name = e.target.name;
     const value = e.target.value;
 
+    if (name === "email") {
+      setIsEmailValid(!validateEmail(value));
+    }
     setFormData({ ...formData, [name]: value });
   };
 
   const handleChangeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const name = e.target.name;
     const value = e.target.value;
-
+    if (name === "message" && value.length > 0) {
+      setIsMessageValid(false);
+    } else {
+      setIsMessageValid(true);
+    }
     setFormData({ ...formData, [name]: value });
   };
 
@@ -78,7 +91,7 @@ export const PageContact = () => {
               value={formData.name}
             />
           </div>
-          <div className="inputEmail">
+          <div className={`inputEmail ${isEmailValid ? "emailNotValid" : ""}`}>
             <input
               placeholder="EMAIL"
               type="email"
@@ -97,9 +110,13 @@ export const PageContact = () => {
             value={formData.subject}
           />
         </div>
-        <div className="textAreaMessage">
+        <div
+          className={`textAreaMessage  ${
+            isMessageValid ? "messageNotValid" : ""
+          }`}
+        >
           <textarea
-            name="message"
+            name={`message`}
             onChange={handleChangeMessage}
             value={formData.message}
             rows={10}

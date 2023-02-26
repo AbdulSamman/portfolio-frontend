@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 body {
+  font-family: $mainFonts;
   .App {
     .navList {
       z-index: 2;
@@ -17,7 +18,7 @@ body {
       .logo {
         h2 {
           color: $Lime;
-          font-family: $mainFonts;
+
           padding: 1rem;
           a {
             cursor: pointer;
@@ -30,7 +31,7 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        font-family: $mainFonts, cursive;
+
         column-gap: 4rem;
         a {
           color: $Lime;
