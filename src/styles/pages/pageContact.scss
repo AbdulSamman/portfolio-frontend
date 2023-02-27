@@ -12,6 +12,23 @@
         color: $mainColor;
         font-size: 4rem;
     }
+    .messageRow {
+        font-size: 1.5rem;
+        width: 100%;
+        padding-bottom: 1rem;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .messageTrue {
+            color: greenyellow;
+        }
+        .messageFalse {
+            color: tomato;
+        }
+    }
     form {
         display: flex;
         flex-direction: column;
@@ -23,9 +40,6 @@
             align-items: center;
             column-gap: 1rem;
             row-gap: 0.5rem;
-            .emailNotValid {
-                background-color: tomato;
-            }
         }
         input {
             height: 50px;
@@ -52,10 +66,38 @@
                 width: 100%;
             }
         }
-        .button {
+        .row {
             display: flex;
-            justify-content: end;
-            div {
+            justify-content: space-between;
+            align-items: center;
+            height: max-content;
+
+            .capture {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: max-content;
+                height: 56px;
+                background: linear-gradient(to right, $backgroundColor, $Lime, $mainColor, $backgroundColor);
+
+                padding: 1rem;
+                input {
+                    width: 60px;
+                    height: 45px;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    background-color: rgba($Lime, 0.3);
+                    color: $css;
+                }
+                .numbers {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    letter-spacing: 10px;
+                    color: $css;
+                }
+            }
+            .button {
                 background-color: $mainColor;
                 height: 56px;
                 width: 200px;
@@ -132,7 +174,10 @@
             }
         }
     }
-    .messageNotValid {
+    .messageNotValid,
+    .subjectNotValid,
+    .nameNotValid,
+    .emailNotValid {
         background-color: tomato;
         &:focus-within {
             background-color: tomato;
@@ -154,6 +199,11 @@
         .nameEmailContent {
             flex-wrap: wrap;
             row-gap: 0.5rem;
+        }
+        .row {
+            flex-direction: column;
+            width: 100%;
+            row-gap: 1rem;
         }
     }
 }

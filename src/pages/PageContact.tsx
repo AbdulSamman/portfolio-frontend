@@ -1,33 +1,40 @@
 import "../styles/pages/pageContact.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { IContactForm, IContactFormData } from "../interfaces";
+import { IContactFormData } from "../interfaces";
+import { BsXCircle, BsCheckCircle } from "react-icons/bs";
 
 const contactFormData = {
   name: "",
   email: "",
   subject: "",
   message: "",
+  capture: "",
 };
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export const PageContact = () => {
-  const [firstNameList, setFirstNameList] = useState<IContactForm[]>([]);
   const [formData, setFormData] = useState<IContactFormData>(contactFormData);
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const [isMessageValid, setIsMessageValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState<boolean>(false);
+  const [isMessageValid, setIsMessageValid] = useState<boolean>(false);
+  const [isFormValid, setIsFormValid] = useState<boolean>(false);
+  const [isNameValid, setIsNameValid] = useState<boolean>(false);
+  const [isSubjectValid, setIsSubjectValid] = useState<boolean>(false);
+  const [isFormSended, setIsFormSended] = useState<boolean>(false);
+  const [firstNumber, setFirstNumber] = useState<number>(0);
+  const [secondNumber, setSecondNumber] = useState<number>(0);
+  const [result, setResult] = useState<number>(0);
+
   useEffect(() => {
-    (async () => {
-      const data = (await axios.get(`${backendUrl}/contacts`)).data;
-      if (data.length > 0) {
-        setFirstNameList(data);
-      }
-    })();
+    const randomFirstNumber = Math.floor(Math.random() * 49) + 1;
+    const randomSecondNumber = Math.floor(Math.random() * 49) + 1;
+    setFirstNumber(randomFirstNumber);
+    setSecondNumber(randomSecondNumber);
   }, []);
 
   // Email validation function
-  const validateEmail = (email: string): boolean => {
+  const emailCheck = (email: string): boolean => {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
   };
 
@@ -45,7 +52,10 @@ export const PageContact = () => {
           withCredentials: true,
         }
       );
-      setFormData(contactFormData);
+      if (isFormSended) {
+        setResult(0);
+        setFormData(contactFormData);
+      }
     } catch (error) {
       throw new Error(`${error}`);
     }
@@ -56,31 +66,70 @@ export const PageContact = () => {
     const value = e.target.value;
 
     if (name === "email") {
-      setIsEmailValid(!validateEmail(value));
+      const _isEmailValid = emailCheck(value);
+      setIsEmailValid(_isEmailValid);
+    } else if (name === "name") {
+      const _isNameValid = value.length > 4;
+      setIsNameValid(_isNameValid);
+    } else if (name === "subject") {
+      const _isSubjectValid = value.length > 3;
+      setIsSubjectValid(_isSubjectValid);
+    } else if (name === "capture") {
+      const result: number = firstNumber + secondNumber;
+      if (parseInt(value) === result) {
+        setResult(parseInt(value));
+      }
     }
+
     setFormData({ ...formData, [name]: value });
   };
 
   const handleChangeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const name = e.target.name;
     const value = e.target.value;
-    if (name === "message" && value.length > 0) {
-      setIsMessageValid(false);
+    if (name === "message") {
+      const _isMessageValid = value.length > 4;
+      setIsMessageValid(_isMessageValid);
     }
+
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmitButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     handleSubmit(formData);
+    if (
+      isEmailValid &&
+      isMessageValid &&
+      isNameValid &&
+      isSubjectValid &&
+      result
+    ) {
+      setIsFormValid(true);
+    }
+    setIsFormSended(true);
   };
 
   return (
     <div id="contact" className="pageContact">
       <h1>CONTACT ME</h1>
+
+      {isFormSended && (
+        <div className="messageRow">
+          {isFormValid ? (
+            <span className="messageTrue">
+              <BsCheckCircle /> <p>Thank you, your message has been sent</p>
+            </span>
+          ) : (
+            <span className="messageFalse">
+              <BsXCircle /> <p>Please check your information</p>
+            </span>
+          )}
+        </div>
+      )}
       <form>
         <div className="nameEmailContent">
-          <div className="inputName">
+          <div className={`inputName ${isNameValid ? "" : "nameNotValid"}`}>
             <input
               placeholder="NAME"
               type="text"
@@ -89,7 +138,7 @@ export const PageContact = () => {
               value={formData.name}
             />
           </div>
-          <div className={`inputEmail ${isEmailValid ? "emailNotValid" : ""}`}>
+          <div className={`inputEmail ${isEmailValid ? "" : "emailNotValid"}`}>
             <input
               placeholder="EMAIL"
               type="email"
@@ -99,7 +148,9 @@ export const PageContact = () => {
             />
           </div>
         </div>
-        <div className="inputSubject">
+        <div
+          className={`inputSubject ${isSubjectValid ? "" : "subjectNotValid"}`}
+        >
           <input
             placeholder="SUBJECT"
             type="text"
@@ -110,7 +161,7 @@ export const PageContact = () => {
         </div>
         <div
           className={`textAreaMessage  ${
-            isMessageValid ? "messageNotValid" : ""
+            !isMessageValid ? "messageNotValid" : ""
           }`}
         >
           <textarea
@@ -120,8 +171,21 @@ export const PageContact = () => {
             rows={10}
           />
         </div>
-        <div className="button">
-          <div>
+        <div className="row">
+          <div className="capture">
+            <div className="numbers">
+              <span>{firstNumber}</span>+<span>{secondNumber}</span>
+            </div>
+
+            <input
+              value={formData.capture}
+              type="text"
+              required
+              name="capture"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="button">
             <button onClick={handleSubmitButton}>SEND MESSAGE!</button>
           </div>
         </div>

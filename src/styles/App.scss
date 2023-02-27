@@ -8,19 +8,47 @@
 body {
   font-family: $mainFonts;
   .App {
+    .loadingPage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      height: 100vh;
+      width: 100vw;
+
+      .spinnerLogoIcon {
+        animation: spinner 1.2s linear infinite;
+        transform-origin: center center;
+        font-size: 5rem;
+        color: $Lime;
+      }
+      span {
+        font-size: 2.5rem;
+        color: $Lime;
+      }
+    }
     .navList {
       z-index: 2;
       background-color: $backgroundColor;
       align-items: center;
       display: flex;
       border-bottom: 1px solid $mainColor;
-      font-size: 1.3rem;
+      font-size: 1rem;
       .logo {
-        h2 {
-          color: $Lime;
-          padding: 1rem;
-          a {
-            cursor: pointer;
+        color: $Lime;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        a {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          .logoIcon {
+            width: 50px;
+            height: 50px;
+            color: $Lime;
           }
         }
       }
@@ -38,7 +66,7 @@ body {
           padding: 1rem 0;
           font-weight: bold;
           &::first-letter {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
           &:hover {
             color: $mainColor;
@@ -66,8 +94,11 @@ body {
           height: 50px;
         }
       }
-      .open {
-        transform: translateX(-10px);
+      .menuOpen {
+        transform: translateX(0%);
+        width: 130px;
+        height: max-content;
+        padding-right: 1rem;
       }
     }
     .sticky {
@@ -94,13 +125,14 @@ body {
       justify-content: center;
       align-items: center;
       background-color: none;
-      height: 40vh;
+      height: max-content;
       position: fixed;
       row-gap: 1rem;
       top: 20%;
       right: 0;
-      transition: transform 0.3s ease-in-out;
+      transition: all 0.3s linear;
       transform: translateX(100%);
+      width: 100px;
 
       a {
         display: flex;
@@ -118,10 +150,6 @@ body {
         }
       }
     }
-
-    .open {
-      transform: translateX(0%);
-    }
   }
 
   @media (max-width: 567px) {
@@ -131,5 +159,13 @@ body {
     .rightImg {
       max-height: 350px;
     }
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
