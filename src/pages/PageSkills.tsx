@@ -1,8 +1,9 @@
 import "../styles/pages/pageSkills.scss";
 import { useContext } from "react";
-import { AppContext } from "../AppContext";
+import { AppContext, AppProvider } from "../AppContext";
 import ReactSkillbar from "react-skillbars";
 import CountUp from "react-countup";
+import ParallaxLine from "../components/ParallaxLine";
 
 export const PageSkills = () => {
   const { skills } = useContext(AppContext);
@@ -32,6 +33,11 @@ export const PageSkills = () => {
           );
         })}
       </div> */}
+      <div style={{ paddingBottom: "2rem" }}>
+        <AppProvider speed={10} start={1800} end={2900}>
+          <ParallaxLine />
+        </AppProvider>
+      </div>
     </div>
   );
 };

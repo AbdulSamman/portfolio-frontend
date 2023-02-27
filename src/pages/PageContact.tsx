@@ -66,8 +66,6 @@ export const PageContact = () => {
     const value = e.target.value;
     if (name === "message" && value.length > 0) {
       setIsMessageValid(false);
-    } else {
-      setIsMessageValid(true);
     }
     setFormData({ ...formData, [name]: value });
   };

@@ -17,13 +17,14 @@
         flex-direction: column;
         width: 50%;
         gap: 0.5rem;
+        padding: 0 1rem;
         .nameEmailContent {
             display: flex;
             align-items: center;
             column-gap: 1rem;
             row-gap: 0.5rem;
             .emailNotValid {
-                background-color: red;
+                background-color: tomato;
             }
         }
         input {
@@ -132,9 +133,9 @@
         }
     }
     .messageNotValid {
-        background-color: red;
+        background-color: tomato;
         &:focus-within {
-            background-color: red;
+            background-color: tomato;
         }
     }
 }
@@ -148,7 +149,7 @@
         padding: 2rem 1rem;
 
         h1 {
-            font-size: 2rem;
+            font-size: 3rem;
         }
         .nameEmailContent {
             flex-wrap: wrap;

@@ -14,11 +14,10 @@ body {
       align-items: center;
       display: flex;
       border-bottom: 1px solid $mainColor;
-
+      font-size: 1.3rem;
       .logo {
         h2 {
           color: $Lime;
-
           padding: 1rem;
           a {
             cursor: pointer;
@@ -31,7 +30,6 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-
         column-gap: 4rem;
         a {
           color: $Lime;
@@ -40,7 +38,7 @@ body {
           padding: 1rem 0;
           font-weight: bold;
           &::first-letter {
-            font-size: 1.5rem;
+            font-size: 2rem;
           }
           &:hover {
             color: $mainColor;
@@ -53,33 +51,80 @@ body {
           cursor: pointer;
         }
       }
+      .burgerMenu {
+        transition: all 0.3s ease;
+        position: sticky;
+        left: 100%;
+        padding-right: 4rem;
+        width: 50px;
+        height: 50px;
+
+        display: none;
+        .menuIcon {
+          cursor: pointer;
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .open {
+        transform: translateX(-10px);
+      }
     }
     .sticky {
       position: sticky;
       top: 0;
     }
   }
-  // .textBox {
-  //   background-color: $backgroundColor;
-  //   h3 {
-  //     letter-spacing: 10px;
-  //     text-transform: uppercase;
-  //     text-align: center;
-  //     padding-bottom: 1rem;
-  //   }
-  //   p {
-  //     text-align: center;
-  //     padding: 3rem 1rem;
-  //     text-align: justify;
-  //   }
-  // }
-}
 
-@media (max-width: 567px) {
-  .shadowBlackImg {
-    max-height: 300px;
+  @media (max-width: 768px) {
+    .App .navList .burgerMenu {
+      display: block;
+
+      .menuIcon {
+        color: $Lime;
+      }
+    }
+    .App .navList nav {
+      width: max-content;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: none;
+      height: 40vh;
+      position: fixed;
+      row-gap: 1rem;
+      top: 20%;
+      right: 0;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(100%);
+    }
+
+    .open {
+      transform: translateX(0%);
+    }
+
+    .menu a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-color: rgba($backgroundColor, 0.8);
+      font-size: 0.5rem;
+    }
   }
-  .rightImg {
-    max-height: 350px;
+
+  @media (max-width: 567px) {
+    .shadowBlackImg {
+      max-height: 300px;
+    }
+    .rightImg {
+      max-height: 350px;
+    }
   }
 }

@@ -4,14 +4,23 @@ import { PageProjects } from "./pages/PageProjects";
 import { PageSkills } from "./pages/PageSkills";
 import { PageContact } from "./pages/PageContact";
 import "./styles/App.scss";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "./AppContext";
+import { AiOutlineMenu } from "react-icons/ai";
+import { BsXLg } from "react-icons/bs";
 
 function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const { isOpacity } = useContext(AppContext);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const handleMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="App" id="start">
       <ParallaxBackground />
@@ -22,19 +31,26 @@ function App() {
               to="start"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-150}
               duration={500}
             >
               SAMMAN
             </Link>
           </h2>
         </div>
-        <nav>
+        <div className="burgerMenu" onClick={handleMenuOpen}>
+          {!isMenuOpen ? (
+            <AiOutlineMenu className="menuIcon" />
+          ) : (
+            <BsXLg className="menuIcon" />
+          )}
+        </div>
+        <nav className={`menu ${isMenuOpen ? "open" : ""}`}>
           <Link
             to="projects"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={-100}
             duration={500}
           >
             PROJECTS
@@ -43,7 +59,7 @@ function App() {
             to="skills"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
           >
             SKILLS
@@ -52,7 +68,7 @@ function App() {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
           >
             CONTACT
