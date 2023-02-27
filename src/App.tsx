@@ -22,7 +22,11 @@ function App() {
   };
 
   return (
-    <div className="App" id="start">
+    <div
+      className="App"
+      id="start"
+      onClick={() => isMenuOpen && setIsMenuOpen(false)}
+    >
       <ParallaxBackground />
       <div className={`navList sticky`}>
         <div className="logo">
