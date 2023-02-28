@@ -69,10 +69,10 @@ export const PageContact = () => {
       const _isEmailValid = emailCheck(value);
       setIsEmailValid(_isEmailValid);
     } else if (name === "name") {
-      const _isNameValid = value.length > 4;
+      const _isNameValid = value.length > 2;
       setIsNameValid(_isNameValid);
     } else if (name === "subject") {
-      const _isSubjectValid = value.length > 3;
+      const _isSubjectValid = value.length > 2;
       setIsSubjectValid(_isSubjectValid);
     } else if (name === "capture") {
       const result: number = firstNumber + secondNumber;

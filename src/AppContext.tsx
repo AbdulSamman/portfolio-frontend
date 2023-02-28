@@ -24,7 +24,8 @@ export const AppProvider: React.FC<IAppProvider> = ({
   // Define a state variable for the horizontal scaling of the parallax line.
   const [scaleX, setScaleX] = useState(0.2);
   const [rotateY, setRotateY] = useState(0.2);
-
+  const [spinnSpeed, setSpinnSpeed] = useState(3);
+  const [spinnSpeedLogo, setSpinnSpeedLogo] = useState(3);
   const [isOpacity, setIsOpacity] = useState(0);
   // Data
   const [person, setPerson] = useState<IPerson>(personData);
@@ -55,18 +56,32 @@ export const AppProvider: React.FC<IAppProvider> = ({
     switch (true) {
       case scrollY >= 950:
         setIsOpacity(1);
+        setSpinnSpeedLogo(1);
         break;
       case scrollY >= 850:
         setIsOpacity(0.8);
+
         break;
       case scrollY >= 750:
         setIsOpacity(0.6);
+        setSpinnSpeedLogo(1.5);
         break;
       case scrollY >= 650:
         setIsOpacity(0.4);
+
         break;
       case scrollY >= 550:
         setIsOpacity(0.2);
+        setSpinnSpeedLogo(2);
+        break;
+      case scrollY >= 150:
+        setSpinnSpeed(0.5);
+        break;
+      case scrollY >= 100:
+        setSpinnSpeed(1);
+        break;
+      case scrollY >= 50:
+        setSpinnSpeed(1.5);
         break;
       default:
         setIsOpacity(0);
@@ -94,6 +109,8 @@ export const AppProvider: React.FC<IAppProvider> = ({
         projects,
         skills,
         isOpacity,
+        spinnSpeed,
+        spinnSpeedLogo,
       }}
     >
       {children}

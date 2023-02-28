@@ -12,6 +12,8 @@ export interface IAppContext {
   skills: ISkills[];
   person: IPerson;
   isOpacity: number;
+  spinnSpeed: number;
+  spinnSpeedLogo: number;
 }
 
 export interface IParallaxLineProps {

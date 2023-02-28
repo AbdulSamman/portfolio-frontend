@@ -3,40 +3,26 @@ import { Parallax } from "react-parallax";
 import Background from "/images/Green.jpg";
 import shadowImage from "/images/shadowForest.png";
 import rightImage from "/images/palmen.png";
-import mongodbImage from "/images/mongodb.png";
-import htmlImage from "/images/html.png";
-import jsImage from "/images/javascript.png";
-import tsImage from "/images/typescript.png";
-import nodejsImage from "/images/nodejs.png";
-import reactImage from "/images/react.png";
+import { FaConnectdevelop } from "react-icons/fa";
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
+
 import "../styles/parallaxStyle.scss";
-import "../styles/cubeSpinner.scss";
 
 export const ParallaxBackground: React.FC = () => {
+  const { spinnSpeed } = useContext(AppContext);
   return (
     <Parallax bgImage={Background} strength={300}>
       <div className="content">
         <div className="personalContainer">
           <h1 className="personal">SAMMAN</h1>
-          <div className="cubeSpinner">
-            <div className="face1">
-              <img src={mongodbImage} />
-            </div>
-            <div className="face2">
-              <img src={reactImage} />
-            </div>
-            <div className="face3">
-              <img src={nodejsImage} />
-            </div>
-            <div className="face4">
-              <img src={tsImage} />
-            </div>
-            <div className="face5">
-              <img src={jsImage} />
-            </div>
-            <div className="face6">
-              <img src={htmlImage} />
-            </div>
+          <div className="logoIcon">
+            <FaConnectdevelop
+              className="spinnerLogoIcon"
+              style={{
+                animation: `spinner ${spinnSpeed}s linear infinite`,
+              }}
+            />
           </div>
         </div>
         <div className="layer" data-depth="0.4">

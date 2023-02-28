@@ -9,7 +9,7 @@
 .content {
     position: relative;
     width: 100%;
-    height: 89.8vh;
+    height: 90.7vh;
     display: flex;
     justify-content: center;
     padding-top: 5rem;
@@ -30,6 +30,13 @@
             text-shadow: 5px 5px $mainColor;
             font-family: $mainFonts, cursive;
             color: $backgroundColor;
+        }
+        .logoIcon {
+            .spinnerLogoIcon {
+                transform-origin: center center;
+                font-size: 5rem;
+                color: $backgroundColor;
+            }
         }
     }
 
@@ -88,5 +95,13 @@
     }
     .rightImg {
         max-height: 350px;
+    }
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

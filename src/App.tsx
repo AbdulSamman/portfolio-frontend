@@ -7,12 +7,14 @@ import "./styles/App.scss";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "./AppContext";
 import { AiOutlineMenu } from "react-icons/ai";
-import { CgSpinnerTwoAlt } from "react-icons/cg";
 import { FaConnectdevelop } from "react-icons/fa";
 import { BsXLg } from "react-icons/bs";
 
 function App() {
-  const { isOpacity } = useContext(AppContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const { isOpacity, spinnSpeedLogo } = useContext(AppContext);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -50,7 +52,12 @@ function App() {
                 offset={-150}
                 duration={500}
               >
-                <FaConnectdevelop className="logoIcon" />
+                <FaConnectdevelop
+                  className="logoIcon"
+                  style={{
+                    animation: `spinner ${spinnSpeedLogo}s linear infinite`,
+                  }}
+                />
                 <span>SAMMAN</span>
               </Link>
             </div>
