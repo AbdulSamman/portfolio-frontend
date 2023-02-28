@@ -21,7 +21,7 @@ export const PageContact = () => {
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
   const [isNameValid, setIsNameValid] = useState<boolean>(false);
   const [isSubjectValid, setIsSubjectValid] = useState<boolean>(false);
-  const [isFormSended, setIsFormSended] = useState<boolean>(false);
+  const [isFormSended, setIsFormSended] = useState<any>(null);
   const [firstNumber, setFirstNumber] = useState<number>(0);
   const [secondNumber, setSecondNumber] = useState<number>(0);
   const [result, setResult] = useState<number>(0);
@@ -31,6 +31,7 @@ export const PageContact = () => {
     const randomSecondNumber = Math.floor(Math.random() * 49) + 1;
     setFirstNumber(randomFirstNumber);
     setSecondNumber(randomSecondNumber);
+    setIsFormSended(null);
   }, []);
 
   // Email validation function
@@ -68,6 +69,7 @@ export const PageContact = () => {
     if (name === "email") {
       const _isEmailValid = emailCheck(value);
       setIsEmailValid(_isEmailValid);
+      setIsFormValid;
     } else if (name === "name") {
       const _isNameValid = value.length > 2;
       setIsNameValid(_isNameValid);
@@ -106,27 +108,30 @@ export const PageContact = () => {
       result
     ) {
       setIsFormValid(true);
+      setIsFormSended(
+        <span className="messageTrue">
+          <BsCheckCircle /> <p>Thank you, your message has been sent</p>
+        </span>
+      );
+      setFormData(contactFormData);
+    } else {
+      setIsFormSended(
+        <span className="messageFalse">
+          <BsXCircle /> <p>Please check your information</p>
+        </span>
+      );
     }
-    setIsFormSended(true);
   };
 
   return (
     <div id="contact" className="pageContact">
       <h1>CONTACT ME</h1>
-
-      {isFormSended && (
-        <div className="messageRow">
-          {isFormValid ? (
-            <span className="messageTrue">
-              <BsCheckCircle /> <p>Thank you, your message has been sent</p>
-            </span>
-          ) : (
-            <span className="messageFalse">
-              <BsXCircle /> <p>Please check your information</p>
-            </span>
-          )}
-        </div>
-      )}
+      {isEmailValid}
+      {isEmailValid}
+      {isEmailValid}
+      {isEmailValid}
+      {isEmailValid}
+      {isFormSended && <div className="messageRow">{isFormSended}</div>}
       <form>
         <div className="nameEmailContent">
           <div className={`inputName ${isNameValid ? "" : "nameNotValid"}`}>
