@@ -69,7 +69,6 @@ export const PageContact = () => {
     if (name === "email") {
       const _isEmailValid = emailCheck(value);
       setIsEmailValid(_isEmailValid);
-      setIsFormValid;
     } else if (name === "name") {
       const _isNameValid = value.length > 2;
       setIsNameValid(_isNameValid);
@@ -126,11 +125,7 @@ export const PageContact = () => {
   return (
     <div id="contact" className="pageContact">
       <h1>CONTACT ME</h1>
-      {isEmailValid}
-      {isEmailValid}
-      {isEmailValid}
-      {isEmailValid}
-      {isEmailValid}
+
       {isFormSended && <div className="messageRow">{isFormSended}</div>}
       <form>
         <div className="nameEmailContent">
