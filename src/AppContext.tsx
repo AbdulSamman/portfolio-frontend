@@ -100,6 +100,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
       );
     };
   }, [speed, start, end]);
+
   return (
     <AppContext.Provider
       value={{

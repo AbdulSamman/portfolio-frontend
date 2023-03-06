@@ -25,6 +25,7 @@ export const PageContact = () => {
   const [firstNumber, setFirstNumber] = useState<number>(0);
   const [secondNumber, setSecondNumber] = useState<number>(0);
   const [result, setResult] = useState<number>(0);
+  const [test, setTest] = useState<string>("");
 
   useEffect(() => {
     const randomFirstNumber = Math.floor(Math.random() * 49) + 1;
@@ -122,6 +123,13 @@ export const PageContact = () => {
     }
   };
 
+  useEffect(() => {
+    (async () => {
+      const _test = (await axios.get(`${backendUrl}/test`)).data;
+      setTest(_test);
+    })();
+  }, []);
+
   return (
     <div id="contact" className="pageContact">
       <h1>CONTACT ME</h1>
@@ -190,6 +198,7 @@ export const PageContact = () => {
           </div>
         </div>
       </form>
+      <div>{test}</div>
     </div>
   );
 };
