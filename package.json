@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "build": "tsc --build --clean && vite build",
+    "start": "vite serve --host --port 3555",
+    "setup": "npm i && pm2 start --name tanguayeu-mainsitereact npm -- start --update-env --time && pm2 save",
+    "deploy": "git pull --no-rebase && pm2 restart tanguayeu-mainsitereact --update-env --time && pm2 save",
     "cp": "node cli/cp.mjs"
   },
   "dependencies": {

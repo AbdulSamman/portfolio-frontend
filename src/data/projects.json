@@ -286,5 +286,14 @@
     "repo": "https://github.com/AbdulSamman/github-username-api",
     "url": "https://abdulsamman.github.io/github-username-api/",
     "description": "Create a simple github username repositories API"
+  },
+  {
+    "id": 33,
+    "name": "MERN CRUD BOOKS",
+    "image": "/images/projects/mern-Crud-Books.png",
+    "tags": ["react", "scss", "typescript", "mongodb", "express"],
+    "repo": "https://github.com/AbdulSamman/mern-crud-frontend",
+    "url": "",
+    "description": "Create a MERN CRUD BOOKS with express server "
   }
 ]

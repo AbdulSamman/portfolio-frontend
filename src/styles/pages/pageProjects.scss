@@ -14,7 +14,7 @@
         height: 750px;
         .projects {
             display: grid;
-            grid-template-columns: repeat(16, auto);
+            grid-template-columns: repeat(17, 1fr);
             gap: 1rem;
             place-items: center;
             flex-wrap: wrap;
