@@ -24,3 +24,13 @@ $vitest2: #76b947;
 $pagePadding: 1rem 2rem;
 $mainFonts: "Indie Flower";
 $borderTop: 10px 10px 0 0;
+
+@function columns($container) {
+    $children: $container + " > *";
+    @return length($children);
+}
+// .projects {
+//     background-color: beige;
+//     display : grid;
+//     grid-template-columns: repeat(columns('.projects'), 1fr);
+//   }
