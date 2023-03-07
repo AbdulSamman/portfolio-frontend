@@ -1,11 +1,11 @@
 @use "../variables" as *;
 
 .pageSkills {
-    height: 100vh;
     padding: $pagePadding;
     display: grid;
     place-items: center;
     background-color: $backgroundColor;
+    height: 100vh;
     .container {
         width: 100%;
 

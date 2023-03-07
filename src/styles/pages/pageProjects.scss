@@ -4,7 +4,7 @@
     padding: $pagePadding;
     background-color: $backgroundColor;
     overflow: hidden;
-
+    height: 100vh;
     h1 {
         color: $mainColor;
     }
@@ -14,7 +14,6 @@
         height: 750px;
         .projects {
             display: grid;
-            grid-template-columns: repeat(17, 1fr);
             gap: 1rem;
             place-items: center;
             width: max-content;
@@ -23,12 +22,12 @@
             position: absolute;
             left: 0;
             top: 0;
-            animation: move 60s linear 0s infinite;
+            animation: move 40s linear 0s infinite;
             .project {
                 width: 220px;
                 height: 340px;
                 perspective: 1000px; // add 3D perspective
-
+                padding: 0.5rem;
                 .flipCardInner {
                     border-radius: $borderTop;
                     position: relative;
@@ -202,9 +201,9 @@
 }
 @keyframes move {
     0% {
-        transform: translate(1800px, 0);
+        transform: translate(40%, 0);
     }
     100% {
-        transform: translate(-4000px, 0);
+        transform: translate(-110%, 0);
     }
 }

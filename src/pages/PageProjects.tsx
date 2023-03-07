@@ -14,7 +14,14 @@ export const PageProjects = () => {
         </AppProvider>
       </div>
       <div className="moveProject">
-        <div className="projects">
+        <div
+          className="projects"
+          style={{
+            gridTemplateColumns: `repeat(${Math.ceil(
+              projects.length / 2
+            )}, 1fr)`,
+          }}
+        >
           {projects.map((project) => {
             return (
               <React.Fragment key={project.id}>

@@ -1,12 +1,12 @@
 @use "../variables" as *;
 
 .pageContact {
-    height: 100vh;
     background-color: $backgroundColor;
     padding: 2rem 0;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    height: 100vh;
 
     h1 {
         color: $mainColor;
