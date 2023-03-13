@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --build --clean && vite build",
-    "start": "vite serve --host --port 3628",
+    "start": "vite serve --host --port 3728",
     "setup": "npm i && npm run build && pm2 start --name portfolio-frontend npm -- start --update-env --time && pm2 save",
     "deploy": "git pull --no-rebase && npm run build && pm2 restart portfolio-frontend --update-env --time && pm2 save",
     "cp": "node cli/cp.mjs"
