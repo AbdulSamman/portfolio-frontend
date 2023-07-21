@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-// for more parallax another image
+// for more parallax another image edited
 import Background from "/images/Green.jpg";
 import shadowImage from "/images/shadowForest.png";
 import rightImage from "/images/palmen.png";
