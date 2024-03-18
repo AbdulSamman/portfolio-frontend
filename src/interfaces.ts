@@ -9,7 +9,6 @@ export interface IAppContext {
   scaleX: number;
   rotateY: number;
   projects: IProject[];
-  skills: ISkills[];
   person: IPerson;
   isOpacity: number;
   spinnSpeed: number;

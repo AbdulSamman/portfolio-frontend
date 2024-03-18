@@ -4,8 +4,10 @@ import { AppContext, AppProvider } from "../AppContext";
 import { AiFillGithub, AiOutlineGlobal } from "react-icons/ai";
 import React from "react";
 import ParallaxLine from "../components/ParallaxLine";
+
 export const PageProjects = () => {
   const { projects } = useContext(AppContext);
+
   return (
     <div id="projects" className="pageProjects">
       <div style={{ paddingBottom: "1rem" }}>
@@ -20,8 +22,7 @@ export const PageProjects = () => {
             gridTemplateColumns: `repeat(${Math.ceil(
               projects.length / 2
             )}, 1fr)`,
-          }}
-        >
+          }}>
           {projects.map((project) => {
             return (
               <React.Fragment key={project.id}>

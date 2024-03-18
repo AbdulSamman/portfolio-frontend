@@ -33,8 +33,7 @@ function App() {
     <div
       className="App"
       id="start"
-      onClick={() => isMenuOpen && setIsMenuOpen(false)}
-    >
+      onClick={() => isMenuOpen && setIsMenuOpen(false)}>
       {isLoading ? (
         <div className="loadingPage">
           <FaConnectdevelop className="spinnerLogoIcon" />
@@ -50,8 +49,7 @@ function App() {
                 spy={true}
                 smooth={true}
                 offset={-150}
-                duration={500}
-              >
+                duration={500}>
                 <FaConnectdevelop
                   className="logoIcon"
                   style={{
@@ -74,8 +72,7 @@ function App() {
                 spy={true}
                 smooth={true}
                 offset={-100}
-                duration={500}
-              >
+                duration={500}>
                 PROJECTS
               </Link>
               <Link
@@ -83,8 +80,7 @@ function App() {
                 spy={true}
                 smooth={true}
                 offset={-100}
-                duration={500}
-              >
+                duration={500}>
                 SKILLS
               </Link>
               <Link
@@ -92,8 +88,7 @@ function App() {
                 spy={true}
                 smooth={true}
                 offset={-100}
-                duration={500}
-              >
+                duration={500}>
                 CONTACT
               </Link>
             </nav>

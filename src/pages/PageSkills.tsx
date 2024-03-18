@@ -1,13 +1,12 @@
 import "../styles/pages/pageSkills.scss";
-import { useContext } from "react";
-import { AppContext, AppProvider } from "../AppContext";
+import { AppProvider } from "../AppContext";
 import ReactSkillbar from "react-skillbars";
 import ParallaxLine from "../components/ParallaxLine";
+import skills from "../data/skills.json";
+import { ISkills } from "../interfaces";
 
 export const PageSkills = () => {
-  const { skills } = useContext(AppContext);
-
-  const skillBars = skills.map((skill) => ({
+  const skillBars = skills.map((skill: ISkills) => ({
     type: skill.type,
     level: skill.value,
   }));

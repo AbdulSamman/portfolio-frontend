@@ -6,12 +6,10 @@ import {
   IAppProvider,
   IPerson,
   IProject,
-  ISkills,
 } from "./interfaces";
 
 import personData from "./data/person.json";
 import projectsData from "./data/projects.json";
-import skillsData from "./data/skills.json";
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
@@ -30,9 +28,8 @@ export const AppProvider: React.FC<IAppProvider> = ({
   // Data
   const [person, setPerson] = useState<IPerson>(personData);
   const [projects, setProjects] = useState<IProject[]>(projectsData);
-  const [skills, setSkills] = useState<ISkills[]>(skillsData);
 
-  const handleScroll: HandleScroll = (event, scrollY) => {
+  const handleScroll: HandleScroll = (_, scrollY) => {
     if (scrollY >= start && scrollY <= end) {
       // Calculate the angle of the parallax line based on the scroll position and speed props.
       const angle = (scrollY - start) * speed * 0.002;
@@ -108,12 +105,10 @@ export const AppProvider: React.FC<IAppProvider> = ({
         rotateY,
         person,
         projects,
-        skills,
         isOpacity,
         spinnSpeed,
         spinnSpeedLogo,
-      }}
-    >
+      }}>
       {children}
     </AppContext.Provider>
   );
