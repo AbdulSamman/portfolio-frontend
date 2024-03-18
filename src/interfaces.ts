@@ -67,3 +67,11 @@ export interface IContactFormData {
   message: string;
   capture: string;
 }
+
+export const contactFormData = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+  capture: "",
+};

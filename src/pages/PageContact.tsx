@@ -1,16 +1,8 @@
 import "../styles/pages/pageContact.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { IContactFormData } from "../interfaces";
+import { IContactFormData, contactFormData } from "../interfaces";
 import { BsXCircle, BsCheckCircle } from "react-icons/bs";
-
-const contactFormData = {
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-  capture: "",
-};
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -18,7 +10,6 @@ export const PageContact = () => {
   const [formData, setFormData] = useState<IContactFormData>(contactFormData);
   const [isEmailValid, setIsEmailValid] = useState<boolean>(false);
   const [isMessageValid, setIsMessageValid] = useState<boolean>(false);
-  const [isFormValid, setIsFormValid] = useState<boolean>(false);
   const [isNameValid, setIsNameValid] = useState<boolean>(false);
   const [isSubjectValid, setIsSubjectValid] = useState<boolean>(false);
   const [isFormSended, setIsFormSended] = useState<any>(null);
@@ -26,9 +17,10 @@ export const PageContact = () => {
   const [secondNumber, setSecondNumber] = useState<number>(0);
   const [result, setResult] = useState<number>(0);
 
+  const randomFirstNumber = Math.floor(Math.random() * 49) + 1;
+  const randomSecondNumber = Math.floor(Math.random() * 49) + 1;
+
   useEffect(() => {
-    const randomFirstNumber = Math.floor(Math.random() * 49) + 1;
-    const randomSecondNumber = Math.floor(Math.random() * 49) + 1;
     setFirstNumber(randomFirstNumber);
     setSecondNumber(randomSecondNumber);
     setIsFormSended(null);
@@ -106,13 +98,14 @@ export const PageContact = () => {
       isSubjectValid &&
       result
     ) {
-      setIsFormValid(true);
       setIsFormSended(
         <span className="messageTrue">
           <BsCheckCircle /> <p>Thank you, your message has been sent</p>
         </span>
       );
       setFormData(contactFormData);
+      setFirstNumber(randomFirstNumber);
+      setSecondNumber(randomSecondNumber);
     } else {
       setIsFormSended(
         <span className="messageFalse">
@@ -149,8 +142,7 @@ export const PageContact = () => {
           </div>
         </div>
         <div
-          className={`inputSubject ${isSubjectValid ? "" : "subjectNotValid"}`}
-        >
+          className={`inputSubject ${isSubjectValid ? "" : "subjectNotValid"}`}>
           <input
             placeholder="SUBJECT"
             type="text"
@@ -162,8 +154,7 @@ export const PageContact = () => {
         <div
           className={`textAreaMessage  ${
             !isMessageValid ? "messageNotValid" : ""
-          }`}
-        >
+          }`}>
           <textarea
             name={`message`}
             onChange={handleChangeMessage}
