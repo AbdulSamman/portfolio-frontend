@@ -1,37 +1,37 @@
 @use "../variables" as *;
 
 .pageSkills {
-    padding: $pagePadding;
-    display: grid;
-    place-items: center;
-    background-color: $backgroundColor;
-    height: 100vh;
-    .container {
-        width: 100%;
+  padding: $pagePadding;
+  display: grid;
+  place-items: center;
+  background-color: $backgroundColor;
 
-        .skillbar {
-            &-title {
-                width: 140px;
-                span {
-                    background-color: #1e3d94;
-                    font-size: 1rem;
-                    font-family: $mainFonts;
-                    position: relative;
-                    z-index: 1;
-                }
-            }
-            &-bar {
-                background-color: #04767a;
-                position: relative;
-            }
-            &-percent {
-                font-family: $mainFonts;
-                color: #8abb05;
-                font-size: 1.8rem;
-                font-weight: bold;
-                position: absolute;
-                top: 5px;
-            }
+  .container {
+    width: 100%;
+
+    .skillbar {
+      &-title {
+        width: 140px;
+        span {
+          background-color: #1e3d94;
+          font-size: 1rem;
+          font-family: $mainFonts;
+          position: relative;
+          z-index: 1;
         }
+      }
+      &-bar {
+        background-color: #04767a;
+        position: relative;
+      }
+      &-percent {
+        font-family: $mainFonts;
+        color: #8abb05;
+        font-size: 1.8rem;
+        font-weight: bold;
+        position: absolute;
+        top: 5px;
+      }
     }
+  }
 }

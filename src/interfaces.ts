@@ -8,7 +8,6 @@ export interface IAppProvider {
 export interface IAppContext {
   scaleX: number;
   rotateY: number;
-  projects: IProject[];
   person: IPerson;
   isOpacity: number;
   spinnSpeed: number;

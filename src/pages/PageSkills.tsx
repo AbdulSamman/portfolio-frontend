@@ -21,8 +21,8 @@ export const PageSkills = () => {
         />
       </div>
 
-      <div style={{ paddingBottom: "2rem" }}>
-        <AppProvider speed={10} start={1800} end={2900}>
+      <div>
+        <AppProvider speed={10} start={1300} end={2500}>
           <ParallaxLine />
         </AppProvider>
       </div>

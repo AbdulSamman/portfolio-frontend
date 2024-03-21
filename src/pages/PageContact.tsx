@@ -160,6 +160,7 @@ export const PageContact = () => {
             onChange={handleChangeMessage}
             value={formData.message}
             rows={10}
+            spellCheck="false"
           />
         </div>
         <div className="row">

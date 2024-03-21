@@ -48,7 +48,7 @@ function App() {
                 to="start"
                 spy={true}
                 smooth={true}
-                offset={-150}
+                offset={-100}
                 duration={500}>
                 <FaConnectdevelop
                   className="logoIcon"
@@ -71,7 +71,7 @@ function App() {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-80}
                 duration={500}>
                 PROJECTS
               </Link>
@@ -79,7 +79,7 @@ function App() {
                 to="skills"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-80}
                 duration={500}>
                 SKILLS
               </Link>
@@ -87,7 +87,7 @@ function App() {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-80}
                 duration={500}>
                 CONTACT
               </Link>

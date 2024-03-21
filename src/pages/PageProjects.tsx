@@ -1,13 +1,12 @@
 import "../styles/pages/pageProjects.scss";
-import { useContext } from "react";
-import { AppContext, AppProvider } from "../AppContext";
+import { AppProvider } from "../AppContext";
 import { AiFillGithub, AiOutlineGlobal } from "react-icons/ai";
 import React from "react";
 import ParallaxLine from "../components/ParallaxLine";
+import projects from "../data/projects.json";
+import { IProject } from "../interfaces";
 
 export const PageProjects = () => {
-  const { projects } = useContext(AppContext);
-
   return (
     <div id="projects" className="pageProjects">
       <div style={{ paddingBottom: "1rem" }}>
@@ -23,7 +22,7 @@ export const PageProjects = () => {
               projects.length / 2
             )}, 1fr)`,
           }}>
-          {projects.map((project) => {
+          {projects.map((project: IProject) => {
             return (
               <React.Fragment key={project.id}>
                 <div className="project">
@@ -77,7 +76,7 @@ export const PageProjects = () => {
         </div>
       </div>
       <div style={{ paddingTop: "2rem" }}>
-        <AppProvider speed={10} start={900} end={1900}>
+        <AppProvider speed={10} start={900} end={2200}>
           <ParallaxLine />
         </AppProvider>
       </div>

@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react";
 import { createContext } from "react";
-import {
-  HandleScroll,
-  IAppContext,
-  IAppProvider,
-  IPerson,
-  IProject,
-} from "./interfaces";
+import { HandleScroll, IAppContext, IAppProvider, IPerson } from "./interfaces";
 
 import personData from "./data/person.json";
-import projectsData from "./data/projects.json";
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
@@ -27,7 +20,6 @@ export const AppProvider: React.FC<IAppProvider> = ({
   const [isOpacity, setIsOpacity] = useState(0);
   // Data
   const [person, setPerson] = useState<IPerson>(personData);
-  const [projects, setProjects] = useState<IProject[]>(projectsData);
 
   const handleScroll: HandleScroll = (_, scrollY) => {
     if (scrollY >= start && scrollY <= end) {
@@ -104,7 +96,6 @@ export const AppProvider: React.FC<IAppProvider> = ({
         scaleX,
         rotateY,
         person,
-        projects,
         isOpacity,
         spinnSpeed,
         spinnSpeedLogo,
