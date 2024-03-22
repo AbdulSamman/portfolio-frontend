@@ -9,18 +9,25 @@
   }
 
   .projects {
-    gap: 1rem;
     place-items: center;
     overflow: scroll;
-    background-color: red;
     height: 90vh;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    padding: 10px;
+    text-align: center;
+    overflow-x: hidden;
     .project {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-      background-color: green;
+      background-color: lighten($backgroundColor, 10);
+      height: 100%;
+      width: 100%;
+      padding: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: $mainColor;
     }
   }
 }
