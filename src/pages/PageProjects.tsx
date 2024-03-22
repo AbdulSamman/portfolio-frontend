@@ -1,12 +1,13 @@
 import "../styles/pages/pageProjects.scss";
 import { AppProvider } from "../AppContext";
-import { AiFillGithub, AiOutlineGlobal } from "react-icons/ai";
 import React from "react";
 import ParallaxLine from "../components/ParallaxLine";
-import projects from "../data/projects.json";
-import { IProject } from "../interfaces";
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
+import { popUp } from "../components/popUp";
 
 export const PageProjects = () => {
+  const { projects } = useContext(AppContext);
   return (
     <div id="projects" className="pageProjects">
       <div style={{ paddingBottom: "1rem" }}>
@@ -14,67 +15,19 @@ export const PageProjects = () => {
           <ParallaxLine />
         </AppProvider>
       </div>
-      <div className="moveProject">
-        <div
-          className="projects"
-          style={{
-            gridTemplateColumns: `repeat(${Math.ceil(
-              projects.length / 2
-            )}, 1fr)`,
-          }}>
-          {projects.map((project: IProject) => {
-            return (
-              <React.Fragment key={project.id}>
-                <div className="project">
-                  <div className="flipCardInner">
-                    <div className="flipCardInner-front">
-                      <div className="imgContainer">
-                        <img src={project.image} />
-                      </div>
-                      <div className="container">
-                        <h4>{project.name}</h4>
 
-                        <div className="tags">
-                          {project.tags.map((tag, i) => {
-                            return (
-                              <div key={i + 1} className={`tag ${tag}`}>
-                                {tag}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flipCardInner-back">
-                      <p>{project.description}</p>
-                      <div className="icons">
-                        <a href={project.repo} target="_blank">
-                          <AiFillGithub className="icon ic1" />
-                        </a>
-                        {project.url === "" ? (
-                          <AiOutlineGlobal
-                            className={
-                              project.url === "" ? "icon notUrl" : "icon ic2"
-                            }
-                          />
-                        ) : (
-                          <a href={project.url} target="_blank">
-                            <AiOutlineGlobal
-                              className={
-                                project.url === "" ? "icon notUrl" : "icon ic2"
-                              }
-                            />
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </React.Fragment>
-            );
-          })}
-        </div>
+      <div className="projects">
+        {projects.map((project) => {
+          return (
+            <React.Fragment key={project.id}>
+              <div className="project" onClick={() => popUp(project)}>
+                <h4>{project.name}</h4>
+              </div>
+            </React.Fragment>
+          );
+        })}
       </div>
+
       <div style={{ paddingTop: "2rem" }}>
         <AppProvider speed={10} start={900} end={2200}>
           <ParallaxLine />

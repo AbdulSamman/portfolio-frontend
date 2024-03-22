@@ -1,0 +1,135 @@
+@use "../variables" as *;
+
+.popupContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .popUpImage {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+    }
+  }
+  .tags {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+
+    .tag {
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+
+      &.typescript {
+        color: $typescript;
+        background-color: rgba($typescript, 0.5);
+        &::before {
+          content: "";
+        }
+      }
+
+      &.react {
+        color: $react;
+        background-color: rgba($react, 0.5);
+      }
+      &.express {
+        color: $express;
+        background-color: rgba($express, 0.5);
+      }
+      &.scss {
+        color: $scss;
+        background-color: rgba($scss, 0.5);
+      }
+      &.sqlite {
+        color: $sqlite;
+        background-color: rgba($sqlite, 0.5);
+      }
+      &.mongodb {
+        color: $mongodb;
+        background-color: rgba($mongodb, 0.5);
+      }
+      &.html {
+        color: $html;
+        background-color: rgba($html, 0.5);
+      }
+      &.css {
+        color: $css;
+        background-color: rgba($css, 0.3);
+      }
+      &.javascript {
+        color: $javascript;
+        background-color: rgba($javascript, 0.5);
+      }
+      &.ejs {
+        color: $ejs1;
+        background-color: rgba($ejs, 0.5);
+      }
+      &.tailwind {
+        color: $tailwind;
+        background-color: rgba($tailwind, 0.5);
+      }
+      &.next {
+        color: $next;
+        background-color: rgba($next, 0.5);
+      }
+      &.cypress {
+        color: $cypress;
+        background-color: rgba($cypress, 0.5);
+      }
+      &.vitest {
+        color: $vitest1;
+        background-color: rgba($vitest2, 0.5);
+      }
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    .icons {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      z-index: 3;
+      position: relative;
+
+      .icon {
+        display: flex;
+        font-size: 2.5rem;
+        color: rgba($backgroundCard, 0.6);
+        &.ic1:hover,
+        &.ic2:hover {
+          color: $Lime;
+          cursor: pointer;
+        }
+      }
+      .notUrl {
+        color: red;
+        cursor: auto;
+      }
+    }
+    .description {
+      padding: 1rem;
+    }
+  }
+
+  .swal2-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 1rem 1rem 0;
+  }
+
+  .swal2-styled.swal2-confirm {
+    font-size: 1.5rem;
+  }
+}

@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const { isOpacity, spinnSpeedLogo } = useContext(AppContext);
+  const { isOpacity, spinnSpeedLogo, person } = useContext(AppContext);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -37,7 +37,7 @@ function App() {
       {isLoading ? (
         <div className="loadingPage">
           <FaConnectdevelop className="spinnerLogoIcon" />
-          <span>SAMMAN</span>
+          <span>{person.lastName}</span>
         </div>
       ) : (
         <>

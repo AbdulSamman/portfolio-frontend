@@ -12,6 +12,7 @@ export interface IAppContext {
   isOpacity: number;
   spinnSpeed: number;
   spinnSpeedLogo: number;
+  projects:IProject[]
 }
 
 export interface IParallaxLineProps {

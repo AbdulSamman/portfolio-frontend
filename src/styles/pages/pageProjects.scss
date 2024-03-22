@@ -3,207 +3,24 @@
 .pageProjects {
   padding: $pagePadding;
   background-color: $backgroundColor;
-  overflow: hidden;
-
+  height: 100vh;
   h1 {
     color: $mainColor;
   }
-  .moveProject {
-    position: relative;
-    width: max-content;
-    height: 750px;
-    .projects {
+
+  .projects {
+    gap: 1rem;
+    place-items: center;
+    overflow: scroll;
+    background-color: red;
+    height: 90vh;
+
+    .project {
       display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
       gap: 1rem;
-      place-items: center;
-      width: max-content;
       padding: 1rem;
-      overflow: hidden;
-      position: absolute;
-      left: 0;
-      top: 0;
-      animation: move 40s linear 0s infinite;
-      .project {
-        width: 220px;
-        height: 340px;
-        perspective: 1000px; // add 3D perspective
-        padding: 0.5rem;
-        .flipCardInner {
-          border-radius: $borderTop;
-          position: relative;
-          transform-style: preserve-3d; // preserve 3D space for children
-          transition: transform 0.6s;
-          width: 100%;
-          height: 100%;
-          box-shadow: $mainColor 0px 2px 3px 4px;
-          &,
-          &-front,
-          &-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden; // hide backface of the card
-          }
-
-          &-front {
-            border-radius: $borderTop;
-            background-color: rgba($backgroundCard, 0.2);
-            .imgContainer {
-              width: 220px;
-              height: 150px;
-              img {
-                width: 220px;
-                height: 150px;
-                border-radius: $borderTop;
-                filter: brightness(90%) saturate(90%);
-              }
-            }
-            .container {
-              padding: 0.5rem;
-              display: flex;
-              flex-flow: column wrap;
-              row-gap: 0.5rem;
-              text-align: center;
-              h4 {
-                height: 50px;
-                color: $Lime;
-              }
-              .tags {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 10px;
-
-                .tag {
-                  border-radius: 10px;
-                  text-align: center;
-                  font-weight: bold;
-
-                  &.typescript {
-                    color: $typescript;
-                    background-color: rgba($typescript, 0.5);
-                    &::before {
-                      content: "";
-                    }
-                  }
-
-                  &.react {
-                    color: $react;
-                    background-color: rgba($react, 0.5);
-                  }
-                  &.express {
-                    color: $express;
-                    background-color: rgba($express, 0.5);
-                  }
-                  &.scss {
-                    color: $scss;
-                    background-color: rgba($scss, 0.5);
-                  }
-                  &.sqlite {
-                    color: $sqlite;
-                    background-color: rgba($sqlite, 0.5);
-                  }
-                  &.mongodb {
-                    color: $mongodb;
-                    background-color: rgba($mongodb, 0.5);
-                  }
-                  &.html {
-                    color: $html;
-                    background-color: rgba($html, 0.5);
-                  }
-                  &.css {
-                    color: $css;
-                    background-color: rgba($css, 0.3);
-                  }
-                  &.javascript {
-                    color: $javascript;
-                    background-color: rgba($javascript, 0.5);
-                  }
-                  &.ejs {
-                    color: $ejs1;
-                    background-color: rgba($ejs, 0.5);
-                  }
-                  &.tailwind {
-                    color: $tailwind;
-                    background-color: rgba($tailwind, 0.5);
-                  }
-                  &.next {
-                    color: $next;
-                    background-color: rgba($next, 0.5);
-                  }
-                  &.cypress {
-                    color: $cypress;
-                    background-color: rgba($cypress, 0.5);
-                  }
-                  &.vitest {
-                    color: $vitest1;
-                    background-color: rgba($vitest2, 0.5);
-                  }
-                }
-              }
-            }
-          }
-
-          &-back {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            height: 100%;
-            width: 100%;
-            background-color: rgba($backgroundCard, 0.2);
-            box-shadow: $Lime 0px 2px 3px 4px;
-            border-radius: $borderTop;
-            font-weight: bold;
-            padding: 10px;
-            color: $backgroundColor;
-            transform: rotateY(180deg);
-            p {
-              height: 85%;
-              display: flex;
-              align-items: center;
-              text-shadow: -3px 0px 15px $Lime;
-            }
-            .icons {
-              display: flex;
-              justify-content: space-evenly;
-              width: 100%;
-              z-index: 3;
-              position: relative;
-
-              .icon {
-                display: flex;
-                font-size: 2.5rem;
-                color: rgba($backgroundCard, 0.6);
-                &.ic1:hover,
-                &.ic2:hover {
-                  color: $Lime;
-                  cursor: pointer;
-                }
-              }
-              .notUrl {
-                color: red;
-                cursor: auto;
-              }
-            }
-          }
-        }
-        &:hover .flipCardInner {
-          transform: rotateY(180deg);
-          backface-visibility: visible;
-        }
-      }
-
-      &:hover {
-        animation-play-state: paused;
-      }
+      background-color: green;
     }
-  }
-}
-@keyframes move {
-  0% {
-    transform: translate(40%, 0);
-  }
-  100% {
-    transform: translate(-110%, 0);
   }
 }
