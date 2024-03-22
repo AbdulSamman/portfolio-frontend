@@ -2,12 +2,12 @@ import Swal from "sweetalert2";
 import "../styles/pages/popUp.scss";
 import { IProject } from "../interfaces";
 import { AiFillGithub, AiOutlineGlobal } from "react-icons/ai";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 export const popUp = (project: IProject) => {
   const popupContainer = document.createElement("div");
 
-  ReactDOM.render(
+  createRoot(popupContainer).render(
     <div className="popupContainer">
       <h4>{project.name}</h4>
       <div className="popUpImage">
@@ -25,7 +25,7 @@ export const popUp = (project: IProject) => {
       </div>
 
       <div className="row">
-        <p className="description">${project.description}</p>
+        <p className="description">{project.description}</p>
         <div className="icons">
           <a href={project.repo} target="_blank">
             <AiFillGithub className="icon ic1" />
@@ -43,16 +43,14 @@ export const popUp = (project: IProject) => {
           )}
         </div>
       </div>
-    </div>,
-    popupContainer
+    </div>
   );
   Swal.fire({
     html: popupContainer,
     background: "rgba(0,0,50,0.9)",
     confirmButtonText: "close",
-    padding: "0",
+    padding: "10px",
     customClass: {
-      title: "popupTitle",
       popup: "myPopup",
       confirmButton: "closeButton",
     },

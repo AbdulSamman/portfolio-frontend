@@ -6,8 +6,12 @@
   justify-content: center;
   align-items: center;
 
+  h4 {
+    padding: 10px 0;
+    color: $javascript;
+  }
   .popUpImage {
-    width: 100%;
+    width: 80%;
     height: 150px;
     border-radius: 10px;
     img {
@@ -21,12 +25,12 @@
     gap: 1rem;
     padding: 1rem;
     flex-wrap: wrap;
-
+    justify-content: center;
     .tag {
       border-radius: 10px;
       text-align: center;
       font-weight: bold;
-
+      padding: 5px;
       &.typescript {
         color: $typescript;
         background-color: rgba($typescript, 0.5);

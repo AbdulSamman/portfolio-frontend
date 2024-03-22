@@ -8,15 +8,15 @@ $typescript: #2e8bc0;
 $react: cyan;
 $express: #b1d4e0;
 $scss: #ffaebc;
-$sqlite: #0000ff;
+$sqlite: #44ff00;
 $mongodb: #18a558;
 $html: #e55b13;
-$css: #051537;
+$css: #5082ef;
 $javascript: #fad02c;
 $ejs: #cdd193;
 $ejs1: #cb0e55;
 $tailwind: #1592b4;
-$next: #0a0708;
+$next: #4e3940;
 $cypress: #ede4e3;
 $vitest1: #f8d210;
 $vitest2: #76b947;
@@ -24,13 +24,3 @@ $vitest2: #76b947;
 $pagePadding: 1rem 2rem;
 $mainFonts: "Indie Flower";
 $borderTop: 10px 10px 0 0;
-
-@function columns($container) {
-    $children: $container + " > *";
-    @return length($children);
-}
-// .projects {
-//     background-color: beige;
-//     display : grid;
-//     grid-template-columns: repeat(columns('.projects'), 1fr);
-//   }
