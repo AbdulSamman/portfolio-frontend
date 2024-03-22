@@ -37,6 +37,7 @@ function App() {
       {isLoading ? (
         <div className="loadingPage">
           <FaConnectdevelop className="spinnerLogoIcon" />
+
           <span>{person.lastName}</span>
         </div>
       ) : (
@@ -56,7 +57,8 @@ function App() {
                     animation: `spinner ${spinnSpeedLogo}s linear infinite`,
                   }}
                 />
-                <span>SAMMAN</span>
+
+                <span>{person.lastName}</span>
               </Link>
             </div>
             <div className="burgerMenu" onClick={handleMenuOpen}>

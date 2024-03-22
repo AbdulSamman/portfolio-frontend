@@ -10,12 +10,14 @@ import { AppContext } from "../AppContext";
 import "../styles/parallaxStyle.scss";
 
 export const ParallaxBackground: React.FC = () => {
-  const { spinnSpeed } = useContext(AppContext);
+  const { spinnSpeed, person } = useContext(AppContext);
   return (
     <Parallax bgImage={Background} strength={300}>
       <div className="content">
         <div className="personalContainer">
-          <h1 className="personal">SAMMAN</h1>
+          <h1 className="personal">
+            {person.firstName} <span> {person.lastName}</span>
+          </h1>
           <div className="logoIcon">
             <FaConnectdevelop
               className="spinnerLogoIcon"

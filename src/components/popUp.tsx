@@ -9,7 +9,7 @@ export const popUp = (project: IProject) => {
 
   createRoot(popupContainer).render(
     <div className="popupContainer">
-      <h4>{project.name}</h4>
+      <h3>{project.name}</h3>
       <div className="popUpImage">
         <img src={project.image} />
       </div>
@@ -47,7 +47,7 @@ export const popUp = (project: IProject) => {
   );
   Swal.fire({
     html: popupContainer,
-    background: "rgba(0,0,50,0.9)",
+    background: "rgba(0,0,50,0.7)",
     confirmButtonText: "close",
     padding: "10px",
     customClass: {

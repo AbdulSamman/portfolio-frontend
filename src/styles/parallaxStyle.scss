@@ -30,6 +30,13 @@
       text-shadow: 5px 5px $mainColor;
       font-family: $mainFonts, cursive;
       color: $backgroundColor;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      span {
+        text-shadow: 3px 3px $mainColor;
+        font-size: 2.5rem;
+      }
     }
     .logoIcon {
       .spinnerLogoIcon {
