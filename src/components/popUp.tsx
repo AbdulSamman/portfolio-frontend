@@ -9,6 +9,7 @@ export const popUp = (project: IProject) => {
 
   ReactDOM.render(
     <div className="popupContainer">
+      <h4>{project.name}</h4>
       <div className="popUpImage">
         <img src={project.image} />
       </div>
