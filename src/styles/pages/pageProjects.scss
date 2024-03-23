@@ -28,6 +28,12 @@
       align-items: center;
       border-radius: 5px;
       color: $mainColor;
+      box-shadow: 5px 5px 3px -4px inset;
+      &:hover {
+        box-shadow: -5px -5px 3px -4px inset;
+
+        cursor: pointer;
+      }
     }
   }
 }
