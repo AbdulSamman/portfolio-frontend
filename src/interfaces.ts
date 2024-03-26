@@ -8,11 +8,12 @@ export interface IAppProvider {
 export interface IAppContext {
   scaleX: number;
   rotateY: number;
-  person: IPerson;
+  person:   IPerson ;
   isOpacity: number;
   spinnSpeed: number;
   spinnSpeedLogo: number;
-  projects:IProject[]
+  projects:IProject[];
+  skills:ISkill[]
 }
 
 export interface IParallaxLineProps {
@@ -41,7 +42,9 @@ export interface HandleScroll {
 export interface IPerson {
   firstName: string;
   lastName: string;
-  githubName: string;
+  gitHubLink: string;
+  linkedinLink: string;
+  title: string;
   hobbys: string[];
   description: string;
 }
@@ -55,9 +58,10 @@ export interface IProject {
   url: string;
   description: string;
 }
-export interface ISkills {
-  type: string;
-  value: number;
+export interface ISkill {
+  id:number,
+  title:string,
+  skills:string[]
 }
 
 export interface IContactFormData {
@@ -75,3 +79,15 @@ export const contactFormData = {
   message: "",
   capture: "",
 };
+
+
+export const personDataEmpty ={
+  firstName: "",
+  lastName: "",
+  gitHubLink: "",
+  linkedinLink: "",
+  title: "",
+  hobbys: [],
+  description: "",
+
+}

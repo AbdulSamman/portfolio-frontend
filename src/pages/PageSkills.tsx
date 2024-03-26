@@ -1,31 +1,38 @@
 import "../styles/pages/pageSkills.scss";
 import { AppProvider } from "../AppContext";
-import ReactSkillbar from "react-skillbars";
 import ParallaxLine from "../components/ParallaxLine";
-import skills from "../data/skills.json";
-import { ISkills } from "../interfaces";
+import { ISkill } from "../interfaces";
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
 
 export const PageSkills = () => {
-  const skillBars = skills.map((skill: ISkills) => ({
-    type: skill.type,
-    level: skill.value,
-  }));
+  const { skills } = useContext(AppContext);
 
   return (
     <div id="skills" className="pageSkills">
-      <div className="container">
-        <ReactSkillbar
-          skills={skillBars}
-          height={40}
-          animationDuration={1800}
-        />
+      <div className="skills">
+        {skills.map((skill: ISkill) => {
+          return (
+            <div key={skill.id} className={`skill ${skill.title}`}>
+              <div className="title">{skill.title}</div>
+              <div className="skillImg">
+                {skill.skills &&
+                  skill.skills.map((skillImg, index) => (
+                    <img
+                      key={index}
+                      src={`images/icons/${skillImg}.png`}
+                      alt={skillImg}
+                    />
+                  ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      <div>
-        <AppProvider speed={10} start={1300} end={2500}>
-          <ParallaxLine />
-        </AppProvider>
-      </div>
+      <AppProvider speed={10} start={1000} end={2500}>
+        <ParallaxLine />
+      </AppProvider>
     </div>
   );
 };

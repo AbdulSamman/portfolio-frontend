@@ -16,7 +16,11 @@ export const ParallaxBackground: React.FC = () => {
       <div className="content">
         <div className="personalContainer">
           <h1 className="personal">
-            {person.firstName} <span> {person.lastName}</span>
+            {person.firstName}
+            <span className="lastName"> {person.lastName}</span>
+          </h1>
+          <h1 className="animatedText">
+            {person.title} <span>...</span>
           </h1>
           <div className="logoIcon">
             <FaConnectdevelop

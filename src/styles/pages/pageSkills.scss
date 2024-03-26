@@ -2,36 +2,70 @@
 
 .pageSkills {
   padding: $pagePadding;
-  display: grid;
-  place-items: center;
   background-color: $backgroundColor;
 
-  .container {
-    width: 100%;
+  .skills {
+    display: grid;
+    grid-template-columns: repeat((3, 1fr));
+    gap: 5px;
+    padding-bottom: 1rem;
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
 
-    .skillbar {
-      &-title {
-        width: 140px;
-        span {
-          background-color: #1e3d94;
-          font-size: 1rem;
-          font-family: $mainFonts;
-          position: relative;
-          z-index: 1;
+      .skillImg {
+        width: 50px;
+        aspect-ratio: 1;
+        display: grid;
+        grid-template-columns: repeat((2, 1fr));
+        gap: 10px;
+        justify-content: center;
+        img {
+          width: 50px;
+          aspect-ratio: 1;
         }
       }
-      &-bar {
-        background-color: #04767a;
-        position: relative;
-      }
-      &-percent {
-        font-family: $mainFonts;
-        color: #8abb05;
-        font-size: 1.8rem;
+      .title {
+        font-size: 2rem;
         font-weight: bold;
-        position: absolute;
-        top: 5px;
       }
+    }
+    .backend {
+      background-color: cyan;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+    .frontend {
+      background-color: yellow;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 6;
+    }
+    .database {
+      background-color: blue;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 6;
+    }
+    .devops {
+      background-color: green;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    .testing {
+      background-color: pink;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 6;
     }
   }
 }

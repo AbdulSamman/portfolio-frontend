@@ -49,7 +49,7 @@ function App() {
                 to="start"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={-150}
                 duration={500}>
                 <FaConnectdevelop
                   className="logoIcon"
@@ -73,7 +73,7 @@ function App() {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-40}
+                offset={-100}
                 duration={500}>
                 PROJECTS
               </Link>
@@ -81,7 +81,7 @@ function App() {
                 to="skills"
                 spy={true}
                 smooth={true}
-                offset={-80}
+                offset={-100}
                 duration={500}>
                 SKILLS
               </Link>
@@ -97,6 +97,7 @@ function App() {
           </div>
           <PageProjects />
           <PageSkills />
+
           <PageContact />
         </>
       )}

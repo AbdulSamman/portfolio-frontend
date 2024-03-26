@@ -6,10 +6,15 @@ import {
   IAppProvider,
   IPerson,
   IProject,
+  ISkill,
+  personDataEmpty,
 } from "./interfaces";
 
-import personData from "./data/person.json";
-import projectsData from "./data/projects.json";
+import axios from "axios";
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
+// Objekt entleeren
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
@@ -25,9 +30,36 @@ export const AppProvider: React.FC<IAppProvider> = ({
   const [spinnSpeed, setSpinnSpeed] = useState(3);
   const [spinnSpeedLogo, setSpinnSpeedLogo] = useState(3);
   const [isOpacity, setIsOpacity] = useState(0);
+
   // Data
-  const [person, setPerson] = useState<IPerson>(personData);
-  const [projects, setProjects] = useState<IProject[]>(projectsData);
+  const [person, setPerson] = useState<IPerson>(personDataEmpty);
+  const [projects, setProjects] = useState<IProject[]>([]);
+  const [skills, setSkills] = useState<ISkill[]>([]);
+  //projects
+  useEffect(() => {
+    setTimeout(() => {
+      (async () => {
+        const responseProjects = (await axios.get(`${backendUrl}/projects`))
+          .data;
+        setProjects(responseProjects);
+      })();
+    }, 2000);
+  }, []);
+  //Skills
+  useEffect(() => {
+    (async () => {
+      const responseSkills = (await axios.get(`${backendUrl}/skills`)).data;
+      setSkills(responseSkills);
+    })();
+  }, []);
+
+  //person
+  useEffect(() => {
+    (async () => {
+      const personData = (await axios.get(`${backendUrl}/person`)).data;
+      setPerson(personData);
+    })();
+  }, []);
 
   const handleScroll: HandleScroll = (_, scrollY) => {
     if (scrollY >= start && scrollY <= end) {
@@ -103,11 +135,12 @@ export const AppProvider: React.FC<IAppProvider> = ({
       value={{
         scaleX,
         rotateY,
-        person,
         isOpacity,
         spinnSpeed,
         spinnSpeedLogo,
         projects,
+        skills,
+        person,
       }}>
       {children}
     </AppContext.Provider>

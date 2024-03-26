@@ -33,7 +33,7 @@
       display: flex;
       flex-direction: column;
       text-align: center;
-      span {
+      .lastName {
         text-shadow: 3px 3px $mainColor;
         font-size: 2.5rem;
       }
@@ -43,6 +43,39 @@
         transform-origin: center center;
         font-size: 5rem;
         color: $backgroundColor;
+      }
+    }
+    .animatedText {
+      font-size: 1rem;
+      font-family: $mainFonts, cursive;
+      overflow: hidden;
+      height: 1.1em;
+      word-wrap: break-word;
+      white-space: nowrap;
+      animation: typing 4s steps(48) forwards;
+      text-shadow: 2px 1px $mainColor;
+      text-transform: uppercase;
+      span {
+        color: red;
+        letter-spacing: 5px;
+        animation: typingSpan 1s steps(48) forwards infinite;
+      }
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 48ch;
+      }
+    }
+    @keyframes typingSpan {
+      from {
+        width: 0;
+      }
+      to {
+        width: 48ch;
       }
     }
   }
