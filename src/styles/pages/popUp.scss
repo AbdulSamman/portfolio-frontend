@@ -11,10 +11,12 @@
     color: $javascript;
   }
   .popUpImage {
-    height: 200px;
+    height: 150px;
+    width: 300px;
     border-radius: 10px;
     img {
-      height: 200px;
+      height: 150px;
+      width: 100%;
       border-radius: 10px;
     }
   }
@@ -28,19 +30,32 @@
       border-radius: 10px;
       text-align: center;
       font-weight: bold;
-      padding: 5px;
+      padding: 10px;
+      font-size: 20px;
+
+      //   @mixin iconColor($name, $bgColor) {
+      //     .#{$name} {
+      //       padding: 10px;
+      //       color: $bgColor;
+      //     }
+      //   }
+
+      // $iconsColors: typescript $typescript, react $react, express $express,
+      //   scss $scss, sqlite $sqlite, mongodb $mongodb, html5 $html5, css3 $css3,
+      //   javascript $javascript, ejs $ejs, tailwind $tailwind, nextJs $nextJs;
+
+      // @each $name, $color in $iconsColors {
+      //   @include iconColor($name, $color);
+      // }
 
       &.typescript {
         color: $typescript;
-        background-color: rgba($typescript, 0.5);
-        &::before {
-          content: "";
-        }
+        background-color: rgba($typescript, 0.2);
       }
 
       &.react {
         color: $react;
-        background-color: rgba($react, 0.5);
+        background-color: rgba($react, 0.2);
       }
       &.express {
         color: $express;
@@ -58,13 +73,13 @@
         color: $mongodb;
         background-color: rgba($mongodb, 0.5);
       }
-      &.html {
-        color: $html;
-        background-color: rgba($html, 0.5);
+      &.html5 {
+        color: $html5;
+        background-color: rgba($html5, 0.5);
       }
-      &.css {
-        color: $css;
-        background-color: rgba($css, 0.3);
+      &.css3 {
+        color: $css3;
+        background-color: rgba($css3, 0.3);
       }
       &.javascript {
         color: $javascript;
@@ -72,15 +87,15 @@
       }
       &.ejs {
         color: $ejs1;
-        background-color: rgba($ejs, 0.5);
+        background-color: rgba($ejs1, 0.3);
       }
       &.tailwind {
         color: $tailwind;
         background-color: rgba($tailwind, 0.5);
       }
-      &.next {
-        color: $next;
-        background-color: rgba($next, 0.5);
+      &.nextJs {
+        color: $nextJs;
+        background-color: rgba($nextJs, 0.5);
       }
       &.cypress {
         color: $cypress;
@@ -102,13 +117,11 @@
       display: flex;
       justify-content: space-evenly;
       width: 100%;
-      z-index: 3;
-      position: relative;
 
       .icon {
         display: flex;
         font-size: 2.5rem;
-        color: rgba($backgroundCard, 0.6);
+
         &.ic1:hover,
         &.ic2:hover {
           color: $Lime;
@@ -121,20 +134,9 @@
       }
     }
     .description {
-      padding: 1rem;
       color: gray;
       font-weight: bold;
+      font-family: $textFonts;
     }
-  }
-
-  .swal2-actions {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 0 1rem 1rem 0;
-  }
-
-  .swal2-styled.swal2-confirm {
-    font-size: 1.5rem;
   }
 }

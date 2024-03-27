@@ -10,6 +10,7 @@
   h1 {
     color: $mainColor;
     font-size: 3rem;
+    padding: 1rem 0;
   }
   .messageRow {
     font-size: 1.5rem;
@@ -44,6 +45,8 @@
       padding: 10px;
       color: $Lime;
       background-color: $backgroundColor;
+      font-family: $textFonts;
+
       filter: brightness(150%);
       outline: none;
       border: none;
@@ -91,7 +94,7 @@
           font-weight: bold;
           font-size: 1.3rem;
           background-color: rgba($Lime, 0.3);
-          color: $css;
+          color: $css3;
         }
         .numbers {
           font-size: 2rem;

@@ -46,13 +46,13 @@ export const popUp = (project: IProject) => {
     </div>
   );
   Swal.fire({
-    html: popupContainer,
-    background: "rgba(0,0,50,0.7)",
-    confirmButtonText: "close",
+    title: popupContainer,
+    background: "rgba(21,21,50,0.9)",
+    confirmButtonText: "CLOSE",
     padding: "10px",
     customClass: {
       popup: "myPopup",
-      confirmButton: "closeButton",
+      confirmButton: "confirmButtonText",
     },
   });
 };

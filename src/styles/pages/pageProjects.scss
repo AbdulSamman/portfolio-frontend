@@ -29,6 +29,7 @@
       border-radius: 5px;
       color: $Lime;
       box-shadow: 5px 5px 3px -4px gray inset;
+      font-family: $textFonts;
       &:hover {
         box-shadow: -5px -5px 3px -4px gray inset;
         cursor: pointer;

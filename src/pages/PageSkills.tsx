@@ -29,10 +29,11 @@ export const PageSkills = () => {
           );
         })}
       </div>
-
-      <AppProvider speed={10} start={1000} end={2500}>
-        <ParallaxLine />
-      </AppProvider>
+      <div>
+        <AppProvider speed={10} start={1000} end={2500}>
+          <ParallaxLine />
+        </AppProvider>
+      </div>
     </div>
   );
 };

@@ -14,6 +14,7 @@ export interface IAppContext {
   spinnSpeedLogo: number;
   projects:IProject[];
   skills:ISkill[]
+  moveTigerX:number
 }
 
 export interface IParallaxLineProps {

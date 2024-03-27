@@ -12,7 +12,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      text-transform: uppercase;
       .skillImg {
         display: flex;
         gap: 1rem;
@@ -50,7 +50,7 @@
       grid-row-end: 5;
     }
     .database {
-      background-color: rgba($javascript, 0.2);
+      background-color: rgba(red, 0.2);
 
       grid-column-start: 2;
       grid-column-end: 4;
@@ -58,7 +58,7 @@
       grid-row-end: 15;
     }
     .devops {
-      background-color: rgba($scss, 0.3);
+      background-color: rgba($scss, 0.1);
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 10;

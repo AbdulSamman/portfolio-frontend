@@ -11,7 +11,7 @@ export const PageProjects = () => {
   return (
     <div id="projects" className="pageProjects">
       <div style={{ paddingBottom: "1rem" }}>
-        <AppProvider speed={10} start={-100} end={1000}>
+        <AppProvider speed={10} start={-200} end={1000}>
           <ParallaxLine />
         </AppProvider>
       </div>
@@ -29,7 +29,7 @@ export const PageProjects = () => {
       </div>
 
       <div style={{ paddingTop: "2rem" }}>
-        <AppProvider speed={10} start={600} end={2200}>
+        <AppProvider speed={10} start={300} end={2200}>
           <ParallaxLine />
         </AppProvider>
       </div>
