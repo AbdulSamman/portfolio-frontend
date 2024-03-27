@@ -3,6 +3,7 @@ import { Parallax } from "react-parallax";
 import Background from "/images/Green.jpg";
 import shadowImage from "/images/shadowForest.png";
 import rightImage from "/images/palmen.png";
+import tiger from "/images/tiger.png";
 import { FaConnectdevelop } from "react-icons/fa";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
@@ -16,7 +17,6 @@ export const ParallaxBackground: React.FC = () => {
       <div className="content">
         <div className="personalContainer">
           <h1 className="personal">
-            {person.firstName}
             <span className="lastName"> {person.lastName}</span>
           </h1>
           <h1 className="animatedText">
@@ -36,6 +36,9 @@ export const ParallaxBackground: React.FC = () => {
         </div>
         <div className="layer" data-depth="0.6">
           <img src={rightImage} alt="right" className="rightImg" />
+        </div>
+        <div className="layer">
+          <img src={tiger} alt="tiger" className="tiger" />
         </div>
       </div>
     </Parallax>

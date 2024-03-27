@@ -39,6 +39,7 @@
       }
     }
     .logoIcon {
+      padding-top: 2rem;
       .spinnerLogoIcon {
         transform-origin: center center;
         font-size: 5rem;
@@ -86,16 +87,24 @@
     width: 100%;
     bottom: -10px;
     left: 0;
-    height: 350px;
+    height: 250px;
   }
 
   .rightImg {
     position: absolute;
     z-index: 1;
     right: 0;
-    bottom: 0;
-    width: 600px;
-    height: 350px;
+    top: 40%;
+    width: 700px;
+    height: 400px;
+  }
+  .tiger {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    bottom: 10%;
+    right: 80%;
+    transform: rotateY(180deg);
   }
 }
 
