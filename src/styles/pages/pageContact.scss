@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
 
   h1 {
     color: $mainColor;
     font-size: 3rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
   .messageRow {
     font-size: 1.5rem;
@@ -70,7 +70,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
 
       .capture {
         display: flex;
@@ -86,7 +85,7 @@
           $backgroundColor
         );
 
-        padding: 1rem;
+        padding: 0 1rem;
         input {
           width: 60px;
           height: 45px;
@@ -106,17 +105,15 @@
       .button {
         background-color: $mainColor;
         height: 56px;
-        width: 200px;
+        width: 215px;
         display: flex;
         justify-content: center;
         align-items: center;
         filter: brightness(150%);
         button {
           height: 50px;
-          width: 194px;
+          width: 205px;
           cursor: pointer;
-          //
-          padding: 10px 20px;
           background-color: $backgroundColor;
           color: $mainColor;
           border: none;

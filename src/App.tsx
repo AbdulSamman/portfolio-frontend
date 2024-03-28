@@ -82,7 +82,7 @@ function App() {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-80}
+                offset={-70}
                 duration={500}>
                 CONTACT
               </Link>
@@ -90,7 +90,6 @@ function App() {
           </div>
           <PageProjects />
           <PageSkills />
-
           <PageContact />
         </>
       )}

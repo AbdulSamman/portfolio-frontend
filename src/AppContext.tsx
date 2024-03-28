@@ -86,41 +86,52 @@ export const AppProvider: React.FC<IAppProvider> = ({
       case scrollY >= 950:
         setIsOpacity(1);
         setSpinnSpeedLogo(1);
-
         break;
+
       case scrollY >= 850:
         setIsOpacity(0.8);
-
         break;
+
       case scrollY >= 750:
         setIsOpacity(0.6);
         setSpinnSpeedLogo(1.5);
-
         break;
+
       case scrollY >= 650:
         setIsOpacity(0.4);
-
         break;
+
       case scrollY >= 550:
         setIsOpacity(0.2);
         setSpinnSpeedLogo(2);
         break;
 
+      case scrollY >= 300:
+        setMoveTimeX(30);
+        break;
+
+      case scrollY >= 250:
+        setMoveTimeX(40);
+        break;
       case scrollY >= 200:
         setMoveTimeX(50);
         break;
+
       case scrollY >= 150:
         setSpinnSpeed(0.5);
         setMoveTimeX(60);
         break;
+
       case scrollY >= 100:
         setSpinnSpeed(1);
         setMoveTimeX(70);
         break;
+
       case scrollY >= 50:
         setSpinnSpeed(1.5);
         setMoveTimeX(80);
         break;
+
       default:
         setIsOpacity(0);
         setMoveTimeX(90);

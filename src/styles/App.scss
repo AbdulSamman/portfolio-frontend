@@ -8,6 +8,7 @@
 body {
   font-family: $mainFonts;
   .App {
+    overflow-x: none;
     .loadingPage {
       display: flex;
       justify-content: center;

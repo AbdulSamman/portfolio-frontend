@@ -9,12 +9,13 @@ import { useContext } from "react";
 import { AppContext } from "../AppContext";
 
 import "../styles/parallaxStyle.scss";
+import React from "react";
 
 export const ParallaxBackground: React.FC = () => {
   const { spinnSpeed, person, moveTigerX } = useContext(AppContext);
 
   return (
-    <Parallax bgImage={Background} strength={300}>
+    <Parallax bgImage={Background} strength={80}>
       <div className="content">
         <div className="personalContainer">
           <h1 className="personal">
@@ -37,6 +38,14 @@ export const ParallaxBackground: React.FC = () => {
         </div>
         <div className="layer" data-depth="0.6">
           <img src={rightImage} alt="right" className="rightImg" />
+        </div>
+        <div className="layer">
+          <img
+            src={tiger}
+            alt="tiger"
+            className="tiger"
+            style={{ right: `${moveTigerX}%` }}
+          />
         </div>
       </div>
     </Parallax>
