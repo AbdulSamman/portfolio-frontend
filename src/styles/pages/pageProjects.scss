@@ -20,7 +20,9 @@
     overflow-x: hidden;
     .project {
       background-color: lighten($backgroundColor, 10);
-      background-color: red;
+      height: 100%;
+      width: 100%;
+      padding: 20px 5px;
       display: flex;
       justify-content: center;
       align-items: center;
