@@ -12,7 +12,7 @@ import {
 
 import axios from "axios";
 
-const backendUrl = String(import.meta.env.VITE_BACKEND_URL);
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 // Objekt entleeren
 
