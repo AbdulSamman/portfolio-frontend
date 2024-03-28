@@ -21,9 +21,9 @@ export const ParallaxBackground: React.FC = () => {
           <h1 className="personal">
             <span className="lastName"> {person.lastName}</span>
           </h1>
-          <h1 className="animatedText">
+          <h2 className="animatedText">
             {person.title} <span>...</span>
-          </h1>
+          </h2>
           <div className="logoIcon">
             <FaConnectdevelop
               className="spinnerLogoIcon"
