@@ -1,159 +1,3 @@
-// @use "variables" as *;
-
-// * {
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// }
-
-// .content {
-//   position: relative;
-//   height: 90.3vh;
-//   width: 100%;
-//   padding-top: 5rem;
-//   text-align: center;
-
-//   .personalContainer {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     .personal {
-//       text-transform: uppercase;
-//       color: $Lime;
-//       padding: 1rem 0;
-//       font-weight: bold;
-//       font-size: 4rem;
-//       height: fit-content;
-//       text-shadow: 5px 5px $mainColor;
-//       font-family: $mainFonts, cursive;
-//       color: $backgroundColor;
-//       display: flex;
-//       flex-direction: column;
-//       text-align: center;
-//       .lastName {
-//         text-shadow: 3px 3px $mainColor;
-//         font-size: 2.5rem;
-//         letter-spacing: 5px;
-//       }
-//     }
-//     .logoIcon {
-//       padding-top: 2rem;
-//       .spinnerLogoIcon {
-//         transform-origin: center center;
-//         font-size: 5rem;
-//         color: $backgroundColor;
-//       }
-//     }
-//     .animatedText {
-//       font-size: 1rem;
-//       font-family: $mainFonts, cursive;
-//       overflow: hidden;
-//       word-wrap: break-word;
-//       white-space: nowrap;
-//       animation: typing 4s steps(48) forwards;
-//       text-shadow: 2px 1px $mainColor;
-//       text-transform: uppercase;
-//       padding: 5px 0;
-
-//       span {
-//         color: red;
-//         letter-spacing: 5px;
-//         animation: typingSpan 1s steps(48) forwards infinite;
-//       }
-//     }
-
-//     @keyframes typing {
-//       from {
-//         width: 0;
-//       }
-//       to {
-//         width: 48ch;
-//       }
-//     }
-//     @keyframes typingSpan {
-//       from {
-//         width: 0;
-//       }
-//       to {
-//         width: 48ch;
-//       }
-//     }
-//   }
-
-//   .shadowBlackImg {
-//     position: absolute;
-//     z-index: 2;
-//     width: 100%;
-//     top: 50%;
-//     left: 0;
-//     height: 350px;
-//   }
-
-//   .rightImg {
-//     position: absolute;
-//     z-index: 1;
-//     right: 0;
-//     top: 45%;
-//     width: 700px;
-//     height: 400px;
-//   }
-//   .tiger {
-//     width: 400px;
-//     height: 200px;
-//     position: absolute;
-//     bottom: 10%;
-//     transform: rotateY(180deg);
-//   }
-// }
-
-// .parallaxRowLine {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding-top: 0.5rem;
-
-//   .parallaxLine {
-//     position: relative;
-//     height: 1px;
-//     background-color: $mainColor;
-//     filter: brightness(150%);
-//     transform-origin: center center;
-//     width: 40vw;
-//   }
-//   .parallaxSpace {
-//     position: absolute;
-//     height: max-content;
-//     width: 60px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: $backgroundColor;
-
-//     .BsTriangleHalfIcon {
-//       color: $mainColor;
-//       filter: brightness(150%);
-//     }
-//   }
-// }
-
-// @media (max-width: 567px) {
-//   .shadowBlackImg {
-//     max-height: 300px;
-//   }
-//   .rightImg {
-//     max-height: 350px;
-//   }
-// }
-// @keyframes spinner {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }
-
 @use "variables" as *;
 
 * {
@@ -165,7 +9,7 @@
 .content {
   position: relative;
   width: 100%;
-  height: 90.5vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   padding-top: 5rem;
@@ -175,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    height: fit-content;
     .personal {
       text-transform: uppercase;
       color: $Lime;
@@ -193,6 +37,7 @@
         text-shadow: 3px 3px $mainColor;
         font-size: 2.5rem;
         letter-spacing: 5px;
+        padding: 5px;
       }
       span {
         text-shadow: 3px 3px $mainColor;
@@ -247,7 +92,7 @@
     width: 100%;
     bottom: -10px;
     left: 0;
-    height: 350px;
+    height: 300px;
   }
 
   .rightImg {

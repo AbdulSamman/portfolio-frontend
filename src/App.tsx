@@ -66,7 +66,7 @@ function App() {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-40}
                 duration={500}>
                 PROJECTS
               </Link>
@@ -74,7 +74,7 @@ function App() {
                 to="skills"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-80}
                 duration={500}>
                 SKILLS
               </Link>
@@ -82,7 +82,7 @@ function App() {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-70}
                 duration={500}>
                 CONTACT
               </Link>
@@ -90,7 +90,6 @@ function App() {
           </div>
           <PageProjects />
           <PageSkills />
-
           <PageContact />
         </>
       )}

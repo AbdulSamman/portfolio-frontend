@@ -9,13 +9,12 @@ body {
   font-family: $mainFonts;
 
   .App {
-    overflow-x: hidden;
     .loadingPage {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 1rem;
-      height: 100vh;
+
       background-color: rgba($backgroundColor, 0.9);
       .spinnerLogoIcon {
         animation: spinner 1.2s linear infinite;
@@ -35,6 +34,7 @@ body {
       display: flex;
       font-size: 1rem;
       padding: 1rem;
+
       .logo {
         color: $Lime;
         display: flex;
