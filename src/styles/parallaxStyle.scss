@@ -33,6 +33,7 @@
       .lastName {
         text-shadow: 3px 3px $mainColor;
         font-size: 2.5rem;
+        letter-spacing: 5px;
       }
     }
     .logoIcon {
@@ -47,12 +48,13 @@
       font-size: 1rem;
       font-family: $mainFonts, cursive;
       overflow: hidden;
-      height: 1.1em;
       word-wrap: break-word;
       white-space: nowrap;
       animation: typing 4s steps(48) forwards;
       text-shadow: 2px 1px $mainColor;
       text-transform: uppercase;
+      padding: 5px 0;
+
       span {
         color: red;
         letter-spacing: 5px;
