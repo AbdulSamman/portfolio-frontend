@@ -3,6 +3,11 @@
 .pageSkills {
   padding: $pagePadding;
   background-color: $backgroundColor;
+  h1 {
+    color: $mainColor;
+    text-align: center;
+    padding: 2rem 0;
+  }
   .skills {
     display: grid;
     grid-template-columns: repeat((3, 1fr));

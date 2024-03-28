@@ -10,12 +10,12 @@ export const PageProjects = () => {
   const { projects } = useContext(AppContext);
   return (
     <div id="projects" className="pageProjects">
-      {/* <div style={{ paddingBottom: "1rem" }}>
-        <AppProvider speed={10} start={-200} end={1000}>
+      <div style={{ paddingBottom: "1rem" }}>
+        <AppProvider speed={10} start={-200} end={800}>
           <ParallaxLine />
         </AppProvider>
-      </div> */}
-      <h2>PROJECTS</h2>
+      </div>
+      <h1>PROJECTS</h1>
       <div className="projects">
         {projects.map((project) => {
           return (

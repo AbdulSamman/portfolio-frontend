@@ -10,6 +10,7 @@ export const PageSkills = () => {
 
   return (
     <div id="skills" className="pageSkills">
+      <h1>SKILLS</h1>
       <div className="skills">
         {skills.map((skill: ISkill) => {
           return (

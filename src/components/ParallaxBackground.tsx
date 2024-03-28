@@ -15,7 +15,7 @@ export const ParallaxBackground: React.FC = () => {
   const { spinnSpeed, person, moveTigerX } = useContext(AppContext);
 
   return (
-    <Parallax bgImage={Background} strength={300}>
+    <Parallax bgImage={Background} strength={80}>
       <div className="content">
         <div className="personalContainer">
           <h1 className="personal">
