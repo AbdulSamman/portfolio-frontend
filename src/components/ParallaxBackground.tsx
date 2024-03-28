@@ -38,14 +38,6 @@ export const ParallaxBackground: React.FC = () => {
         <div className="layer" data-depth="0.6">
           <img src={rightImage} alt="right" className="rightImg" />
         </div>
-        <div className="layer">
-          <img
-            src={tiger}
-            alt="tiger"
-            className="tiger"
-            style={{ right: `${moveTigerX}%` }}
-          />
-        </div>
       </div>
     </Parallax>
   );
