@@ -14,16 +14,9 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const { isOpacity, spinnSpeedLogo, person } = useContext(AppContext);
+  const { isOpacity, spinnSpeedLogo, person, projects } =
+    useContext(AppContext);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
 
   const handleMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -34,7 +27,7 @@ function App() {
       className="App"
       id="start"
       onClick={() => isMenuOpen && setIsMenuOpen(false)}>
-      {isLoading ? (
+      {projects.length === 0 ? (
         <div className="loadingPage">
           <FaConnectdevelop className="spinnerLogoIcon" />
 
