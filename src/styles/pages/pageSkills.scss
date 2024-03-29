@@ -4,12 +4,7 @@
   padding: $pagePadding;
   background-color: $backgroundColor;
   padding: 10px;
-  h1 {
-    color: $mainColor;
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 3rem;
-  }
+
   .skills {
     display: grid;
     grid-template-columns: repeat((3, 1fr));

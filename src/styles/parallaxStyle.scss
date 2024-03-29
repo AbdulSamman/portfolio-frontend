@@ -20,12 +20,11 @@
     align-items: center;
     height: fit-content;
 
-    .personal {
+    .lastName {
       text-transform: uppercase;
       color: $Lime;
       padding: 1rem 0;
       font-weight: bold;
-      font-size: 4rem;
       height: fit-content;
       text-shadow: 5px 5px $mainColor;
       font-family: $mainFonts, cursive;
@@ -33,15 +32,11 @@
       display: flex;
       flex-direction: column;
       text-align: center;
-      .lastName {
-        text-shadow: 3px 3px $mainColor;
-        font-size: 2.5rem;
+      span {
+        font-size: 4rem;
+        text-shadow: 5px 3px $mainColor;
         letter-spacing: 5px;
         padding: 5px;
-      }
-      span {
-        text-shadow: 3px 3px $mainColor;
-        font-size: 2.5rem;
       }
     }
     .logoIcon {
@@ -53,7 +48,7 @@
       }
     }
     .animatedText {
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-family: $mainFonts, cursive;
       overflow: hidden;
       word-wrap: break-word;

@@ -18,8 +18,8 @@ export const ParallaxBackground: React.FC = () => {
     <Parallax bgImage={Background} strength={80}>
       <div className="content">
         <div className="personalContainer">
-          <h1 className="personal">
-            <span className="lastName"> {person.lastName}</span>
+          <h1 className="lastName">
+            <span> {person.lastName}</span>
           </h1>
           <h2 className="animatedText">
             {person.title} <span>...</span>

@@ -8,6 +8,12 @@
 body {
   font-family: $mainFonts;
   background-color: $backgroundColor;
+  h1 {
+    color: $mainColor;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+  }
   .App {
     .loadingPage {
       display: flex;
@@ -16,6 +22,7 @@ body {
       gap: 1rem;
       height: 100vh;
       background-color: rgba($backgroundColor, 0.9);
+
       .spinnerLogoIcon {
         animation: spinner 1.2s linear infinite;
         transform-origin: center center;
@@ -23,7 +30,7 @@ body {
         color: $Lime;
       }
       span {
-        font-size: 2.5rem;
+        font-size: 3rem;
         color: $Lime;
       }
     }
