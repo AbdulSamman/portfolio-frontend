@@ -10,8 +10,8 @@ export const PageProjects = () => {
   const { projects } = useContext(AppContext);
   return (
     <div id="projects" className="pageProjects">
-      <div style={{ paddingBottom: "1rem" }}>
-        <AppProvider speed={10} start={-200} end={800}>
+      <div className="line">
+        <AppProvider speed={10} start={-200} end={1000}>
           <ParallaxLine />
         </AppProvider>
       </div>
@@ -28,11 +28,11 @@ export const PageProjects = () => {
         })}
       </div>
 
-      {/* <div style={{ paddingTop: "2rem" }}>
-        <AppProvider speed={10} start={300} end={2200}>
+      <div className="line">
+        <AppProvider speed={10} start={700} end={1900}>
           <ParallaxLine />
         </AppProvider>
-      </div> */}
+      </div>
     </div>
   );
 };

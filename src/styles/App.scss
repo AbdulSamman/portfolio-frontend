@@ -8,6 +8,9 @@
 body {
   font-family: $mainFonts;
   background-color: $backgroundColor;
+  .line {
+    padding-top: 2rem;
+  }
   h1 {
     color: $mainColor;
     padding: 2rem 0;

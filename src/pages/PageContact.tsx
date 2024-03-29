@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { IContactFormData, contactFormData } from "../interfaces";
 import { BsXCircle, BsCheckCircle } from "react-icons/bs";
+import { FiFacebook } from "react-icons/fi";
+import { TfiInstagram } from "react-icons/tfi";
+import { AiFillGithub } from "react-icons/ai";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -186,6 +189,20 @@ export const PageContact = () => {
           </div>
         </div>
       </form>
+
+      <div className="contactIcons">
+        <a href="https://github.com/AbdulSamman">
+          <AiFillGithub className="gitHub" />
+        </a>
+        <a href="https://www.facebook.com/Abdul0989/" target="_blank">
+          <FiFacebook className="faceBook" />
+        </a>
+
+        <a href="https://www.instagram.com/abdul5amman/" target="_blank">
+          {" "}
+          <TfiInstagram className="insta" />
+        </a>
+      </div>
     </div>
   );
 };

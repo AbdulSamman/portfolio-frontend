@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: center;
   .messageRowContainer {
-    height: 80px;
     padding: 10px;
 
     .messageRow {
@@ -193,6 +192,27 @@
     background-color: tomato;
     &:focus-within {
       background-color: tomato;
+    }
+  }
+
+  .contactIcons {
+    display: flex;
+    padding: 3rem 0;
+    font-size: 3rem;
+    justify-content: space-evenly;
+    width: 100%;
+
+    .faceBook {
+      color: $typescript;
+      padding: 5px;
+    }
+    .insta {
+      padding: 5px;
+      color: $ejs1;
+    }
+    .gitHub {
+      padding: 5px;
+      color: $Lime;
     }
   }
 }
