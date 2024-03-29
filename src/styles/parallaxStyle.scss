@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     height: fit-content;
-
+    width: 100%;
     .lastName {
       text-transform: uppercase;
       color: $Lime;
@@ -48,31 +48,19 @@
       }
     }
     .animatedText {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-family: $mainFonts, cursive;
       overflow: hidden;
       word-wrap: break-word;
       white-space: nowrap;
-      animation: typing 4s steps(48) forwards;
-      text-shadow: 2px 1px $mainColor;
+      animation: typing 6s steps(50) forwards infinite;
+      text-shadow: 3px 2px $mainColor;
       text-transform: uppercase;
       padding: 5px 0;
 
-      span {
-        color: red;
-        letter-spacing: 5px;
-        animation: typingSpan 1s steps(48) forwards infinite;
-      }
+      letter-spacing: 2px;
     }
     @keyframes typing {
-      from {
-        width: 0;
-      }
-      to {
-        width: 48ch;
-      }
-    }
-    @keyframes typingSpan {
       from {
         width: 0;
       }
@@ -153,4 +141,82 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+//Nav
+.navList {
+  z-index: 2;
+  background-color: rgba($backgroundColor, 0.9);
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  .logo {
+    color: $Lime;
+    display: flex;
+    align-items: center;
+    a {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      .logoIcon {
+        width: 50px;
+        height: 50px;
+        color: $Lime;
+        transform-origin: center center;
+      }
+      span {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  nav {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    a {
+      color: $Lime;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 1rem;
+      &::first-letter {
+        font-size: 1.5rem;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .burgerMenu {
+    transition: all 0.3s ease;
+    position: sticky;
+    left: 100%;
+    width: 50px;
+    height: 50px;
+    display: none;
+
+    .menuIcon {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .menuOpen {
+    transform: translateX(0%);
+    width: 130px;
+    height: max-content;
+    padding-right: 1rem;
+  }
+}
+.sticky {
+  position: sticky;
+  top: 0;
 }

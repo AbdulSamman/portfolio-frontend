@@ -8,7 +8,7 @@
   .skills {
     display: grid;
     grid-template-columns: repeat((3, 1fr));
-    gap: 5px;
+    gap: 10px;
     padding-bottom: 1rem;
     .skill {
       display: flex;
@@ -82,11 +82,13 @@
           width: 60px;
           height: 60px;
         }
-        .netlify {
-          width: 80px;
+        .netlify,
+        .vercel,
+        .render {
+          width: 90px;
         }
         .vercel {
-          height: 50px;
+          height: 40px;
         }
       }
     }

@@ -31,6 +31,12 @@ export const AppProvider: React.FC<IAppProvider> = ({
   const [spinnSpeedLogo, setSpinnSpeedLogo] = useState(3);
   const [isOpacity, setIsOpacity] = useState(0);
   const [moveTigerX, setMoveTimeX] = useState(90);
+
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const handleMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   // Data
   const [person, setPerson] = useState<IPerson>(personDataEmpty);
   const [projects, setProjects] = useState<IProject[]>([]);
@@ -162,6 +168,9 @@ export const AppProvider: React.FC<IAppProvider> = ({
         skills,
         person,
         moveTigerX,
+        isMenuOpen,
+        setIsMenuOpen,
+        handleMenuOpen,
       }}>
       {children}
     </AppContext.Provider>

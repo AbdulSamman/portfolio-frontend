@@ -13,8 +13,11 @@ export interface IAppContext {
   spinnSpeed: number;
   spinnSpeedLogo: number;
   projects:IProject[];
-  skills:ISkill[]
-  moveTigerX:number
+  skills:ISkill[];
+  moveTigerX:number;
+  isMenuOpen:boolean;
+  setIsMenuOpen:(isMenuOpen:boolean)=> void
+  handleMenuOpen:()=>void
 }
 
 export interface IParallaxLineProps {
