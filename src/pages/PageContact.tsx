@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { IContactFormData, contactFormData } from "../interfaces";
 import { BsXCircle, BsCheckCircle } from "react-icons/bs";
-import { FiFacebook } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
+
 import { TfiInstagram } from "react-icons/tfi";
 import { AiFillGithub } from "react-icons/ai";
 
@@ -194,8 +195,10 @@ export const PageContact = () => {
         <a href="https://github.com/AbdulSamman">
           <AiFillGithub className="gitHub" />
         </a>
-        <a href="https://www.facebook.com/Abdul0989/" target="_blank">
-          <FiFacebook className="faceBook" />
+        <a
+          href="https://www.linkedin.com/in/abdulrazak-samman-175b2718b/"
+          target="_blank">
+          <FiLinkedin className="linkedIn" />
         </a>
 
         <a href="https://www.instagram.com/abdul5amman/" target="_blank">
