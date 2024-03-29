@@ -146,7 +146,7 @@
 //Nav
 .navList {
   z-index: 2;
-  background-color: rgba($backgroundColor, 0.9);
+  background-color: $backgroundColor;
   align-items: center;
   display: flex;
   font-size: 1rem;
