@@ -66,7 +66,7 @@ function App() {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-40}
+                offset={-100}
                 duration={500}>
                 PROJECTS
               </Link>
