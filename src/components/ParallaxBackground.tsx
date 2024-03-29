@@ -88,7 +88,7 @@ export const ParallaxBackground: React.FC = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-40}
+            offset={0}
             duration={500}>
             PROJECTS
           </Link>
@@ -96,7 +96,7 @@ export const ParallaxBackground: React.FC = () => {
             to="skills"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-60}
             duration={500}>
             SKILLS
           </Link>
@@ -104,7 +104,7 @@ export const ParallaxBackground: React.FC = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-60}
             duration={500}>
             CONTACT
           </Link>

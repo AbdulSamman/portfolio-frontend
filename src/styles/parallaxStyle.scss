@@ -13,7 +13,9 @@
   justify-content: center;
   padding-top: 5rem;
   text-align: center;
-
+  h1 {
+    font-family: "Workbench", sans-serif;
+  }
   .personalContainer {
     display: flex;
     flex-direction: column;
@@ -27,7 +29,7 @@
       font-weight: bold;
       height: fit-content;
       text-shadow: 5px 5px $mainColor;
-      font-family: $mainFonts, cursive;
+
       color: $backgroundColor;
       display: flex;
       flex-direction: column;
@@ -41,6 +43,7 @@
     }
     .logoIcon {
       padding: 1rem 0;
+
       .spinnerLogoIcon {
         transform-origin: center center;
         font-size: 5rem;
@@ -158,6 +161,7 @@
     color: $Lime;
     display: flex;
     align-items: center;
+    font-family: "Workbench", sans-serif;
     a {
       cursor: pointer;
       display: flex;

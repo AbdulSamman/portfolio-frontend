@@ -79,9 +79,8 @@
 
       .capture {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        width: max-content;
         height: 56px;
         width: 220px;
         background: linear-gradient(
@@ -107,6 +106,7 @@
           font-weight: bold;
           letter-spacing: 10px;
           color: $backgroundColor;
+          padding-top: 10px;
         }
       }
       .msgButton {

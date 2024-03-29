@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: $mainFonts;
+  font-family: $testFont;
   background-color: $backgroundColor;
   .line {
     padding-top: 2rem;
@@ -25,7 +25,7 @@ body {
       gap: 1rem;
       height: 100vh;
       background-color: rgba($backgroundColor, 0.9);
-
+      font-family: "Workbench", sans-serif;
       .spinnerLogoIcon {
         animation: spinner 1.2s linear infinite;
         transform-origin: center center;
