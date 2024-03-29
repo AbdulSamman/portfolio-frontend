@@ -177,7 +177,7 @@ export const PageContact = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="button">
+          <div className="msgButton">
             <button onClick={handleSubmitButton}>SEND MESSAGE!</button>
           </div>
         </div>

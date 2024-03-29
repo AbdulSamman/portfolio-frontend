@@ -10,6 +10,7 @@
     color: $mainColor;
     font-size: 3rem;
     padding: 2rem 0;
+    text-align: center;
   }
   .messageRow {
     font-size: 1.5rem;
@@ -42,21 +43,24 @@
       row-gap: 0.5rem;
     }
     input {
-      height: 50px;
+      height: 80px;
       padding: 10px;
       color: $Lime;
       background-color: $backgroundColor;
+      font-weight: bold;
       font-family: $textFonts;
-
+      font-size: 2rem;
       filter: brightness(150%);
       outline: none;
       border: none;
       width: 100%;
     }
     .textAreaMessage {
-      height: 235px;
+      height: 265px;
       textArea {
-        height: 230px;
+        font-size: 2rem;
+        font-family: $textFonts;
+        height: 260px;
         padding: 10px;
         color: $Lime;
         background-color: $backgroundColor;
@@ -73,12 +77,14 @@
       align-items: center;
       flex-wrap: wrap;
       padding: 1rem 0;
+
       .capture {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: max-content;
         height: 56px;
+        width: 220px;
         background: linear-gradient(
           to right,
           $backgroundColor,
@@ -104,17 +110,17 @@
           color: $backgroundColor;
         }
       }
-      .button {
+      .msgButton {
         background-color: $mainColor;
         height: 56px;
-        width: 215px;
+        width: 220px;
         display: flex;
         justify-content: center;
         align-items: center;
         filter: brightness(150%);
         button {
           height: 50px;
-          width: 205px;
+          width: 210px;
           cursor: pointer;
           background-color: $backgroundColor;
           color: $mainColor;
@@ -153,7 +159,7 @@
   .inputEmail,
   .inputSubject,
   .textAreaMessage {
-    height: 54px;
+    height: 84px;
     width: 100%;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -196,9 +202,6 @@
 }
 @media (max-width: 767px) {
   .pageContact {
-    h1 {
-      font-size: 2rem;
-    }
     .nameEmailContent {
       flex-wrap: wrap;
     }
@@ -208,5 +211,15 @@
   .row {
     flex-direction: column;
     row-gap: 0.5rem;
+
+    .capture {
+      width: 100%;
+      color: blue;
+    }
+  }
+}
+@media (max-width: 555px) {
+  .row {
+    background-color: blue;
   }
 }
