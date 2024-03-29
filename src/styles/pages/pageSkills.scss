@@ -38,7 +38,6 @@
     }
     .backend {
       background-color: rgba($mainColor, 0.3);
-
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 5;
@@ -53,7 +52,6 @@
     }
     .database {
       background-color: rgba(red, 0.2);
-
       grid-column-start: 2;
       grid-column-end: 4;
       grid-row-start: 10;
@@ -72,6 +70,25 @@
       grid-column-end: 4;
       grid-row-start: 5;
       grid-row-end: 10;
+    }
+    .devtools {
+      background-color: rgba($typescript, 0.5);
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 15;
+      grid-row-end: 20;
+      .skillImg {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        .netlify {
+          width: 80px;
+        }
+        .vercel {
+          height: 50px;
+        }
+      }
     }
   }
 }

@@ -100,7 +100,8 @@ export const PageContact = () => {
     ) {
       setIsFormSended(
         <span className="messageTrue">
-          <BsCheckCircle /> <p>Thank you, your message has been sent</p>
+          <BsCheckCircle className="msgIcon" />
+          <p>Thank you, your message has been sent</p>
         </span>
       );
       setFormData(contactFormData);
@@ -109,7 +110,7 @@ export const PageContact = () => {
     } else {
       setIsFormSended(
         <span className="messageFalse">
-          <BsXCircle /> <p>Please check your information</p>
+          <BsXCircle className="msgIcon" /> <p>Please check your information</p>
         </span>
       );
     }
@@ -119,7 +120,10 @@ export const PageContact = () => {
     <div id="contact" className="pageContact">
       <h1>CONTACT ME</h1>
 
-      {isFormSended && <div className="messageRow">{isFormSended}</div>}
+      <p className="messageRowContainer">
+        {isFormSended && <div className="messageRow">{isFormSended}</div>}
+      </p>
+
       <form>
         <div className="nameEmailContent">
           <div className={`inputName ${isNameValid ? "" : "nameNotValid"}`}>

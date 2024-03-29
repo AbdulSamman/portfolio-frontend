@@ -23,7 +23,7 @@ export const PageSkills = () => {
                       key={index}
                       src={`images/icons/${skillImg}.png`}
                       alt={skillImg}
-                      title={skillImg}
+                      className={skillImg}
                     />
                   ))}
               </div>

@@ -5,24 +5,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  .messageRowContainer {
+    height: 100px;
+    padding: 20px;
 
-  .messageRow {
-    font-size: 1.5rem;
-    padding: 10px 0;
-    text-align: center;
-    height: 50px;
+    .messageRow {
+      font-size: 1.5rem;
+      text-align: center;
 
-    span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-    .messageTrue {
-      color: greenyellow;
-    }
-    .messageFalse {
-      color: tomato;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 10px 0;
+      }
+      .messageTrue {
+        color: greenyellow;
+      }
+      .messageFalse {
+        color: tomato;
+      }
+      .msgIcon {
+        font-size: 2rem;
+      }
     }
   }
   form {
@@ -43,7 +49,7 @@
       background-color: $backgroundColor;
       font-weight: bold;
       font-family: $textFonts;
-      font-size: 2rem;
+      font-size: 1.5rem;
       filter: brightness(150%);
       outline: none;
       border: none;
@@ -52,7 +58,7 @@
     .textAreaMessage {
       height: 265px;
       textArea {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-family: $textFonts;
         height: 260px;
         padding: 10px;
@@ -111,6 +117,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         filter: brightness(150%);
         button {
           height: 50px;
@@ -205,15 +212,5 @@
   .row {
     flex-direction: column;
     row-gap: 0.5rem;
-
-    .capture {
-      width: 100%;
-      color: blue;
-    }
-  }
-}
-@media (max-width: 555px) {
-  .row {
-    background-color: blue;
   }
 }
