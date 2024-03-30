@@ -209,12 +209,14 @@
     justify-content: center;
     align-items: center;
     column-gap: 4rem;
+
     a {
       color: $Lime;
       text-decoration: none;
       letter-spacing: 2px;
       font-weight: bold;
       font-size: 1rem;
+
       &::first-letter {
         font-size: 1.5rem;
       }
@@ -245,6 +247,13 @@
     height: 100%;
     padding-right: 1rem;
     background-color: $backgroundColor;
+    transition: all 0.3s linear;
+    a {
+      font-size: 1.5rem;
+      &::first-letter {
+        font-size: 2rem;
+      }
+    }
   }
 }
 .sticky {
@@ -271,7 +280,7 @@
     row-gap: 3rem;
     top: 0;
     right: 0;
-    transition: all 0.3s linear;
+    transition: all 0.3s step-start;
     transform: translateX(100%);
   }
 }
