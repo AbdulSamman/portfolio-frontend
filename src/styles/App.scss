@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: $luckFont;
+  font-family: $mainFonts;
   background-color: $backgroundColor;
   .line {
     padding-top: 2rem;
@@ -16,7 +16,6 @@ body {
     padding: 2rem 0;
     text-align: center;
     font-size: 3rem;
-    font-family: $mainFonts;
   }
   .App {
     .loadingPage {
@@ -36,51 +35,6 @@ body {
       span {
         font-size: 3rem;
         color: $Lime;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .App .navList .burgerMenu {
-      display: block;
-
-      .menuIcon {
-        color: $Lime;
-      }
-      nav {
-        width: max-content;
-      }
-    }
-
-    .menu {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: none;
-      height: max-content;
-      position: fixed;
-      row-gap: 1rem;
-      top: 20%;
-      right: 0;
-      transition: all 0.3s linear;
-      transform: translateX(100%);
-      width: 100px;
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-        box-shadow: rgba($Lime, 0.25) 0px 6px 12px -2px,
-          rgba($mainColor, 0.3) 0px 3px 7px -3px;
-        background-color: rgba($backgroundColor, 0.9);
-        font-size: 0.5rem;
-        &:hover {
-          box-shadow: rgba($Lime, 0.25) 0px 30px 60px -12px inset,
-            rgba(rgba($mainColor, 0.3), 0.3) 0px 18px 36px -18px inset;
-        }
       }
     }
   }

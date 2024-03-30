@@ -55,7 +55,7 @@
       font-family: $mainFonts, cursive;
       padding: 5px 0;
       text-shadow: 3px 2px $mainColor;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       height: 100px;
       display: flex;
       flex-direction: column;
@@ -220,6 +220,8 @@
       }
       &:hover {
         cursor: pointer;
+
+        transform: scale(1.2);
       }
     }
   }
@@ -239,12 +241,37 @@
   }
   .menuOpen {
     transform: translateX(0%);
-    width: 130px;
-    height: max-content;
+    width: 50%;
+    height: 100%;
     padding-right: 1rem;
+    background-color: $backgroundColor;
   }
 }
 .sticky {
   position: sticky;
   top: 0;
+}
+@media (max-width: 768px) {
+  .navList .burgerMenu {
+    display: block;
+
+    .menuIcon {
+      color: $Lime;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    row-gap: 3rem;
+    top: 0;
+    right: 0;
+    transition: all 0.3s linear;
+    transform: translateX(100%);
+  }
 }
