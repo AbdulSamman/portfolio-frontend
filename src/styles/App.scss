@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: $testFont;
+  font-family: $luckFont;
   background-color: $backgroundColor;
   .line {
     padding-top: 2rem;
@@ -16,6 +16,7 @@ body {
     padding: 2rem 0;
     text-align: center;
     font-size: 3rem;
+    font-family: $mainFonts;
   }
   .App {
     .loadingPage {

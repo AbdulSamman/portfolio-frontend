@@ -1,16 +1,16 @@
 import { Parallax } from "react-parallax";
+import "../styles/parallaxStyle.scss";
 // for more parallax another image edited
+import React from "react";
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
 import Background from "/images/Green.jpg";
 import shadowImage from "/images/shadowForest.png";
 import rightImage from "/images/palmen.png";
 import tiger from "/images/tiger.png";
 import { FaConnectdevelop } from "react-icons/fa";
-import { useContext, useState } from "react";
-import { AppContext } from "../AppContext";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsXLg } from "react-icons/bs";
-import "../styles/parallaxStyle.scss";
-import React from "react";
 import { Link } from "react-scroll";
 
 export const ParallaxBackground: React.FC = () => {
@@ -32,7 +32,10 @@ export const ParallaxBackground: React.FC = () => {
             <h1 className="lastName">
               <span> {person.lastName}</span>
             </h1>
-            <h2 className="animatedText">{person.title} ...</h2>
+            <h2 className="animatedText">
+              <span className="firstName">HI, I'M {person.firstName}</span>{" "}
+              <span className="title">{person.title} ...</span>
+            </h2>
             <div className="logoIcon">
               <FaConnectdevelop
                 className="spinnerLogoIcon"

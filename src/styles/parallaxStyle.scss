@@ -53,22 +53,45 @@
     .animatedText {
       font-size: 1.1rem;
       font-family: $mainFonts, cursive;
-      overflow: hidden;
-      word-wrap: break-word;
-      white-space: nowrap;
-      animation: typing 6s steps(50) forwards infinite;
-      text-shadow: 3px 2px $mainColor;
-      text-transform: uppercase;
       padding: 5px 0;
-
+      text-shadow: 3px 2px $mainColor;
       letter-spacing: 2px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-transform: uppercase;
+      .firstName {
+        overflow: hidden;
+        word-wrap: break-word;
+        white-space: nowrap;
+        animation: typing 4s steps(60) forwards;
+      }
+      .title {
+        overflow: hidden;
+        word-wrap: break-word;
+        white-space: nowrap;
+        animation: typingTitle 8s steps(60) forwards infinite;
+        animation-delay: 4s;
+        opacity: 0;
+      }
     }
     @keyframes typing {
       from {
         width: 0;
       }
       to {
-        width: 48ch;
+        width: 100%;
+      }
+    }
+    @keyframes typingTitle {
+      from {
+        opacity: 1;
+        width: 0;
+      }
+      to {
+        opacity: 1;
+        width: 100%;
       }
     }
   }
