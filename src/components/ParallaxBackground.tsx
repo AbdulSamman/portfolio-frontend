@@ -88,9 +88,19 @@ export const ParallaxBackground: React.FC = () => {
         </div>
         <nav className={`menu ${isMenuOpen ? "menuOpen" : ""}`}>
           {isMenuOpen && (
-            <Link to="start" spy={true} smooth={true} offset={0} duration={500}>
-              HOME
-            </Link>
+            <>
+              <div>
+                <BsXLg className="menuIcon" />
+              </div>
+              <Link
+                to="start"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}>
+                HOME
+              </Link>
+            </>
           )}
 
           <Link

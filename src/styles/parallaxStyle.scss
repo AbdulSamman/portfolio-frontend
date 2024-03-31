@@ -247,6 +247,20 @@
     padding-right: 1rem;
     background-color: $backgroundColor;
     transition: all 0.3s linear;
+    div {
+      position: absolute;
+      top: 2%;
+      right: 10%;
+      .menuIcon {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        color: $Lime;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
     a {
       font-size: 1.4rem;
       &::first-letter {
@@ -260,7 +274,7 @@
         width: 100%;
         bottom: 0;
         left: 0;
-        background-color: $mainColor;
+        background-color: $Lime;
       }
     }
   }

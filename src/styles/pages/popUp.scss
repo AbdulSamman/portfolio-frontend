@@ -34,21 +34,6 @@
       padding: 10px;
       font-size: 20px;
 
-      //   @mixin iconColor($name, $bgColor) {
-      //     .#{$name} {
-      //       padding: 10px;
-      //       color: $bgColor;
-      //     }
-      //   }
-
-      // $iconsColors: typescript $typescript, react $react, express $express,
-      //   scss $scss, sqlite $sqlite, mongodb $mongodb, html5 $html5, css3 $css3,
-      //   javascript $javascript, ejs $ejs, tailwind $tailwind, nextJs $nextJs;
-
-      // @each $name, $color in $iconsColors {
-      //   @include iconColor($name, $color);
-      // }
-
       &.typescript {
         color: $typescript;
         background-color: rgba($typescript, 0.2);
@@ -122,6 +107,7 @@
       .icon {
         display: flex;
         font-size: 2.5rem;
+        color: $css3;
 
         &.ic1:hover,
         &.ic2:hover {
@@ -129,6 +115,7 @@
           cursor: pointer;
         }
       }
+
       .notUrl {
         color: red;
         cursor: auto;
