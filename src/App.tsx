@@ -22,7 +22,7 @@ function App() {
         <div className="loadingPage">
           <FaConnectdevelop className="spinnerLogoIcon" />
 
-          <span>SAMMAN</span>
+          <span>ABDULRAZAK</span>
         </div>
       ) : (
         <>

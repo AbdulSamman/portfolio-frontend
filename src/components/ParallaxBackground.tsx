@@ -30,7 +30,7 @@ export const ParallaxBackground: React.FC = () => {
         <div className="content">
           <div className="personalContainer">
             <h1 className="lastName">
-              <span> {person.lastName}</span>
+              <span> ABDUL</span>
             </h1>
             <h2 className="animatedText">
               <span className="firstName">HI, I'M {person.firstName}</span>{" "}
@@ -76,7 +76,7 @@ export const ParallaxBackground: React.FC = () => {
               }}
             />
 
-            <span>{person.lastName}</span>
+            <span>ABDUL</span>
           </Link>
         </div>
         <div className="burgerMenu" onClick={handleMenuOpen}>
