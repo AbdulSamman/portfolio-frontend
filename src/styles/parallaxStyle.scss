@@ -244,10 +244,9 @@
   .menuOpen {
     transform: translateX(0%);
     width: 50%;
-    height: 100%;
     padding-right: 1rem;
     background-color: $backgroundColor;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
     a {
       font-size: 1.4rem;
       &::first-letter {
