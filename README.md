@@ -2,4 +2,4 @@
 
 - a full-stack MERN-stack project
 
-[my portfolio](https://portfolio-psi-seven-56.vercel.app)
+[my portfolio](https://portfolioas.vercel.app)
