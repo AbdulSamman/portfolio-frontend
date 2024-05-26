@@ -5,10 +5,11 @@ import { IContactFormData, contactFormData } from "../interfaces";
 import { BsXCircle, BsCheckCircle } from "react-icons/bs";
 import { FiLinkedin } from "react-icons/fi";
 
-import { TfiInstagram } from "react-icons/tfi";
+import { FaWhatsapp } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
+const myPhoneNumber = import.meta.env.MY_PHONE_NUMBER;
 
 export const PageContact = () => {
   const [formData, setFormData] = useState<IContactFormData>(contactFormData);
@@ -201,9 +202,9 @@ export const PageContact = () => {
           <FiLinkedin className="linkedIn" />
         </a>
 
-        <a href="https://www.instagram.com/abdul5amman/" target="_blank">
+        <a href={`https://wa.me/+491794305611`} target="_blank">
           {" "}
-          <TfiInstagram className="insta" />
+          <FaWhatsapp className="whatsApp" />
         </a>
       </div>
     </div>
