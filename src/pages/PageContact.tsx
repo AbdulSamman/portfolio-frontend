@@ -9,7 +9,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
-const myPhoneNumber = import.meta.env.MY_PHONE_NUMBER;
 
 export const PageContact = () => {
   const [formData, setFormData] = useState<IContactFormData>(contactFormData);
