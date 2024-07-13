@@ -91,6 +91,14 @@
         color: $vitest1;
         background-color: rgba($vitest2, 0.5);
       }
+      &.postgres {
+        color: $postGres;
+        background-color: rgba($postGres, 0.5);
+      }
+      &.strapi {
+        color: $strapi;
+        background-color: rgba($strapi, 0.5);
+      }
     }
   }
   .row {
