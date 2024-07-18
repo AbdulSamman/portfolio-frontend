@@ -36,14 +36,14 @@
         width: 100%;
       }
     }
-    .backend {
-      background-color: rgba($mainColor, 0.3);
+    .frameworks {
+      background-color: rgba($css3, 0.3);
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 5;
       grid-row-end: 10;
     }
-    .frontend {
+    .technologies {
       background-color: rgba($sqlite, 0.2);
       grid-column-start: 1;
       grid-column-end: 4;
@@ -64,6 +64,7 @@
       grid-row-start: 10;
       grid-row-end: 15;
     }
+
     .testing {
       background-color: rgba($javascript, 0.5);
       grid-column-start: 3;
@@ -71,10 +72,11 @@
       grid-row-start: 5;
       grid-row-end: 10;
     }
+
     .devtools {
-      background-color: rgba($typescript, 0.5);
+      background-color: rgba($react, 0.2);
       grid-column-start: 1;
-      grid-column-end: 4;
+      grid-column-end: 3;
       grid-row-start: 15;
       grid-row-end: 20;
       .skillImg {
@@ -91,6 +93,13 @@
           height: 40px;
         }
       }
+    }
+    .others {
+      background-color: rgba($mongodb, 0.5);
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 15;
+      grid-row-end: 20;
     }
   }
 }
