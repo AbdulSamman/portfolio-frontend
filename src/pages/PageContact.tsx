@@ -201,7 +201,6 @@ export const PageContact = () => {
           target="_blank">
           <FiLinkedin className="linkedIn" />
         </a>
-
         <a href={`https://wa.me/${myPhoneNumber}`} target="_blank">
           <FaWhatsapp className="whatsApp" />
         </a>

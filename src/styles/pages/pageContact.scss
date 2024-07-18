@@ -203,8 +203,8 @@
     width: 100%;
 
     .linkedIn {
-      color: $typescript;
       padding: 5px;
+      color: $typescript;
     }
     .whatsApp {
       padding: 5px;
@@ -215,7 +215,7 @@
       color: $Lime;
     }
     .gitHub:hover,
-    .insta:hover,
+    .whatsApp:hover,
     .linkedIn:hover {
       transform: scale(1.2);
     }

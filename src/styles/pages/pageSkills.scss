@@ -29,7 +29,7 @@
         }
       }
       .title {
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: bold;
         padding: 1rem;
         background-color: rgba(gray, 0.15);
@@ -58,19 +58,19 @@
       grid-row-end: 15;
     }
     .devops {
-      background-color: rgba($scss, 0.1);
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 10;
-      grid-row-end: 15;
-    }
-
-    .testing {
       background-color: rgba($javascript, 0.5);
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 5;
       grid-row-end: 10;
+    }
+
+    .testing {
+      background-color: rgba($scss, 0.1);
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 10;
+      grid-row-end: 15;
     }
 
     .devtools {
@@ -94,12 +94,19 @@
         }
       }
     }
-    .others {
+    .libraries {
       background-color: rgba($mongodb, 0.5);
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 15;
       grid-row-end: 20;
+    }
+    .others {
+      background-color: rgba($express, 0.2);
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 20;
+      grid-row-end: 25;
     }
   }
 }
