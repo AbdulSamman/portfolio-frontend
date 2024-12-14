@@ -19,7 +19,7 @@
 
     .project {
       background-color: color.adjust($backgroundColor, $lightness: 10%);
-      height: 140px;
+      height: 120px;
       width: 140px;
       padding: 20px 5px;
       display: flex;
@@ -31,7 +31,7 @@
       font-family: $textFonts;
       h4 {
         padding: 5px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
       &:active {
         box-shadow: -5px -5px 3px -4px gray inset;
