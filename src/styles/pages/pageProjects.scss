@@ -1,5 +1,5 @@
 @use "../variables" as *;
-//@use "sass:color";
+@use "sass:color";
 
 .pageProjects {
   padding: $pagePadding;
@@ -18,7 +18,7 @@
     overflow-x: hidden;
 
     .project {
-      //background-color: color.adjust($backgroundColor, $lightness: 10%);
+      background-color: color.adjust($backgroundColor, $lightness: 10%);
       height: 150px;
       width: 150px;
       padding: 20px 5px;
