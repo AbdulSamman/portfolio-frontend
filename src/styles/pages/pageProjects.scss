@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "sass:color";
 
 .pageProjects {
   padding: $pagePadding;
@@ -10,15 +11,16 @@
     height: 90vh;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
     padding: 10px;
     text-align: center;
     overflow-x: hidden;
+
     .project {
-      background-color: lighten($backgroundColor, 10);
-      height: 100%;
-      width: 100%;
+      background-color: color.adjust($backgroundColor, $lightness: 10%);
+      height: 150px;
+      width: 150px;
       padding: 20px 5px;
       display: flex;
       justify-content: center;
@@ -27,6 +29,9 @@
       color: $Lime;
       box-shadow: 5px 5px 3px -4px gray inset;
       font-family: $textFonts;
+      h4 {
+        padding: 5px;
+      }
       &:active {
         box-shadow: -5px -5px 3px -4px gray inset;
         cursor: pointer;
