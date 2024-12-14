@@ -45,8 +45,9 @@ export const AppProvider: React.FC<IAppProvider> = ({
   useEffect(() => {
     setTimeout(() => {
       (async () => {
-        const responseProjects = (await axios.get(`${backendUrl}/projects`))
-          .data;
+        const responseProjects = (
+          await axios.get(`${backendUrl}/projects`)
+        ).data.reverse();
         setProjects(responseProjects);
       })();
     }, 2000);
