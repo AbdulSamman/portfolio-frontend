@@ -12,17 +12,16 @@
     height: 90vh;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 1rem;
-    margin: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+    margin: 1rem;
     text-align: center;
     overflow-x: hidden;
-    background-color: red;
+
     .project {
       background-color: color.adjust($backgroundColor, $lightness: 10%);
       height: 100px;
       width: 100%;
-      padding: 20px 5px;
       display: flex;
       justify-content: center;
       align-items: center;
