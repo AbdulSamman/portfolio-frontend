@@ -17,7 +17,7 @@
     margin: 20px;
     text-align: center;
     overflow-x: hidden;
-
+    background-color: red;
     .project {
       background-color: color.adjust($backgroundColor, $lightness: 10%);
       height: 100px;
