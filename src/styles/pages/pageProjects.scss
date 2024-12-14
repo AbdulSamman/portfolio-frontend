@@ -10,7 +10,7 @@
   .projects {
     place-items: center;
     height: 90vh;
-    overflow-y: scroll;
+    //overflow-y: scroll;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 0.5rem;
