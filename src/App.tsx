@@ -10,7 +10,6 @@ import { FaConnectdevelop } from "react-icons/fa";
 function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    ("");
   }, []);
   const { projects, isMenuOpen, setIsMenuOpen } = useContext(AppContext);
 
