@@ -11,7 +11,7 @@
     height: 90vh;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 0.5rem;
     padding: 10px;
     text-align: center;
@@ -19,8 +19,8 @@
 
     .project {
       background-color: color.adjust($backgroundColor, $lightness: 10%);
-      height: 150px;
-      width: 150px;
+      height: 140px;
+      width: 140px;
       padding: 20px 5px;
       display: flex;
       justify-content: center;
@@ -31,6 +31,7 @@
       font-family: $textFonts;
       h4 {
         padding: 5px;
+        font-size: 0.8rem;
       }
       &:active {
         box-shadow: -5px -5px 3px -4px gray inset;
