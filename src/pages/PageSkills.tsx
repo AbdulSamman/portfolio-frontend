@@ -14,9 +14,7 @@ export const PageSkills = () => {
       <div className="skills">
         {skills.map((skill: ISkill, index) => {
           return (
-            <div
-              key={`${skill.title}-${index}`}
-              className={`skill ${skill.title}`}>
+            <div key={index} className={`skill ${skill.title}`}>
               <div className="title">{skill.title}</div>
               <div className="skillImg">
                 {skill.skills &&
