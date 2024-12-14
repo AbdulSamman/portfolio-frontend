@@ -38,7 +38,7 @@ export const PageContact = () => {
 
   const handleSubmit = async (formData: IContactFormData) => {
     try {
-      const data = await axios.post(
+      await axios.post(
         `${backendUrl}/contact`,
         {
           ...formData,

@@ -3,7 +3,7 @@ import { PageProjects } from "./pages/PageProjects";
 import { PageSkills } from "./pages/PageSkills";
 import { PageContact } from "./pages/PageContact";
 import "./styles/App.scss";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
 import { FaConnectdevelop } from "react-icons/fa";
 
