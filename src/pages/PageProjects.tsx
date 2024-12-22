@@ -19,7 +19,7 @@ export const PageProjects = () => {
       <div className="projects">
         {projects.map((project) => {
           return (
-            <React.Fragment key={project.id}>
+            <React.Fragment key={project._id}>
               <div className="project" onClick={() => popUp(project)}>
                 <h4>{project.name}</h4>
               </div>

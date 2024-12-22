@@ -8,16 +8,16 @@ export interface IAppProvider {
 export interface IAppContext {
   scaleX: number;
   rotateY: number;
-  person:   IPerson ;
+  person: IPerson;
   isOpacity: number;
   spinnSpeed: number;
   spinnSpeedLogo: number;
-  projects:IProject[];
-  skills:ISkill[];
-  moveTigerX:number;
-  isMenuOpen:boolean;
-  setIsMenuOpen:(isMenuOpen:boolean)=> void
-  handleMenuOpen:()=>void
+  projects: IProject[];
+  skills: ISkill[];
+  moveTigerX: number;
+  isMenuOpen: boolean;
+  setIsMenuOpen: (isMenuOpen: boolean) => void;
+  handleMenuOpen: () => void;
 }
 
 export interface IParallaxLineProps {
@@ -54,7 +54,7 @@ export interface IPerson {
 }
 
 export interface IProject {
-  id: number;
+  _id: string;
   name: string;
   image: string;
   tags: string[];
@@ -63,9 +63,9 @@ export interface IProject {
   description: string;
 }
 export interface ISkill {
-  id:number,
-  title:string,
-  skills:string[]
+  _id: string;
+  title: string;
+  skills: string[];
 }
 
 export interface IContactFormData {
@@ -84,14 +84,22 @@ export const contactFormData = {
   capture: "",
 };
 
-
-export const personDataEmpty ={
-  firstName: "",
-  lastName: "",
-  gitHubLink: "",
-  linkedinLink: "",
-  title: "",
-  hobbys: [],
-  description: "",
-
+interface IPersonData {
+  firstName: string;
+  lastName: string;
+  gitHubLink: string;
+  linkedinLink: string;
+  title: string;
+  description: string;
+  hobbys: string[];
 }
+export const personData: IPersonData = {
+  firstName: "Abdulrazak",
+  lastName: "SAMMAN",
+  gitHubLink: "https://github.com/AbdulSamman",
+  linkedinLink: "https://www.linkedin.com/in/abdulrazak-samman-175b2718b/",
+  title: "fullstack/ MERNstack Web-Developer",
+  description:
+    "Passionate Junior Fullstack Web Developer with problem-solving skills, strong design sense, and a hunger for learning.",
+  hobbys: ["Chess", "Football", "Swimming", "Coding"],
+};

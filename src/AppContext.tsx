@@ -7,7 +7,7 @@ import {
   IPerson,
   IProject,
   ISkill,
-  personDataEmpty,
+  personData,
 } from "./interfaces";
 
 import axios from "axios";
@@ -38,7 +38,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
     setIsMenuOpen(!isMenuOpen);
   };
   // Data
-  const [person, setPerson] = useState<IPerson>(personDataEmpty);
+  const [person, setPerson] = useState<IPerson>(personData);
   const [projects, setProjects] = useState<IProject[]>([]);
   const [skills, setSkills] = useState<ISkill[]>([]);
   //projects
@@ -60,13 +60,13 @@ export const AppProvider: React.FC<IAppProvider> = ({
     })();
   }, []);
 
-  //person
-  useEffect(() => {
-    (async () => {
-      const personData = (await axios.get(`${backendUrl}/person`)).data;
-      setPerson(personData);
-    })();
-  }, []);
+  // //person
+  // useEffect(() => {
+  //   (async () => {
+  //     const personData = (await axios.get(`${backendUrl}/person`)).data;
+  //     setPerson(personData);
+  //   })();
+  // }, []);
 
   const handleScroll: HandleScroll = (_, scrollY) => {
     if (scrollY >= start && scrollY <= end) {
