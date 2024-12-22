@@ -4,7 +4,7 @@ import {
   HandleScroll,
   IAppContext,
   IAppProvider,
-  IPerson,
+  IPersonData,
   IProject,
   ISkill,
   personData,
@@ -38,7 +38,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
     setIsMenuOpen(!isMenuOpen);
   };
   // Data
-  const [person, setPerson] = useState<IPerson>(personData);
+  const [person, setPerson] = useState<IPersonData>(personData);
   const [projects, setProjects] = useState<IProject[]>([]);
   const [skills, setSkills] = useState<ISkill[]>([]);
   //projects

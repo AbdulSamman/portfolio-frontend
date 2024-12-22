@@ -8,7 +8,7 @@ export interface IAppProvider {
 export interface IAppContext {
   scaleX: number;
   rotateY: number;
-  person: IPerson;
+  person: IPersonData;
   isOpacity: number;
   spinnSpeed: number;
   spinnSpeedLogo: number;
@@ -43,16 +43,6 @@ export interface HandleScroll {
   prevScrollPosition?: number;
 }
 
-export interface IPerson {
-  firstName: string;
-  lastName: string;
-  gitHubLink: string;
-  linkedinLink: string;
-  title: string;
-  hobbys: string[];
-  description: string;
-}
-
 export interface IProject {
   _id: string;
   name: string;
@@ -84,7 +74,7 @@ export const contactFormData = {
   capture: "",
 };
 
-interface IPersonData {
+export interface IPersonData {
   firstName: string;
   lastName: string;
   gitHubLink: string;
