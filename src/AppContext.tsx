@@ -60,13 +60,13 @@ export const AppProvider: React.FC<IAppProvider> = ({
     })();
   }, []);
 
-  // //person
-  // useEffect(() => {
-  //   (async () => {
-  //     const personData = (await axios.get(`${backendUrl}/person`)).data;
-  //     setPerson(personData);
-  //   })();
-  // }, []);
+  //person
+  useEffect(() => {
+    (async () => {
+      //const personData = (await axios.get(`${backendUrl}/person`)).data;
+      setPerson(personData);
+    })();
+  }, []);
 
   const handleScroll: HandleScroll = (_, scrollY) => {
     if (scrollY >= start && scrollY <= end) {

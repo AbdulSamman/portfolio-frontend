@@ -15,7 +15,7 @@ export const popUp = (project: IProject) => {
       </div>
 
       <div className="tags">
-        {project.tags.map((tag, i) => {
+        {project.tags?.map((tag, i) => {
           return (
             <div key={i + 1} className={`tag ${tag}`}>
               {tag}
