@@ -51,6 +51,7 @@ export interface IProject {
   repo: string;
   url: string;
   description: string;
+  createdAt: string;
 }
 export interface ISkill {
   _id: string;

@@ -45,10 +45,14 @@ export const AppProvider: React.FC<IAppProvider> = ({
   useEffect(() => {
     setTimeout(() => {
       (async () => {
-        const responseProjects = (
-          await axios.get(`${backendUrl}/projects`)
-        ).data.reverse();
-        setProjects(responseProjects);
+        const responseProjects = (await axios.get(`${backendUrl}/projects`))
+          .data;
+        console.log("geher", responseProjects);
+        const sortProjectsDate = responseProjects.sort(
+          (a: any, b: any) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
+        setProjects(sortProjectsDate);
       })();
     }, 2000);
   }, []);
@@ -56,6 +60,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
   useEffect(() => {
     (async () => {
       const responseSkills = (await axios.get(`${backendUrl}/skills`)).data;
+
       setSkills(responseSkills);
     })();
   }, []);
