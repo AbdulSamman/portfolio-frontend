@@ -29,14 +29,13 @@
       font-weight: bold;
       height: fit-content;
       text-shadow: 5px 5px $mainColor;
-
       color: $backgroundColor;
       display: flex;
       flex-direction: column;
       text-align: center;
       span {
         font-size: 4rem;
-        text-shadow: 5px 3px $mainColor;
+        text-shadow: 5px 3px rgb(243, 184, 74);
         letter-spacing: 5px;
         padding: 5px;
       }

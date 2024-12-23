@@ -193,7 +193,7 @@ export const PageContact = () => {
       </form>
 
       <div className="contactIcons">
-        <a href="https://github.com/AbdulSamman">
+        <a href="https://github.com/AbdulSamman" target="_blank">
           <AiFillGithub className="gitHub" />
         </a>
         <a

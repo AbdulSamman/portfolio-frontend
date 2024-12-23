@@ -27,15 +27,29 @@
       align-items: center;
       border-radius: 5px;
       color: $Lime;
-      box-shadow: 5px 5px 3px -4px gray inset;
+      //box-shadow: 5px 5px 3px -4px gray inset;
+      box-shadow: -5px 5px 3px -4px gray inset;
+
       font-family: $textFonts;
+      cursor: pointer;
       h4 {
         padding: 5px;
         font-size: 0.9rem;
       }
       &:active {
-        box-shadow: -5px -5px 3px -4px gray inset;
-        cursor: pointer;
+        box-shadow: 5px -5px 3px -4px gray inset;
+      }
+    }
+  }
+
+  @media (width > 950px) {
+    .projects {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      .project {
+        height: 100%;
+        h4 {
+          font-size: 1.2rem;
+        }
       }
     }
   }
