@@ -47,7 +47,7 @@ export const AppProvider: React.FC<IAppProvider> = ({
       (async () => {
         const responseProjects = (await axios.get(`${backendUrl}/projects`))
           .data;
-        console.log("responseProjects", responseProjects);
+
         const sortProjectsDate = responseProjects.sort(
           (a: any, b: any) =>
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
