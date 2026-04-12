@@ -47,10 +47,10 @@ export const AppProvider: React.FC<IAppProvider> = ({
       (async () => {
         const responseProjects = (await axios.get(`${backendUrl}/projects`))
           .data;
-        console.log("geher", responseProjects);
+        console.log("responseProjects", responseProjects);
         const sortProjectsDate = responseProjects.sort(
           (a: any, b: any) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
         );
         setProjects(sortProjectsDate);
       })();
@@ -153,11 +153,11 @@ export const AppProvider: React.FC<IAppProvider> = ({
 
   useEffect(() => {
     window.addEventListener("scroll", (event) =>
-      handleScroll(event, window.pageYOffset)
+      handleScroll(event, window.pageYOffset),
     );
     return () => {
       window.removeEventListener("scroll", (event) =>
-        handleScroll(event, window.pageYOffset)
+        handleScroll(event, window.pageYOffset),
       );
     };
   }, [speed, start, end]);
@@ -177,7 +177,8 @@ export const AppProvider: React.FC<IAppProvider> = ({
         isMenuOpen,
         setIsMenuOpen,
         handleMenuOpen,
-      }}>
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
