@@ -48,7 +48,7 @@ export const PageContact = () => {
             "Content-Type": "application/json",
           },
           withCredentials: true,
-        }
+        },
       );
       if (isFormSended) {
         setResult(0);
@@ -106,8 +106,8 @@ export const PageContact = () => {
       setIsFormSended(
         <span className="messageTrue">
           <BsCheckCircle className="msgIcon" />
-          <p>Thank you, your message has been sent</p>
-        </span>
+          <span>Thank you, your message has been sent</span>
+        </span>,
       );
       setFormData(contactFormData);
       setFirstNumber(randomFirstNumber);
@@ -115,8 +115,9 @@ export const PageContact = () => {
     } else {
       setIsFormSended(
         <span className="messageFalse">
-          <BsXCircle className="msgIcon" /> <p>Please check your information</p>
-        </span>
+          <BsXCircle className="msgIcon" />
+          <span>Please check your information</span>
+        </span>,
       );
     }
   };
@@ -125,9 +126,9 @@ export const PageContact = () => {
     <div id="contact" className="pageContact">
       <h1>CONTACT ME</h1>
 
-      <p className="messageRowContainer">
+      <div className="messageRowContainer">
         {isFormSended && <div className="messageRow">{isFormSended}</div>}
-      </p>
+      </div>
 
       <form>
         <div className="nameEmailContent">
@@ -151,7 +152,8 @@ export const PageContact = () => {
           </div>
         </div>
         <div
-          className={`inputSubject ${isSubjectValid ? "" : "subjectNotValid"}`}>
+          className={`inputSubject ${isSubjectValid ? "" : "subjectNotValid"}`}
+        >
           <input
             placeholder="SUBJECT"
             type="text"
@@ -163,7 +165,8 @@ export const PageContact = () => {
         <div
           className={`textAreaMessage  ${
             !isMessageValid ? "messageNotValid" : ""
-          }`}>
+          }`}
+        >
           <textarea
             name={`message`}
             onChange={handleChangeMessage}
@@ -198,7 +201,8 @@ export const PageContact = () => {
         </a>
         <a
           href="https://www.linkedin.com/in/abdulrazak-samman-175b2718b/"
-          target="_blank">
+          target="_blank"
+        >
           <FiLinkedin className="linkedIn" />
         </a>
         <a href={`https://wa.me/${myPhoneNumber}`} target="_blank">
