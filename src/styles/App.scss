@@ -1,3 +1,61 @@
+// @use "variables" as *;
+
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+// body {
+//   font-family: $mainFonts;
+//   background-color: $backgroundColor;
+//   .line {
+//     padding-top: 2rem;
+//   }
+//   h1 {
+//     color: $mainColor;
+//     padding: 2rem 0;
+//     text-align: center;
+//     font-size: 3rem;
+//   }
+//   .App {
+//     .loadingPage {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       gap: 1rem;
+//       height: 100vh;
+//       background-color: rgba($backgroundColor, 0.9);
+//       font-family: "Workbench", sans-serif;
+//       .spinnerLogoIcon {
+//         animation: spinner 1.2s linear infinite;
+//         transform-origin: center center;
+//         font-size: 5rem;
+//         color: $Lime;
+//       }
+//       span {
+//         font-size: 3rem;
+//         color: $Lime;
+//       }
+//     }
+//   }
+
+//   @media (max-width: 567px) {
+//     .shadowBlackImg {
+//       max-height: 300px;
+//     }
+//     .rightImg {
+//       max-height: 350px;
+//     }
+//   }
+// }
+// @keyframes spinner {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
 @use "variables" as *;
 
 * {
@@ -8,14 +66,18 @@
 body {
   font-family: $mainFonts;
   background-color: $backgroundColor;
+  color: $textPrimary;
   .line {
     padding-top: 2rem;
   }
   h1 {
-    color: $mainColor;
+    color: $textPrimary;
     padding: 2rem 0;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-family: $logoFonts;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
   .App {
     .loadingPage {
@@ -24,17 +86,18 @@ body {
       align-items: center;
       gap: 1rem;
       height: 100vh;
-      background-color: rgba($backgroundColor, 0.9);
-      font-family: "Workbench", sans-serif;
+      background-color: $backgroundColor;
+      font-family: $logoFonts;
       .spinnerLogoIcon {
         animation: spinner 1.2s linear infinite;
         transform-origin: center center;
-        font-size: 5rem;
-        color: $Lime;
+        font-size: 3.5rem;
+        color: $mainColor;
       }
       span {
-        font-size: 3rem;
-        color: $Lime;
+        font-size: 2rem;
+        color: $textPrimary;
+        letter-spacing: 2px;
       }
     }
   }

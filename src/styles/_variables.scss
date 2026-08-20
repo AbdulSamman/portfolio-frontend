@@ -1,12 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Anta&family=Workbench&display=swap");
-@import url("https://fonts.cdnfonts.com/css/sprite-graffiti");
+// @import url("https://fonts.googleapis.com/css2?family=Anta&family=Workbench&display=swap");
+// @import url("https://fonts.cdnfonts.com/css/Space-Grotesk");
 
-$mainColor: #33857c;
-$backgroundColor: rgb(21, 21, 51);
-$Lime: #c9f1c5;
-$backgroundCard: #80d9c4;
+// $mainColor: #00e5ff;
+// $backgroundColor: #0a0e17;
+// $secondColor: #a78bfa;
+// $Lime: #c9f1c5;
+// $backgroundCard: #80d9c4;
+// $typescript: #2e8bc0;
+// $react: cyan;
+// $express: #b1d4e0;
+// $scss: #ffaebc;
+// $sqlite: #44ff00;
+// $mongodb: #18a558;
+// $html5: #e55b13;
+// $css3: #5082ef;
+// $javascript: #fad02c;
+// $ejs: #cdd193;
+// $ejs1: #cb0e55;
+// $tailwind: #1592b4;
+// $nextJs: #f26127;
+// $cypress: #beb1b0;
+// $vitest1: #f8d210;
+// $vitest2: #76b947;
+// $postGres: #f36187;
+// $strapi: #beb9c0;
+// $eplan: blue;
+
+// $cad: red;
+// $sps: green;
+
+// $pagePadding: 1rem 2rem;
+// $logoFonts: "Workbench", "sans-serif";
+// $textFonts: "Anta";
+// $borderTop: 10px 10px 0 0;
+// $mainFonts: "Space Grotesk", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+// === Cyber Minimal Farbpalette ===
+$backgroundColor: #070a12;
+$backgroundCardDark: #0f1420;
+$backgroundCard: rgba(255, 255, 255, 0.035);
+$borderSubtle: rgba(255, 255, 255, 0.09);
+
+$mainColor: #2dd4ff;
+$accentViolet: #b18aff;
+$Lime: #2dd4ff;
+
+$textPrimary: #eef1f6;
+$textSecondary: #7d8699;
+
+// Tech-Farben (für Skills-Tags, unverändert nutzbar)
 $typescript: #2e8bc0;
-$react: cyan;
+$react: #61dafb;
 $express: #b1d4e0;
 $scss: #ffaebc;
 $sqlite: #44ff00;
@@ -23,9 +69,12 @@ $vitest1: #f8d210;
 $vitest2: #76b947;
 $postGres: #f36187;
 $strapi: #beb9c0;
+$eplan: #2dd4ff;
+$cad: #b18aff;
+$sps: #ff8fb1;
 
 $pagePadding: 1rem 2rem;
-$logoFonts: "Workbench", "sans-serif";
-$textFonts: "Anta";
+$logoFonts: "Space Grotesk", sans-serif;
+$textFonts: "Space Grotesk", sans-serif;
 $borderTop: 10px 10px 0 0;
-$mainFonts: "Sprite Graffiti", sans-serif;
+$mainFonts: "Inter", sans-serif;

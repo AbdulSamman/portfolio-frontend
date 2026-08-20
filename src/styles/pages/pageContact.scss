@@ -1,3 +1,244 @@
+// @use "../variables" as *;
+
+// .pageContact {
+//   background-color: $backgroundColor;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   .messageRowContainer {
+//     padding: 10px;
+
+//     .messageRow {
+//       font-size: 1.5rem;
+//       text-align: center;
+//       font-family: "Workbench", sans-serif;
+//       span {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         gap: 1rem;
+//         padding: 10px 0;
+//       }
+//       .messageTrue {
+//         color: greenyellow;
+//       }
+//       .messageFalse {
+//         color: tomato;
+//       }
+//       .msgIcon {
+//         font-size: 2rem;
+//       }
+//     }
+//   }
+//   form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5rem;
+//     width: 70%;
+//     .nameEmailContent {
+//       display: flex;
+//       align-items: center;
+//       column-gap: 1rem;
+//       row-gap: 0.5rem;
+//     }
+//     input {
+//       height: 80px;
+//       padding: 10px;
+//       color: $Lime;
+//       background-color: $backgroundColor;
+//       font-weight: bold;
+//       font-family: $textFonts;
+//       font-size: 1.5rem;
+//       filter: brightness(150%);
+//       outline: none;
+//       border: none;
+//       width: 100%;
+//     }
+//     .textAreaMessage {
+//       height: 265px;
+//       textArea {
+//         font-size: 1.5rem;
+//         font-family: $textFonts;
+//         height: 260px;
+//         padding: 10px;
+//         color: $Lime;
+//         background-color: $backgroundColor;
+//         filter: brightness(150%);
+//         outline: none;
+//         border: none;
+//         resize: none;
+//         width: 100%;
+//       }
+//     }
+//     .row {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       flex-wrap: wrap;
+//       padding: 1rem 0;
+
+//       .capture {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         height: 56px;
+//         width: 220px;
+//         background: linear-gradient(
+//           to right,
+//           $backgroundColor,
+//           $Lime,
+//           $mainColor,
+//           $backgroundColor
+//         );
+
+//         padding: 0 1rem;
+//         input {
+//           width: 60px;
+//           height: 45px;
+//           text-align: center;
+//           font-weight: bold;
+//           font-size: 1.3rem;
+//           background-color: rgba($Lime, 0.3);
+//           color: $css3;
+//         }
+//         .numbers {
+//           font-size: 2rem;
+//           font-weight: bold;
+//           letter-spacing: 10px;
+//           color: $backgroundColor;
+//           padding-top: 10px;
+//         }
+//       }
+//       .msgButton {
+//         background-color: $mainColor;
+//         height: 56px;
+//         width: 220px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         filter: brightness(150%);
+//         button {
+//           height: 50px;
+//           width: 210px;
+//           cursor: pointer;
+//           background-color: $backgroundColor;
+//           color: $mainColor;
+//           border: none;
+//           font-size: 16px;
+//           font-weight: bold;
+//           letter-spacing: 1px;
+//           overflow: hidden;
+//           transition: all 1.3s ease;
+//           display: inline-block;
+//           position: relative;
+
+//           &::after {
+//             content: "";
+//             display: block;
+//             position: absolute;
+//             top: 0;
+//             right: 100%;
+//             width: 100%;
+//             height: 100%;
+//             background-color: rgba($mainColor, 0.3);
+//             transition: all 1s ease;
+//           }
+//           &:hover {
+//             color: $backgroundColor;
+//             background-color: $mainColor;
+//             &:after {
+//               right: 0;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .inputName,
+//   .inputEmail,
+//   .inputSubject,
+//   .textAreaMessage {
+//     height: 84px;
+//     width: 100%;
+//     overflow: hidden;
+//     transition: all 0.5s ease;
+//     display: inline-block;
+//     position: relative;
+//     background-color: $backgroundColor;
+
+//     &::after {
+//       content: "";
+//       background-color: $backgroundColor;
+//       position: absolute;
+//       height: 6px;
+//       width: 100%;
+//       bottom: 0;
+//       left: 0;
+//       transition: all 1s ease;
+//     }
+//     &:focus-within {
+//       background-color: $mainColor;
+//       &:after {
+//         right: 0;
+//         transform: translateX(100%);
+//       }
+//     }
+//   }
+//   .messageNotValid,
+//   .subjectNotValid,
+//   .nameNotValid,
+//   .emailNotValid {
+//     background-color: tomato;
+//     &:focus-within {
+//       background-color: tomato;
+//     }
+//   }
+
+//   .contactIcons {
+//     display: flex;
+//     padding: 3rem 0;
+//     font-size: 3rem;
+//     justify-content: space-evenly;
+//     width: 100%;
+
+//     .linkedIn {
+//       padding: 5px;
+//       color: $typescript;
+//     }
+//     .whatsApp {
+//       padding: 5px;
+//       color: $mongodb;
+//     }
+//     .gitHub {
+//       padding: 5px;
+//       color: $Lime;
+//     }
+//     .gitHub:hover,
+//     .whatsApp:hover,
+//     .linkedIn:hover {
+//       transform: scale(1.2);
+//     }
+//   }
+// }
+// @media (max-width: 967px) {
+//   form {
+//     min-width: 90%;
+//   }
+// }
+// @media (max-width: 767px) {
+//   .pageContact {
+//     .nameEmailContent {
+//       flex-wrap: wrap;
+//     }
+//   }
+// }
+// @media (max-width: 567px) {
+//   .row {
+//     flex-direction: column;
+//     row-gap: 0.5rem;
+//   }
+// }
 @use "../variables" as *;
 
 .pageContact {
@@ -9,31 +250,32 @@
     padding: 10px;
 
     .messageRow {
-      font-size: 1.5rem;
+      font-size: 1.15rem;
       text-align: center;
-      font-family: "Workbench", sans-serif;
+      font-family: $mainFonts;
+      font-weight: 500;
       span {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 0.75rem;
         padding: 10px 0;
       }
       .messageTrue {
-        color: greenyellow;
+        color: #4ade80;
       }
       .messageFalse {
-        color: tomato;
+        color: #f87171;
       }
       .msgIcon {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
     }
   }
   form {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
     width: 70%;
     .nameEmailContent {
       display: flex;
@@ -42,32 +284,41 @@
       row-gap: 0.5rem;
     }
     input {
-      height: 80px;
-      padding: 10px;
-      color: $Lime;
-      background-color: $backgroundColor;
-      font-weight: bold;
-      font-family: $textFonts;
-      font-size: 1.5rem;
-      filter: brightness(150%);
+      height: 60px;
+      padding: 10px 14px;
+      color: $textPrimary;
+      background: $backgroundCard;
+      font-weight: 500;
+      font-family: $mainFonts;
+      font-size: 1.05rem;
       outline: none;
-      border: none;
+      border: 1px solid $borderSubtle;
+      border-radius: 10px;
       width: 100%;
+      transition: border-color 0.25s ease;
+      &::placeholder {
+        color: $textSecondary;
+        letter-spacing: 0.5px;
+      }
     }
     .textAreaMessage {
-      height: 265px;
-      textArea {
-        font-size: 1.5rem;
-        font-family: $textFonts;
-        height: 260px;
-        padding: 10px;
-        color: $Lime;
-        background-color: $backgroundColor;
-        filter: brightness(150%);
+      height: 220px;
+      textarea {
+        font-size: 1.05rem;
+        font-family: $mainFonts;
+        height: 100%;
+        padding: 14px;
+        color: $textPrimary;
+        background: $backgroundCard;
         outline: none;
-        border: none;
+        border: 1px solid $borderSubtle;
+        border-radius: 10px;
         resize: none;
         width: 100%;
+        transition: border-color 0.25s ease;
+        &::placeholder {
+          color: $textSecondary;
+        }
       }
     }
     .row {
@@ -83,73 +334,54 @@
         align-items: center;
         height: 56px;
         width: 220px;
-        background: linear-gradient(
-          to right,
-          $backgroundColor,
-          $Lime,
-          $mainColor,
-          $backgroundColor
-        );
-
+        background: $backgroundCard;
+        border: 1px solid $borderSubtle;
+        border-radius: 10px;
+        gap: 0.75rem;
         padding: 0 1rem;
         input {
           width: 60px;
-          height: 45px;
+          height: 40px;
           text-align: center;
-          font-weight: bold;
-          font-size: 1.3rem;
-          background-color: rgba($Lime, 0.3);
-          color: $css3;
+          font-weight: 600;
+          font-size: 1.1rem;
+          background: rgba($mainColor, 0.08);
+          border: 1px solid rgba($mainColor, 0.25);
+          color: $mainColor;
         }
         .numbers {
-          font-size: 2rem;
-          font-weight: bold;
-          letter-spacing: 10px;
-          color: $backgroundColor;
-          padding-top: 10px;
+          font-size: 1.3rem;
+          font-weight: 600;
+          letter-spacing: 4px;
+          color: $textPrimary;
         }
       }
       .msgButton {
-        background-color: $mainColor;
         height: 56px;
         width: 220px;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        filter: brightness(150%);
         button {
-          height: 50px;
-          width: 210px;
+          height: 100%;
+          width: 100%;
           cursor: pointer;
-          background-color: $backgroundColor;
+          background: transparent;
           color: $mainColor;
-          border: none;
-          font-size: 16px;
-          font-weight: bold;
-          letter-spacing: 1px;
+          border: 1px solid $mainColor;
+          border-radius: 10px;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 1.5px;
           overflow: hidden;
-          transition: all 1.3s ease;
-          display: inline-block;
+          transition: all 0.3s ease;
           position: relative;
 
-          &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 100%;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($mainColor, 0.3);
-            transition: all 1s ease;
-          }
           &:hover {
             color: $backgroundColor;
             background-color: $mainColor;
-            &:after {
-              right: 0;
-            }
+            box-shadow: 0 8px 22px rgba($mainColor, 0.3);
           }
         }
       }
@@ -159,29 +391,15 @@
   .inputEmail,
   .inputSubject,
   .textAreaMessage {
-    height: 84px;
     width: 100%;
-    overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     display: inline-block;
     position: relative;
-    background-color: $backgroundColor;
 
-    &::after {
-      content: "";
-      background-color: $backgroundColor;
-      position: absolute;
-      height: 6px;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      transition: all 1s ease;
-    }
     &:focus-within {
-      background-color: $mainColor;
-      &:after {
-        right: 0;
-        transform: translateX(100%);
+      input,
+      textarea {
+        border-color: $mainColor;
       }
     }
   }
@@ -189,35 +407,51 @@
   .subjectNotValid,
   .nameNotValid,
   .emailNotValid {
-    background-color: tomato;
+    input,
+    textarea {
+      border-color: rgba(#f87171, 0.5);
+    }
     &:focus-within {
-      background-color: tomato;
+      input,
+      textarea {
+        border-color: #f87171;
+      }
     }
   }
 
   .contactIcons {
     display: flex;
     padding: 3rem 0;
-    font-size: 3rem;
+    font-size: 2.2rem;
     justify-content: space-evenly;
     width: 100%;
 
     .linkedIn {
       padding: 5px;
-      color: $typescript;
+      color: $textSecondary;
+      transition: color 0.25s ease;
     }
     .whatsApp {
       padding: 5px;
-      color: $mongodb;
+      color: $textSecondary;
+      transition: color 0.25s ease;
     }
     .gitHub {
       padding: 5px;
-      color: $Lime;
+      color: $textSecondary;
+      transition: color 0.25s ease;
     }
-    .gitHub:hover,
-    .whatsApp:hover,
+    .gitHub:hover {
+      color: $textPrimary;
+      transform: scale(1.15);
+    }
+    .whatsApp:hover {
+      color: #4ade80;
+      transform: scale(1.15);
+    }
     .linkedIn:hover {
-      transform: scale(1.2);
+      color: $mainColor;
+      transform: scale(1.15);
     }
   }
 }

@@ -1,3 +1,312 @@
+// @use "variables" as *;
+
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+
+// .content {
+//   position: relative;
+//   height: 91vh;
+//   display: flex;
+//   justify-content: center;
+//   padding-top: 5rem;
+//   text-align: center;
+
+//   h1 {
+//     font-family: "Workbench", sans-serif;
+//   }
+//   .personalContainer {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     height: fit-content;
+//     width: 100%;
+//     .lastName {
+//       text-transform: uppercase;
+//       color: $Lime;
+//       padding: 1rem 0;
+//       font-weight: bold;
+//       height: fit-content;
+//       text-shadow: 5px 5px $mainColor;
+//       color: $backgroundColor;
+//       display: flex;
+//       flex-direction: column;
+//       text-align: center;
+//       span {
+//         font-size: 4rem;
+//         text-shadow: 6px 8px rgb(241, 196, 111);
+//         padding: 5px;
+//         letter-spacing: 2px;
+//       }
+//     }
+//     .logoIcon {
+//       padding: 1rem 0;
+
+//       .spinnerLogoIcon {
+//         transform-origin: center center;
+//         font-size: 5rem;
+//         color: $backgroundColor;
+//       }
+//     }
+//     .animatedText {
+//       font-size: 1.1rem;
+//       font-family: $logoFonts, cursive;
+//       padding: 5px 0;
+//       text-shadow: 3px 2px $mainColor;
+//       letter-spacing: 1px;
+//       height: 100px;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 1rem;
+//       text-transform: uppercase;
+//       .firstName {
+//         overflow: hidden;
+//         word-wrap: break-word;
+//         white-space: nowrap;
+//         animation: typing 4s steps(60) forwards;
+//       }
+//       .title {
+//         overflow: hidden;
+//         word-wrap: break-word;
+//         white-space: nowrap;
+//         animation: typingTitle 8s steps(60) forwards infinite;
+//         animation-delay: 4s;
+//         opacity: 0;
+//       }
+//     }
+//     @keyframes typing {
+//       from {
+//         width: 0;
+//       }
+//       to {
+//         width: 100%;
+//       }
+//     }
+//     @keyframes typingTitle {
+//       from {
+//         opacity: 1;
+//         width: 0;
+//       }
+//       to {
+//         opacity: 1;
+//         width: 100%;
+//       }
+//     }
+//   }
+
+//   .shadowBlackImg {
+//     position: absolute;
+//     z-index: 2;
+//     width: 100%;
+//     bottom: 0;
+//     left: 0;
+//     height: 300px;
+//   }
+
+//   .rightImg {
+//     position: absolute;
+//     z-index: 1;
+//     right: 0;
+//     bottom: 0;
+//     width: 700px;
+//     height: 400px;
+//   }
+//   .tiger {
+//     width: 400px;
+//     height: 200px;
+//     position: absolute;
+//     bottom: 10%;
+//     transform: rotateY(180deg);
+//   }
+// }
+
+// .parallaxRowLine {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding-top: 0.5rem;
+
+//   .parallaxLine {
+//     position: relative;
+//     height: 1px;
+//     background-color: $mainColor;
+//     filter: brightness(150%);
+//     transform-origin: center center;
+//     width: 40vw;
+//   }
+//   .parallaxSpace {
+//     position: absolute;
+//     height: max-content;
+//     width: 60px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: $backgroundColor;
+
+//     .BsTriangleHalfIcon {
+//       color: $mainColor;
+//       filter: brightness(150%);
+//     }
+//   }
+// }
+
+// @media (max-width: 567px) {
+//   .shadowBlackImg {
+//     max-height: 300px;
+//   }
+//   .rightImg {
+//     max-height: 350px;
+//   }
+// }
+// @keyframes spinner {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// //Nav
+// .navList {
+//   z-index: 2;
+//   background-color: $backgroundColor;
+
+//   align-items: center;
+//   display: flex;
+//   font-size: 1rem;
+//   padding: 1rem;
+//   position: absolute;
+//   bottom: 0;
+//   .logo {
+//     color: $Lime;
+//     display: flex;
+//     align-items: center;
+//     font-family: "Workbench", sans-serif;
+//     a {
+//       cursor: pointer;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       gap: 0.5rem;
+//       .logoIcon {
+//         width: 50px;
+//         height: 50px;
+//         color: $Lime;
+//         transform-origin: center center;
+//       }
+//       span {
+//         font-size: 1.3rem;
+//       }
+//     }
+//   }
+//   nav {
+//     width: 80%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//     column-gap: 4rem;
+
+//     a {
+//       color: $Lime;
+//       text-decoration: none;
+//       letter-spacing: 2px;
+//       font-weight: bold;
+//       font-size: 1rem;
+
+//       &::first-letter {
+//         font-size: 1.5rem;
+//       }
+//       &:hover {
+//         cursor: pointer;
+
+//         transform: scale(1.2);
+//       }
+//     }
+//   }
+//   .burgerMenu {
+//     transition: all 0.3s ease;
+//     position: sticky;
+//     left: 100%;
+//     width: 50px;
+//     height: 50px;
+//     display: none;
+
+//     .menuIcon {
+//       cursor: pointer;
+//       width: 50px;
+//       height: 50px;
+//     }
+//   }
+//   .menuOpen {
+//     transform: translateX(0%);
+//     width: 50%;
+//     padding-right: 1rem;
+//     background-color: $backgroundColor;
+//     transition: all 0.3s linear;
+//     div {
+//       position: absolute;
+//       top: 2%;
+//       right: 10%;
+//       .menuIcon {
+//         cursor: pointer;
+//         width: 30px;
+//         height: 30px;
+//         color: $Lime;
+//         &:hover {
+//           transform: scale(1.2);
+//         }
+//       }
+//     }
+//     a {
+//       font-size: 1.4rem;
+//       position: relative;
+//       &::first-letter {
+//         font-size: 1.8rem;
+//       }
+//       &::after {
+//         content: "";
+//         position: absolute;
+//         height: 1px;
+//         width: 100%;
+//         bottom: 0;
+//         left: 0;
+//         background-color: $Lime;
+//       }
+//     }
+//   }
+// }
+// .sticky {
+//   position: sticky;
+//   top: 0;
+// }
+// @media (max-width: 768px) {
+//   .navList .burgerMenu {
+//     display: block;
+
+//     .menuIcon {
+//       color: $Lime;
+//     }
+//   }
+
+//   .menu {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     width: 50%;
+//     height: 110%;
+//     position: fixed;
+//     row-gap: 3rem;
+//     top: 0;
+//     right: 0;
+//     transition: all step-start;
+//     transform: translateX(100%);
+//   }
+// }
 @use "variables" as *;
 
 * {
@@ -11,13 +320,18 @@
   height: 91vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 5rem;
   text-align: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a0e17 0%, #0d1220 100%);
 
   h1 {
-    font-family: "Workbench", sans-serif;
+    font-family: $logoFonts;
   }
   .personalContainer {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,20 +339,19 @@
     width: 100%;
     .lastName {
       text-transform: uppercase;
-      color: $Lime;
-      padding: 1rem 0;
-      font-weight: bold;
+      font-weight: 700;
       height: fit-content;
-      text-shadow: 5px 5px $mainColor;
-      color: $backgroundColor;
       display: flex;
       flex-direction: column;
       text-align: center;
       span {
-        font-size: 4rem;
-        text-shadow: 6px 8px rgb(241, 196, 111);
-        padding: 5px;
-        letter-spacing: 2px;
+        font-size: 4.5rem;
+        letter-spacing: 4px;
+        background: linear-gradient(135deg, $mainColor 0%, $accentViolet 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 25px rgba($mainColor, 0.35));
       }
     }
     .logoIcon {
@@ -46,26 +359,28 @@
 
       .spinnerLogoIcon {
         transform-origin: center center;
-        font-size: 5rem;
-        color: $backgroundColor;
+        font-size: 3rem;
+        color: $accentViolet;
+        opacity: 0.7;
       }
     }
     .animatedText {
-      font-size: 1.1rem;
-      font-family: $logoFonts, cursive;
+      font-size: 1.15rem;
+      font-family: $mainFonts;
+      font-weight: 400;
       padding: 5px 0;
-      text-shadow: 3px 2px $mainColor;
-      letter-spacing: 1px;
+      color: $textSecondary;
+      letter-spacing: 0.5px;
       height: 100px;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      text-transform: uppercase;
       .firstName {
         overflow: hidden;
         word-wrap: break-word;
         white-space: nowrap;
         animation: typing 4s steps(60) forwards;
+        color: $textPrimary;
       }
       .title {
         overflow: hidden;
@@ -74,6 +389,8 @@
         animation: typingTitle 8s steps(60) forwards infinite;
         animation-delay: 4s;
         opacity: 0;
+        color: $mainColor;
+        font-weight: 500;
       }
     }
     @keyframes typing {
@@ -94,31 +411,6 @@
         width: 100%;
       }
     }
-  }
-
-  .shadowBlackImg {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    height: 300px;
-  }
-
-  .rightImg {
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    width: 700px;
-    height: 400px;
-  }
-  .tiger {
-    width: 400px;
-    height: 200px;
-    position: absolute;
-    bottom: 10%;
-    transform: rotateY(180deg);
   }
 }
 
@@ -171,20 +463,22 @@
 
 //Nav
 .navList {
-  z-index: 2;
-  background-color: $backgroundColor;
+  z-index: 10;
+  background: rgba(10, 14, 23, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $borderSubtle;
 
   align-items: center;
   display: flex;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   position: absolute;
   bottom: 0;
   .logo {
-    color: $Lime;
+    color: $textPrimary;
     display: flex;
     align-items: center;
-    font-family: "Workbench", sans-serif;
+    font-family: $logoFonts;
     a {
       cursor: pointer;
       display: flex;
@@ -192,13 +486,15 @@
       justify-content: center;
       gap: 0.5rem;
       .logoIcon {
-        width: 50px;
-        height: 50px;
-        color: $Lime;
+        width: 36px;
+        height: 36px;
+        color: $mainColor;
         transform-origin: center center;
       }
       span {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
       }
     }
   }
@@ -208,22 +504,19 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    column-gap: 4rem;
+    column-gap: 3rem;
 
     a {
-      color: $Lime;
+      color: $textSecondary;
       text-decoration: none;
-      letter-spacing: 2px;
-      font-weight: bold;
-      font-size: 1rem;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.25s ease;
 
-      &::first-letter {
-        font-size: 1.5rem;
-      }
       &:hover {
         cursor: pointer;
-
-        transform: scale(1.2);
+        color: $mainColor;
       }
     }
   }
@@ -237,15 +530,17 @@
 
     .menuIcon {
       cursor: pointer;
-      width: 50px;
-      height: 50px;
+      width: 30px;
+      height: 30px;
+      color: $mainColor;
     }
   }
   .menuOpen {
     transform: translateX(0%);
-    width: 50%;
+    width: 60%;
     padding-right: 1rem;
-    background-color: $backgroundColor;
+    background: rgba(10, 14, 23, 0.97);
+    backdrop-filter: blur(16px);
     transition: all 0.3s linear;
     div {
       position: absolute;
@@ -253,28 +548,26 @@
       right: 10%;
       .menuIcon {
         cursor: pointer;
-        width: 30px;
-        height: 30px;
-        color: $Lime;
+        width: 28px;
+        height: 28px;
+        color: $mainColor;
         &:hover {
-          transform: scale(1.2);
+          transform: scale(1.15);
         }
       }
     }
     a {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       position: relative;
-      &::first-letter {
-        font-size: 1.8rem;
-      }
       &::after {
         content: "";
         position: absolute;
         height: 1px;
         width: 100%;
-        bottom: 0;
+        bottom: -4px;
         left: 0;
-        background-color: $Lime;
+        background-color: $mainColor;
+        opacity: 0.4;
       }
     }
   }

@@ -1,3 +1,115 @@
+// @use "../variables" as *;
+
+// .pageSkills {
+//   padding: $pagePadding;
+//   background-color: $backgroundColor;
+//   padding: 10px;
+
+//   .skills {
+//     display: grid;
+//     grid-template-columns: repeat((3, 1fr));
+//     gap: 10px;
+//     padding-bottom: 1rem;
+//     .skill {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       text-transform: uppercase;
+//       .skillImg {
+//         display: flex;
+//         gap: 1rem;
+//         justify-content: center;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         width: 100%;
+//         padding: 20px 0;
+//         img {
+//           width: 60px;
+//           aspect-ratio: 1;
+//         }
+//       }
+//       .title {
+//         font-size: 1.7rem;
+//         font-weight: bold;
+//         padding: 1rem;
+//         background-color: rgba(gray, 0.15);
+//         width: 100%;
+//       }
+//     }
+//     .frameworks {
+//       background-color: rgba($css3, 0.3);
+//       grid-column-start: 1;
+//       grid-column-end: 3;
+//       grid-row-start: 5;
+//       grid-row-end: 10;
+//     }
+//     .technologies {
+//       background-color: rgba($sqlite, 0.2);
+//       grid-column-start: 1;
+//       grid-column-end: 4;
+//       grid-row-start: 1;
+//       grid-row-end: 5;
+//     }
+//     .database {
+//       background-color: rgba(red, 0.2);
+//       grid-column-start: 2;
+//       grid-column-end: 4;
+//       grid-row-start: 10;
+//       grid-row-end: 15;
+//     }
+//     .devops {
+//       background-color: rgba($javascript, 0.5);
+//       grid-column-start: 3;
+//       grid-column-end: 4;
+//       grid-row-start: 5;
+//       grid-row-end: 10;
+//     }
+
+//     .testing {
+//       background-color: rgba($scss, 0.1);
+//       grid-column-start: 1;
+//       grid-column-end: 2;
+//       grid-row-start: 10;
+//       grid-row-end: 15;
+//     }
+
+//     .devtools {
+//       background-color: rgba($react, 0.2);
+//       grid-column-start: 1;
+//       grid-column-end: 3;
+//       grid-row-start: 15;
+//       grid-row-end: 20;
+//       .skillImg {
+//         img {
+//           width: 60px;
+//           height: 60px;
+//         }
+//         .netlify,
+//         .vercel,
+//         .render {
+//           width: 90px;
+//         }
+//         .vercel {
+//           height: 40px;
+//         }
+//       }
+//     }
+//     .libraries {
+//       background-color: rgba($mongodb, 0.5);
+//       grid-column-start: 3;
+//       grid-column-end: 4;
+//       grid-row-start: 15;
+//       grid-row-end: 20;
+//     }
+//     .others {
+//       background-color: rgba($express, 0.2);
+//       grid-column-start: 1;
+//       grid-column-end: 4;
+//       grid-row-start: 20;
+//       grid-row-end: 25;
+//     }
+//   }
+// }
 @use "../variables" as *;
 
 .pageSkills {
@@ -15,6 +127,17 @@
       flex-direction: column;
       align-items: center;
       text-transform: uppercase;
+      background: $backgroundCard;
+      backdrop-filter: blur(10px);
+      border: 1px solid $borderSubtle;
+      border-radius: 14px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: rgba($mainColor, 0.35);
+        transform: translateY(-3px);
+      }
+
       .skillImg {
         display: flex;
         gap: 1rem;
@@ -24,41 +147,46 @@
         width: 100%;
         padding: 20px 0;
         img {
-          width: 60px;
+          width: 55px;
           aspect-ratio: 1;
+          filter: drop-shadow(0 0 6px rgba($mainColor, 0.15));
+          transition: transform 0.25s ease;
+          &:hover {
+            transform: scale(1.12);
+          }
         }
       }
       .title {
-        font-size: 1.7rem;
-        font-weight: bold;
-        padding: 1rem;
-        background-color: rgba(gray, 0.15);
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 0.85rem;
+        color: $textPrimary;
+        background-color: rgba(255, 255, 255, 0.03);
+        border-top: 1px solid $borderSubtle;
         width: 100%;
+        font-family: $logoFonts;
       }
     }
     .frameworks {
-      background-color: rgba($css3, 0.3);
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 5;
       grid-row-end: 10;
     }
     .technologies {
-      background-color: rgba($sqlite, 0.2);
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 1;
       grid-row-end: 5;
     }
     .database {
-      background-color: rgba(red, 0.2);
       grid-column-start: 2;
       grid-column-end: 4;
       grid-row-start: 10;
       grid-row-end: 15;
     }
     .devops {
-      background-color: rgba($javascript, 0.5);
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 5;
@@ -66,7 +194,6 @@
     }
 
     .testing {
-      background-color: rgba($scss, 0.1);
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 10;
@@ -74,35 +201,32 @@
     }
 
     .devtools {
-      background-color: rgba($react, 0.2);
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 15;
       grid-row-end: 20;
       .skillImg {
         img {
-          width: 60px;
-          height: 60px;
+          width: 55px;
+          height: 55px;
         }
         .netlify,
         .vercel,
         .render {
-          width: 90px;
+          width: 85px;
         }
         .vercel {
-          height: 40px;
+          height: 38px;
         }
       }
     }
     .libraries {
-      background-color: rgba($mongodb, 0.5);
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 15;
       grid-row-end: 20;
     }
     .others {
-      background-color: rgba($express, 0.2);
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 20;

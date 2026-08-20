@@ -1,0 +1,91 @@
+@use "variables" as *;
+
+.circuitBackground {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+
+  .circuitSvg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+
+    .line {
+      fill: none;
+      stroke: $mainColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 3px rgba($mainColor, 0.6));
+    }
+    .line2,
+    .line4 {
+      stroke: $accentViolet;
+      filter: drop-shadow(0 0 3px rgba($accentViolet, 0.6));
+    }
+
+    .node {
+      fill: $mainColor;
+      filter: drop-shadow(0 0 6px rgba($mainColor, 0.9));
+      animation: pulseNode 3s ease-in-out infinite;
+    }
+    .n2,
+    .n4,
+    .n6 {
+      fill: $accentViolet;
+      filter: drop-shadow(0 0 6px rgba($accentViolet, 0.9));
+      animation-delay: 1s;
+    }
+    .n3,
+    .n5,
+    .n7 {
+      animation-delay: 2s;
+    }
+  }
+
+  .glowOrb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.15;
+  }
+  .orb1 {
+    width: 400px;
+    height: 400px;
+    background: $mainColor;
+    top: 10%;
+    left: 10%;
+    animation: floatOrb 12s ease-in-out infinite;
+  }
+  .orb2 {
+    width: 350px;
+    height: 350px;
+    background: $accentViolet;
+    bottom: 5%;
+    right: 10%;
+    animation: floatOrb 14s ease-in-out infinite reverse;
+  }
+}
+
+@keyframes pulseNode {
+  0%,
+  100% {
+    opacity: 0.4;
+    r: 3;
+  }
+  50% {
+    opacity: 1;
+    r: 5;
+  }
+}
+
+@keyframes floatOrb {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -30px);
+  }
+}

@@ -13,6 +13,7 @@ export interface IAppContext {
   spinnSpeed: number;
   spinnSpeedLogo: number;
   projects: IProject[];
+  engineeringProjects: IEngineeringProject[];
   skills: ISkill[];
   moveTigerX: number;
   isMenuOpen: boolean;
@@ -51,6 +52,16 @@ export interface IProject {
   repo: string;
   url: string;
   description: string;
+  createdAt: string;
+}
+
+export interface IEngineeringProject {
+  _id: string;
+  name: string;
+  images: string[];
+  tools: string[];
+  description: string;
+  link: string;
   createdAt: string;
 }
 export interface ISkill {
