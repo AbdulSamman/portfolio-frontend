@@ -8,7 +8,7 @@
 
 .content {
   position: relative;
-  height: 91vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   padding-top: 5rem;
@@ -23,57 +23,100 @@
     align-items: center;
     height: fit-content;
     width: 100%;
+    .eyebrow {
+      font-family: $monoFonts;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: $mainColor;
+      opacity: 0;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border: 1px solid rgba($mainColor, 0.35);
+      border-radius: 999px;
+      background: rgba($mainColor, 0.06);
+      animation: fadeUp 0.7s ease-out 0.1s forwards;
+
+      &::after {
+        content: "_";
+        animation: blinkCursor 1s step-end infinite;
+        color: $accentViolet;
+      }
+    }
     .lastName {
       text-transform: uppercase;
-      color: $Lime;
-      padding: 1rem 0;
-      font-weight: bold;
+      padding: 1rem 0 0.5rem;
+      font-weight: 700;
       height: fit-content;
-      text-shadow: 5px 5px $mainColor;
-      color: $backgroundColor;
       display: flex;
       flex-direction: column;
       text-align: center;
+      font-family: $logoFonts;
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out 0.3s forwards;
       span {
-        font-size: 4rem;
-        text-shadow: 6px 8px rgb(241, 196, 111);
+        font-size: 4.5rem;
+        letter-spacing: 4px;
         padding: 5px;
-        letter-spacing: 2px;
+        background: linear-gradient(
+          100deg,
+          $textPrimary 10%,
+          $mainColor 45%,
+          $accentViolet 75%,
+          $textPrimary 100%
+        );
+        background-size: 220% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: shimmerText 7s linear infinite;
+
+        @media (max-width: 567px) {
+          font-size: 2.8rem;
+        }
       }
     }
     .logoIcon {
-      padding: 1rem 0;
-
+      padding: 1.25rem 0 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out 0.7s forwards;
       .spinnerLogoIcon {
         transform-origin: center center;
-        font-size: 5rem;
-        color: $backgroundColor;
+        font-size: 2.6rem;
+        color: $mainColor;
+        filter: drop-shadow(0 0 10px rgba($mainColor, 0.5));
       }
     }
     .animatedText {
       font-size: 1.1rem;
-      font-family: $logoFonts, cursive;
+      font-family: $monoFonts;
       padding: 5px 0;
-      text-shadow: 3px 2px $mainColor;
-      letter-spacing: 1px;
-      height: 100px;
+      color: $textSecondary;
+      letter-spacing: 0.5px;
+      min-height: 70px;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      text-transform: uppercase;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out 0.5s forwards;
       .firstName {
-        overflow: hidden;
         word-wrap: break-word;
         white-space: nowrap;
+        color: $textPrimary;
+        font-weight: 500;
         animation: typing 4s steps(60) forwards;
       }
       .title {
         overflow: hidden;
         word-wrap: break-word;
         white-space: nowrap;
+        color: $mainColor;
         animation: typingTitle 8s steps(60) forwards infinite;
         animation-delay: 4s;
         opacity: 0;
+      }
+      @media (max-width: 567px) {
+        font-size: 0.95rem;
       }
     }
     @keyframes typing {
@@ -96,29 +139,56 @@
     }
   }
 
-  .shadowBlackImg {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    height: 300px;
-  }
+  // .shadowBlackImg {
+  //   position: absolute;
+  //   z-index: 2;
+  //   width: 100%;
+  //   bottom: 0;
+  //   left: 0;
+  //   height: 300px;
+  // }
 
-  .rightImg {
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    width: 700px;
-    height: 400px;
+  // .rightImg {
+  //   position: absolute;
+  //   z-index: 1;
+  //   right: 0;
+  //   bottom: 0;
+  //   width: 700px;
+  //   height: 400px;
+  // }
+  // .tiger {
+  //   width: 400px;
+  //   height: 200px;
+  //   position: absolute;
+  //   bottom: 10%;
+  //   transform: rotateY(180deg);
+  // }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
-  .tiger {
-    width: 400px;
-    height: 200px;
-    position: absolute;
-    bottom: 10%;
-    transform: rotateY(180deg);
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes blinkCursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes shimmerText {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 220% center;
   }
 }
 
@@ -152,14 +222,14 @@
   }
 }
 
-@media (max-width: 567px) {
-  .shadowBlackImg {
-    max-height: 300px;
-  }
-  .rightImg {
-    max-height: 350px;
-  }
-}
+// @media (max-width: 567px) {
+//   .shadowBlackImg {
+//     max-height: 300px;
+//   }
+//   .rightImg {
+//     max-height: 350px;
+//   }
+// }
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -179,6 +249,7 @@
   padding: 1.2rem;
   position: absolute;
   bottom: 0;
+
   .logo {
     color: $Lime;
     display: flex;
