@@ -65,9 +65,9 @@
   .projects {
     place-items: stretch;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.25rem;
-    margin: 1rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    margin: 1rem;
     text-align: center;
 
     .project {
@@ -75,18 +75,18 @@
       background: $backgroundCard;
       backdrop-filter: blur(10px);
       border: 1px solid $borderSubtle;
-      min-height: 140px;
+      min-height: 110px;
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 0.5rem;
-      border-radius: 14px;
+      border-radius: 12px;
       color: $textPrimary;
       font-family: $textFonts;
       cursor: pointer;
-      padding: 1.5rem 1rem;
+      padding: 1rem 0.75rem;
       transition: all 0.3s ease;
       overflow: hidden;
 
@@ -105,9 +105,9 @@
 
       .linkIndicator {
         position: absolute;
-        top: 0.85rem;
-        right: 0.85rem;
-        font-size: 1rem;
+        top: 0.65rem;
+        right: 0.65rem;
+        font-size: 0.9rem;
         color: $mainColor;
         opacity: 0.7;
       }
@@ -115,9 +115,9 @@
       h4 {
         position: relative;
         padding: 5px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 500;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
       }
 
       &:hover {
@@ -131,6 +131,26 @@
       }
       &:active {
         transform: translateY(-2px);
+      }
+    }
+  }
+
+  @media (width > 650px) {
+    .projects {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin: 1rem 2rem;
+      .project {
+        min-height: 140px;
+        padding: 1.5rem 1rem;
+        h4 {
+          font-size: 1rem;
+        }
+        .linkIndicator {
+          top: 0.85rem;
+          right: 0.85rem;
+          font-size: 1rem;
+        }
       }
     }
   }

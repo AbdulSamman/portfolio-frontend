@@ -5,7 +5,6 @@ import ParallaxLine from "../components/ParallaxLine";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
 import { popUpEngineering } from "../components/Popupengineering";
-import { HiOutlineExternalLink } from "react-icons/hi";
 
 export const PageEngineering = () => {
   const { engineeringProjects } = useContext(AppContext);
@@ -20,9 +19,6 @@ export const PageEngineering = () => {
                 className="project"
                 onClick={() => popUpEngineering(project)}
               >
-                {project.link ? (
-                  <HiOutlineExternalLink className="linkIndicator" />
-                ) : null}
                 <h4>{project.name}</h4>
               </div>
             </React.Fragment>

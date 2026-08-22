@@ -280,7 +280,6 @@
 //     </>
 //   );
 // };
-import { Parallax } from "react-parallax";
 import "../styles/parallaxStyle.scss";
 import React from "react";
 import { useContext } from "react";
@@ -303,12 +302,13 @@ export const ParallaxBackground: React.FC = () => {
 
   return (
     <>
-      <Parallax bgImage="" strength={80}>
+      <header className="hero">
+        <CircuitBackground />
         <div className="content">
-          <CircuitBackground />
           <div className="personalContainer">
+            <span className="eyebrow">&lt;engineering × code /&gt;</span>
             <h1 className="lastName">
-              <span> ABDUL</span>
+              <span>{person.lastName || "SAMMAN"}</span>
             </h1>
             <h2 className="animatedText">
               <span className="firstName">HI, I'M {person.firstName}</span>{" "}
@@ -324,7 +324,7 @@ export const ParallaxBackground: React.FC = () => {
             </div>
           </div>
         </div>
-      </Parallax>
+      </header>
       <div className={`navList sticky`}>
         <div className="logo" style={{ opacity: `${isOpacity}` }}>
           <Link
@@ -348,7 +348,7 @@ export const ParallaxBackground: React.FC = () => {
           {!isMenuOpen ? (
             <AiOutlineMenu className="menuIcon" />
           ) : (
-            <BsXLg className="menuIcon" />
+            <BsXLg className="menuIconX" />
           )}
         </div>
         <nav className={`menu ${isMenuOpen ? "menuOpen" : ""}`}>
