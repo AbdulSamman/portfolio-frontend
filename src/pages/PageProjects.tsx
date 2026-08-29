@@ -1,13 +1,22 @@
 import "../styles/pages/pageProjects.scss";
 import { AppProvider } from "../AppContext";
-import React from "react";
+import React, { useState } from "react";
 import ParallaxLine from "../components/ParallaxLine";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
 import { popUp } from "../components/popUp";
 
+const FEATURED_COUNT = 6;
+
 export const PageProjects = () => {
   const { projects } = useContext(AppContext);
+  const [showAll, setShowAll] = useState(false);
+
+  const hasMore = projects.length > FEATURED_COUNT;
+  const visibleProjects = showAll
+    ? projects
+    : projects.slice(0, FEATURED_COUNT);
+
   return (
     <div id="projects" className="pageProjects">
       <div className="line">
@@ -17,7 +26,7 @@ export const PageProjects = () => {
       </div>
       <h1>PROJECTS</h1>
       <div className="projects">
-        {projects.map((project) => {
+        {visibleProjects.map((project) => {
           return (
             <React.Fragment key={project._id}>
               <div className="project" onClick={() => popUp(project)}>
@@ -27,6 +36,16 @@ export const PageProjects = () => {
           );
         })}
       </div>
+
+      {hasMore && (
+        <button
+          type="button"
+          className="viewAllBtn"
+          onClick={() => setShowAll((prev) => !prev)}
+        >
+          {showAll ? "Hide All" : `View All (${projects.length})`}
+        </button>
+      )}
 
       <div className="line">
         <AppProvider speed={10} start={700} end={1900}>
