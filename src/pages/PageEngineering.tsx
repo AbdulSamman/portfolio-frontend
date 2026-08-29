@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AppContext } from "../AppContext";
 import { popUpEngineering } from "../components/Popupengineering";
 
-const FEATURED_COUNT = 6;
+const FEATURED_COUNT = 7;
 
 export const PageEngineering = () => {
   const { engineeringProjects } = useContext(AppContext);
