@@ -20,7 +20,7 @@ export const PageProjects = () => {
   return (
     <div id="projects" className="pageProjects">
       <div className="line">
-        <AppProvider speed={10} start={-100} end={1000}>
+        <AppProvider speed={10} start={0} end={0}>
           <ParallaxLine />
         </AppProvider>
       </div>
