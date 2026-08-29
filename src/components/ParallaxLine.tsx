@@ -64,7 +64,7 @@ const ParallaxLine: React.FC<IParallaxLineProps> = ({ speed = 10 }) => {
       );
 
       const angle = progress * speed * 0.2;
-      const wiggle = Math.sin(angle) * 0.3;
+      const wiggle = Math.sin(angle) * 0.2;
       const magnitude = Math.max(
         0.05,
         Math.min(0.85, 0.55 + wiggle + progress * 0.15),

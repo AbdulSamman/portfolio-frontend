@@ -48,7 +48,7 @@ export const PageProjects = () => {
       )}
 
       <div className="line">
-        <AppProvider speed={10} start={300} end={1900}>
+        <AppProvider speed={10} start={0} end={0}>
           <ParallaxLine />
         </AppProvider>
       </div>
