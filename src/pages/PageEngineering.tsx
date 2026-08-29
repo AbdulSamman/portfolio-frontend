@@ -46,7 +46,7 @@ export const PageEngineering = () => {
       )}
 
       <div className="line">
-        <AppProvider speed={10} start={1900} end={3100}>
+        <AppProvider speed={10} start={500} end={800}>
           <ParallaxLine />
         </AppProvider>
       </div>

@@ -32,7 +32,7 @@ export const PageSkills = () => {
         })}
       </div>
       <div className="line">
-        <AppProvider speed={10} start={2600} end={4300}>
+        <AppProvider speed={10} start={1000} end={2500}>
           <ParallaxLine />
         </AppProvider>
       </div>

@@ -204,7 +204,7 @@
     background-color: $mainColor;
     filter: brightness(150%);
     transform-origin: center center;
-    width: 40vw;
+    width: 80vw;
   }
   .parallaxSpace {
     position: absolute;
@@ -222,14 +222,6 @@
   }
 }
 
-// @media (max-width: 567px) {
-//   .shadowBlackImg {
-//     max-height: 300px;
-//   }
-//   .rightImg {
-//     max-height: 350px;
-//   }
-// }
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
