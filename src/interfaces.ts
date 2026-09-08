@@ -100,8 +100,8 @@ export const personData: IPersonData = {
   lastName: "SAMMAN",
   gitHubLink: "https://github.com/AbdulSamman",
   linkedinLink: "https://www.linkedin.com/in/abdulrazak-samman-175b2718b/",
-  title: "fullstack/ MERNstack Web-Developer",
+  title: "Mechatronics Engineer & Web Developer",
   description:
-    "Passionate Junior Fullstack Web Developer with problem-solving skills, strong design sense, and a hunger for learning.",
+    "Mechatronics Engineer (B.Eng.) with strong Full-Stack Web Development skills — bridging physical engineering (CAD, EPLAN, SPS) with modern web technologies.",
   hobbys: ["Chess", "Football", "Swimming", "Coding"],
 };
