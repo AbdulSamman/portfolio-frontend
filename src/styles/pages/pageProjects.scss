@@ -190,3 +190,56 @@
     }
   }
 }
+
+.pdfRowContainer {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  gap: 2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+
+  .pdfItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      .pdfImgIcon {
+        filter: drop-shadow(0 0 8px rgba(255, 77, 77, 0.8));
+      }
+
+      .pdfCategory,
+      .pdfTitle {
+        color: #ff4d4d;
+      }
+    }
+
+    .pdfCategory {
+      font-size: 0.75rem;
+      color: #e63946; // أحمر مميز
+      font-weight: bold;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .pdfImgIcon {
+      width: 38px; // حجم صغير وأنيق مثل الصورة
+      height: auto;
+      transition: filter 0.2s ease;
+    }
+
+    .pdfTitle {
+      font-size: 0.8rem;
+      color: #ffffff;
+      margin-top: 6px;
+      font-weight: 500;
+    }
+  }
+}

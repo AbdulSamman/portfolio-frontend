@@ -8,6 +8,25 @@ import { popUpEngineering } from "../components/Popupengineering";
 
 const FEATURED_COUNT = 7;
 
+// PDF
+const pdfFiles = [
+  {
+    category: "Unterlagen",
+    title: "Bewerbung",
+    fileUrl: "/docs/Unterlagen.pdf",
+  },
+  {
+    category: "Nachweise",
+    title: "Zertifikate",
+    fileUrl: "/docs/Zertifikate.pdf",
+  },
+  {
+    category: "Fraunhofer",
+    title: "Projektbericht",
+    fileUrl: "/docs/Fraunhofer_Bericht.pdf",
+  },
+];
+
 export const PageEngineering = () => {
   const { engineeringProjects } = useContext(AppContext);
   const [showAll, setShowAll] = useState(false);
@@ -44,7 +63,27 @@ export const PageEngineering = () => {
           {showAll ? "Hide All" : `View All (${engineeringProjects.length})`}
         </button>
       )}
-
+      <div className="pdfRowContainer">
+        {pdfFiles.map((pdf, index) => (
+          <a
+            key={index}
+            href={pdf.fileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pdfItem"
+          >
+            <span className="pdfCategory">{pdf.category}</span>
+            <div className="pdfBadge">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/337/337946.png"
+                alt="PDF Icon"
+                className="pdfImgIcon"
+              />
+            </div>
+            <span className="pdfTitle">{pdf.title}</span>
+          </a>
+        ))}
+      </div>
       <div className="line">
         <AppProvider speed={10} start={0} end={0}>
           <ParallaxLine />
