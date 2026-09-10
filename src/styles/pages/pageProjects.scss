@@ -200,6 +200,11 @@
   flex-wrap: wrap;
   padding: 1rem 2rem;
 
+  @media (max-width: 767px) {
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    gap: 1.5rem;
+  }
   .pdfItem {
     display: flex;
     flex-direction: column;
@@ -240,6 +245,69 @@
       color: #ffffff;
       margin-top: 6px;
       font-weight: 500;
+    }
+  }
+}
+.videoRowContainer {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  gap: 2rem;
+  margin: 2.5rem 0 1.5rem 0;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  @media (max-width: 767px) {
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    gap: 1.5rem;
+  }
+  .videoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      .videoImgIcon {
+        // Blauer Cyan-Glow-Effekt analog zu PDF (Rot)
+        filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.8));
+      }
+
+      .videoCategory,
+      .videoTitle {
+        color: #00f2fe;
+      }
+    }
+
+    .videoCategory {
+      font-size: 0.75rem;
+      color: #00f2fe;
+      font-weight: bold;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      text-align: center;
+      // إضافة الخصائص التالية لفرض كسر النص
+      white-space: normal;
+      overflow-wrap: word-wrap; // أو word-wrap: break-word
+      line-height: 1.2;
+    }
+
+    .videoImgIcon {
+      width: 38px;
+      height: auto;
+      transition: filter 0.2s ease;
+    }
+
+    .videoTitle {
+      font-size: 0.8rem;
+      color: #ffffff;
+      margin-top: 6px;
+      font-weight: 500;
+      text-align: center;
     }
   }
 }

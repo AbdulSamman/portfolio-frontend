@@ -21,9 +21,27 @@ const pdfFiles = [
     fileUrl: "/docs/Zertifikate.pdf",
   },
   {
-    category: "Fraunhofer",
-    title: "Projektbericht",
-    fileUrl: "/docs/Fraunhofer_Bericht.pdf",
+    category: "Wirbelstromscheider",
+    title: "Entsorga",
+    fileUrl:
+      "https://res.cloudinary.com/duphnvqtf/image/upload/v1789060603/Entsorga_Artikel_L.S.L._Mechatronics_1_ed7mey.pdf",
+  },
+];
+
+const videoFiles = [
+  {
+    category: "Wirbelstromscheider",
+    title: "RMS-Förderung",
+    videoUrl:
+      "https://res.cloudinary.com/duphnvqtf/video/upload/v1789054314/portfolio/RMS_Foerderung_qhyh2g.mp4",
+    poster: "",
+  },
+  {
+    category: "Wirbelstromscheider",
+    title: "Blei Versuch",
+    videoUrl:
+      "https://res.cloudinary.com/duphnvqtf/video/upload/v1789057289/portfolio/Blei_RMS_com_kftukx.mp4",
+    poster: "",
   },
 ];
 
@@ -81,6 +99,27 @@ export const PageEngineering = () => {
               />
             </div>
             <span className="pdfTitle">{pdf.title}</span>
+          </a>
+        ))}
+      </div>
+      <div className="videoRowContainer">
+        {videoFiles.map((video, index) => (
+          <a
+            key={index}
+            href={video.videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="videoItem"
+          >
+            <span className="videoCategory">{video.category}</span>
+            <div className="videoBadge">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1179/1179069.png"
+                alt="Video Icon"
+                className="videoImgIcon"
+              />
+            </div>
+            <span className="videoTitle">{video.title}</span>
           </a>
         ))}
       </div>
