@@ -11,7 +11,10 @@ export const popUp = (project: IProject) => {
     <div className="popupContainer">
       <h3>{project.name}</h3>
       <div className="popUpImage">
-        <img src={project.image} />
+        <img
+          src={`https://res.cloudinary.com/duphnvqtf/image/upload/portfolio/${project.image}`}
+          alt={project.name}
+        />
       </div>
 
       <div className="tags">
@@ -43,7 +46,7 @@ export const popUp = (project: IProject) => {
           )}
         </div>
       </div>
-    </div>
+    </div>,
   );
   Swal.fire({
     title: popupContainer,
