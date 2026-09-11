@@ -24,7 +24,7 @@ const pdfFiles = [
     category: "Wirbelstromscheider",
     title: "Entsorga",
     fileUrl:
-      "https://res.cloudinary.com/duphnvqtf/image/upload/v1789060603/Entsorga_Artikel_L.S.L._Mechatronics_1_ed7mey.pdf",
+      "https://res.cloudinary.com/duphnvqtf/image/upload/v1789060603/portfolio/Entsorga_Artikel_L.S.L._Mechatronics_1_ed7mey.pdf",
   },
 ];
 

@@ -228,14 +228,19 @@
 
     .pdfCategory {
       font-size: 0.75rem;
-      color: #e63946; // أحمر مميز
+      color: #e63946;
       font-weight: bold;
       margin-bottom: 6px;
       text-transform: uppercase;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      line-height: 1.2;
+      max-width: 90px;
+      min-height: 2.4em; // Platz für genau 2 Zeilen (2 × line-height)
     }
 
     .pdfImgIcon {
-      width: 38px; // حجم صغير وأنيق مثل الصورة
+      width: 38px;
       height: auto;
       transition: filter 0.2s ease;
     }
@@ -273,7 +278,6 @@
       transform: translateY(-4px);
 
       .videoImgIcon {
-        // Blauer Cyan-Glow-Effekt analog zu PDF (Rot)
         filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.8));
       }
 
@@ -290,10 +294,11 @@
       margin-bottom: 6px;
       text-transform: uppercase;
       text-align: center;
-      // إضافة الخصائص التالية لفرض كسر النص
-      white-space: normal;
-      overflow-wrap: word-wrap; // أو word-wrap: break-word
+      overflow-wrap: break-word;
+      word-break: break-word;
       line-height: 1.2;
+      max-width: 90px;
+      min-height: 2.4em;
     }
 
     .videoImgIcon {
