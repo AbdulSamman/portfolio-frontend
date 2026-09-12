@@ -37,8 +37,7 @@
         border-color 0.3s ease,
         box-shadow 0.3s ease;
       overflow: hidden;
-      content-visibility: auto;
-      contain-intrinsic-size: 110px;
+
       overflow-anchor: none;
       / &::before {
         content: "";
