@@ -17,7 +17,7 @@
     .project {
       position: relative;
       background: $backgroundCard;
-      backdrop-filter: blur(10px);
+      // backdrop-filter: blur(10px);
       border: 1px solid $borderSubtle;
       min-height: 110px;
       width: 100%;
@@ -31,9 +31,14 @@
       font-family: $textFonts;
       cursor: pointer;
       padding: 1rem 0.75rem;
-      transition: all 0.3s ease;
+      //transition: all 0.3s ease;
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
       overflow: hidden;
-
+      content-visibility: auto;
+      contain-intrinsic-size: 110px;
       &::before {
         content: "";
         position: absolute;
