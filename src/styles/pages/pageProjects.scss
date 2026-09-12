@@ -31,7 +31,7 @@
       font-family: $textFonts;
       cursor: pointer;
       padding: 1rem 0.75rem;
-      //transition: all 0.3s ease;
+
       transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -39,7 +39,8 @@
       overflow: hidden;
       content-visibility: auto;
       contain-intrinsic-size: 110px;
-      &::before {
+      overflow-anchor: none;
+      / &::before {
         content: "";
         position: absolute;
         inset: 0;
