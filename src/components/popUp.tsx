@@ -71,6 +71,7 @@ export const popUp = (project: IProject) => {
     confirmButtonText: "CLOSE",
     padding: "10px",
     heightAuto: false,
+    returnFocus: false,
     customClass: {
       popup: "myPopup",
       confirmButton: "confirmButtonText",
