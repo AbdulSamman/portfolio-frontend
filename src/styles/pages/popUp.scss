@@ -241,3 +241,83 @@
     }
   }
 }
+// -- SweetAlert overrides --
+.swal2-container {
+  .swal2-backdrop-show {
+    background: rgba(5, 6, 15, 0.75);
+    backdrop-filter: blur(4px);
+  }
+}
+
+.myPopup {
+  background:
+    linear-gradient(160deg, rgba(21, 21, 50, 0.92), rgba(12, 12, 28, 0.96)),
+    $backgroundCard;
+  border: 1px solid $borderSubtle;
+  border-radius: 18px;
+  padding: 2rem 1.75rem 1.75rem;
+  box-shadow: 0 24px 60px -20px rgba($mainColor, 0.25);
+  max-width: 480px;
+  width: 92%;
+
+  &::before {
+    content: "";
+  }
+}
+
+.swalFadeIn {
+  animation: swalIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.swalFadeOut {
+  animation: swalOut 0.2s ease both;
+}
+
+@keyframes swalIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes swalOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+.confirmButtonText {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.65rem 2.2rem;
+  background: rgba($mainColor, 0.1);
+  border: 1px solid rgba($mainColor, 0.45);
+  border-radius: 999px;
+  color: $mainColor;
+  font-family: $monoFonts;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    $backgroundColor 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background: rgba($mainColor, 0.18);
+    border-color: $mainColor;
+    transform: translateY(-2px);
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($mainColor, 0.25);
+    outline: none;
+  }
+}
