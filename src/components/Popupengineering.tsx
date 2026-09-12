@@ -44,6 +44,7 @@ export const popUpEngineering = (project: IEngineeringProject) => {
     background: "rgba(21,21,50,0.9)",
     confirmButtonText: "CLOSE",
     padding: "10px",
+    heightAuto: false,
     customClass: {
       popup: "myPopup",
       confirmButton: "confirmButtonText",
