@@ -39,6 +39,17 @@ export const popUpEngineering = (project: IEngineeringProject) => {
       </div>
     </div>,
   );
+  const scrollY = window.scrollY;
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = "100%";
+
+  const restoreScroll = () => {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    window.scrollTo(0, scrollY);
+  };
   Swal.fire({
     title: popupContainer,
     background: "rgba(21,21,50,0.9)",
@@ -49,5 +60,6 @@ export const popUpEngineering = (project: IEngineeringProject) => {
       popup: "myPopup",
       confirmButton: "confirmButtonText",
     },
+    didClose: restoreScroll,
   });
 };
