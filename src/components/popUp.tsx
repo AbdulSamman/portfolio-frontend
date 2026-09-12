@@ -3,6 +3,7 @@ import "../styles/pages/popUp.scss";
 import { IProject } from "../interfaces";
 import { AiFillGithub, AiOutlineGlobal } from "react-icons/ai";
 import { createRoot } from "react-dom/client";
+import { ProjectGallery } from "./ProjectGallery";
 
 export const popUp = (project: IProject) => {
   const popupContainer = document.createElement("div");
@@ -10,13 +11,16 @@ export const popUp = (project: IProject) => {
   createRoot(popupContainer).render(
     <div className="popupContainer">
       <h3>{project.name}</h3>
-      <div className="popUpImage">
-        <img
-          src={`https://res.cloudinary.com/duphnvqtf/image/upload/portfolio/${project.image}`}
-          alt={project.name}
-        />
-      </div>
 
+      <ProjectGallery
+        images={
+          project.image
+            ? [
+                `https://res.cloudinary.com/duphnvqtf/image/upload/portfolio/${project.image}`,
+              ]
+            : []
+        }
+      />
       <div className="tags">
         {project.tags?.map((tag, i) => {
           return (

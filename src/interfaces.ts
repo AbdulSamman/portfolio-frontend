@@ -47,7 +47,7 @@ export interface HandleScroll {
 export interface IProject {
   _id: string;
   name: string;
-  image: string;
+  image?: string[];
   tags: string[];
   repo: string;
   url: string;

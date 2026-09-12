@@ -3,6 +3,7 @@ import "../styles/pages/popUp.scss";
 import { IEngineeringProject } from "../interfaces";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { createRoot } from "react-dom/client";
+import { ProjectGallery } from "./ProjectGallery";
 
 export const popUpEngineering = (project: IEngineeringProject) => {
   const popupContainer = document.createElement("div");
@@ -10,12 +11,12 @@ export const popUpEngineering = (project: IEngineeringProject) => {
   createRoot(popupContainer).render(
     <div className="popupContainer">
       <h3>{project.name}</h3>
-      <div className="popUpImage">
+      {/* <div className="popUpImage">
         {project.images?.map((img: string, i: any) => (
           <img key={i} src={img} />
         ))}
-      </div>
-
+      </div> */}
+      <ProjectGallery images={project.images ?? []} />
       <div className="tags">
         {project.tools?.map((tool, i) => {
           return (

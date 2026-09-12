@@ -59,7 +59,7 @@ export const ParallaxBackground: React.FC = () => {
               }}
             />
 
-            <span>ABDUL</span>
+            <span>SAMMAN</span>
           </Link>
         </div>
         <div className="burgerMenu" onClick={handleMenuOpen}>
