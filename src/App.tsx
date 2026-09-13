@@ -7,6 +7,7 @@ import "./styles/App.scss";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./AppContext";
 import { FaConnectdevelop } from "react-icons/fa";
+import { PageFooter } from "./pages/PageFooter";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
           <PageEngineering />
           <PageSkills />
           <PageContact />
+          <PageFooter />
         </>
       )}
     </div>

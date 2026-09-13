@@ -61,3 +61,34 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.PageFooter {
+  background-color: $backgroundColor;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 12px;
+  span {
+    letter-spacing: 1px;
+    padding: 5px;
+    background: linear-gradient(
+      100deg,
+      $textPrimary 10%,
+      $mainColor 45%,
+      $accentViolet 75%,
+      $textPrimary 100%
+    );
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmerText 7s linear infinite;
+  }
+  @keyframes shimmerText {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 220% center;
+    }
+  }
+}
