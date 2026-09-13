@@ -114,6 +114,7 @@
         animation: typingTitle 8s steps(60) forwards infinite;
         animation-delay: 4s;
         opacity: 0;
+        font-size: 10px;
       }
       @media (max-width: 567px) {
         font-size: 0.95rem;

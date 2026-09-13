@@ -220,19 +220,12 @@ const ParallaxPage: React.FC = () => {
     <div className="parallaxPageContainer">
       <CircuitBackground />
 
-      <main className="heroContent">
-        <div className="tag">&lt;ENGINEERING × CODE /&gt;</div>
-        <h1 className="title">SAMMAN</h1>
-        <p className="subtitle">HI, I'M Abdulrazak</p>
-        <p className="role">fullstack/ MERN</p>
-
-        <div className="navLinks">
-          <a href="#projects">PROJECTS</a>
-          <a href="#engineering">ENGINEERING</a>
-          <a href="#skills">SKILLS</a>
-          <a href="#contact">CONTACT</a>
-        </div>
-      </main>
+      <div className="navLinks">
+        <a href="#projects">PROJECTS</a>
+        <a href="#engineering">ENGINEERING</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
 
       <footer className="parallaxFooter">
         <ParallaxLine speed={10} />
