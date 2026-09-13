@@ -132,7 +132,7 @@ export const PageContact = () => {
 
       <form>
         <div className="nameEmailContent">
-          <div className={`inputName ${isNameValid ? "" : "nameNotValid"}`}>
+          <div className={`inputName ${!isNameValid ? "nameNotValid" : ""}`}>
             <input
               placeholder="NAME"
               type="text"
@@ -141,7 +141,7 @@ export const PageContact = () => {
               value={formData.name}
             />
           </div>
-          <div className={`inputEmail ${isEmailValid ? "" : "emailNotValid"}`}>
+          <div className={`inputEmail ${!isEmailValid ? "emailNotValid" : ""}`}>
             <input
               placeholder="EMAIL"
               type="email"
@@ -152,7 +152,7 @@ export const PageContact = () => {
           </div>
         </div>
         <div
-          className={`inputSubject ${isSubjectValid ? "" : "subjectNotValid"}`}
+          className={`inputSubject ${!isSubjectValid ? "subjectNotValid" : ""}`}
         >
           <input
             placeholder="SUBJECT"

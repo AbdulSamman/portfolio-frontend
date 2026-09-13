@@ -42,23 +42,37 @@
       column-gap: 1rem;
       row-gap: 0.5rem;
     }
-    input {
-      height: 60px;
-      padding: 10px 14px;
-      color: $textPrimary;
-      background: $backgroundCard;
-      font-weight: 500;
-      font-family: $mainFonts;
-      font-size: 1.05rem;
-      outline: none;
-      border: 1px solid $borderSubtle;
-      border-radius: 10px;
-      width: 100%;
-      transition: border-color 0.25s ease;
-      &::placeholder {
-        color: $textSecondary;
-        letter-spacing: 0.5px;
+    .inputName,
+    .inputEmail,
+    .inputSubject {
+      input {
+        height: 60px;
+        padding: 10px 14px;
+        color: $textPrimary;
+        background: $backgroundCard;
+        font-weight: 500;
+        font-family: $mainFonts;
+        font-size: 1.05rem;
+        outline: none;
+        border: 1px solid $borderSubtle;
+        border-radius: 10px;
+        width: 100%;
+        transition: border-color 0.25s ease;
+        &::placeholder {
+          color: $textSecondary;
+          letter-spacing: 0.5px;
+        }
       }
+    }
+    // für autofill damit den background nicht weiß wird
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px $backgroundCard inset !important;
+      -webkit-text-fill-color: $textPrimary !important;
+      caret-color: $textPrimary !important;
+      transition: background-color 5000s ease-in-out 0s;
     }
     .textAreaMessage {
       height: 220px;
