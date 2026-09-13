@@ -112,13 +112,13 @@
         white-space: nowrap;
         color: $mainColor;
         animation: typingTitle 8s steps(60) forwards infinite;
-        animation-delay: 4s;
+        animation-delay: 2s;
         opacity: 0;
       }
       @media (max-width: 567px) {
         font-size: 0.95rem;
         .title {
-          font-size: 0.75rem;
+          font-size: 0.85rem;
         }
       }
     }
