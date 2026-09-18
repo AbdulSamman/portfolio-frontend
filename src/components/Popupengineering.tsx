@@ -11,11 +11,7 @@ export const popUpEngineering = (project: IEngineeringProject) => {
   createRoot(popupContainer).render(
     <div className="popupContainer">
       <h3>{project.name}</h3>
-      {/* <div className="popUpImage">
-        {project.images?.map((img: string, i: any) => (
-          <img key={i} src={img} />
-        ))}
-      </div> */}
+
       <ProjectGallery images={project.images ?? []} />
       <div className="tags">
         {project.tools?.map((tool, i) => {
@@ -29,9 +25,9 @@ export const popUpEngineering = (project: IEngineeringProject) => {
 
       <div className="row">
         <p className="description">{project.description}</p>
-        {project.link ? (
+        {project?.link ? (
           <div className="icons">
-            <a href={project.link} target="_blank">
+            <a href={project?.link} target="_blank">
               <AiOutlineGlobal className="icon ic2" />
             </a>
           </div>

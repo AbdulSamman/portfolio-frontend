@@ -43,6 +43,20 @@ const videoFiles = [
       "https://res.cloudinary.com/duphnvqtf/video/upload/v1789057289/portfolio/Blei_RMS_com_kftukx.mp4",
     poster: "",
   },
+  {
+    category: "Gießanlage PU-Schuhsohlen",
+    title: "Vorher",
+    videoUrl:
+      "https://res.cloudinary.com/duphnvqtf/video/upload/v1789688702/portfolio/vorher_kroyn4.mp4",
+    poster: "",
+  },
+  {
+    category: "Gießanlage PU-Schuhsohlen",
+    title: "Nachher",
+    videoUrl:
+      "https://res.cloudinary.com/duphnvqtf/video/upload/v1789688698/portfolio/nachher_hvxrmq.mp4",
+    poster: "",
+  },
 ];
 
 export const PageEngineering = () => {
